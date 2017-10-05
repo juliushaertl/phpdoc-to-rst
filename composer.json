@@ -1,0 +1,16 @@
+{
+    "name": "juliushaertl/phpdoc-to-rst",
+    "description": "Generate Sphinx/ReStructured documentation from PHPDoc",
+    "type": "library",
+    "require": {
+        "phpdocumentor/reflection": "dev-develop"
+    },
+    "license": "AGPLv3",
+    "authors": [
+        {
+            "name": "Julius Härtl",
+            "email": "jus@bitgrid.net"
+        }
+    ],
+    "minimum-stability": "dev"
+}
