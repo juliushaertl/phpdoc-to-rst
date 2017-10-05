@@ -12,5 +12,10 @@
             "email": "jus@bitgrid.net"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "JuliusHaertl\\PHPDocToRst\\": ["src"]
+        }
+    }
 }
