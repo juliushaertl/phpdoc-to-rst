@@ -102,6 +102,8 @@ class ApiDocBuilder {
     public function createDirectoryStructure() {
         foreach ($this->project->getNamespaces() as $namespace) {
             $namespaceDir = $this->dstDir . str_replace("\\", "/", $namespace->getFqsen());
+            if (is_dir($namespaceDir))
+                continue;
             if (!mkdir($namespaceDir, 0755, true)) {
                 throw new \Exception('Could not create directory '. $namespaceDir);
             }

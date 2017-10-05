@@ -3,7 +3,8 @@
     "description": "Generate Sphinx/ReStructured documentation from PHPDoc",
     "type": "library",
     "require": {
-        "phpdocumentor/reflection": "dev-develop"
+        "phpdocumentor/reflection": "dev-develop",
+        "symfony/console": "^3.3"
     },
     "license": "AGPLv3",
     "authors": [
