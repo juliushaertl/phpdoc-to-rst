@@ -9,11 +9,14 @@
 namespace JuliusHaertl\PHPDocToRst\Test;
 
 use JuliusHaertl\PHPDocToRst\Builder\InterfaceBuilder;
+use phpDocumentor\Reflection\Element;
+use phpDocumentor\Reflection\Php\File;
 use PHPUnit\Framework\TestCase;
 
 class InterfaceBuilderTest extends TestCase {
 
     public function testFoobar() {
-        $this->assertEquals(1, 0);
+        $file = $this->getMockBuilder(File::class);
+        $element = $this->getMockBuilder(Element::class);
     }
 }
