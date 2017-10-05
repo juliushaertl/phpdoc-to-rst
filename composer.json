@@ -6,6 +6,9 @@
         "phpdocumentor/reflection": "dev-develop",
         "symfony/console": "^3.3"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8"
+    },
     "license": "AGPLv3",
     "authors": [
         {
@@ -16,7 +19,8 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "JuliusHaertl\\PHPDocToRst\\": ["src"]
+            "JuliusHaertl\\PHPDocToRst\\": ["src"],
+            "JuliusHaertl\\PHPDocToRst\\Test\\": ["tests"]
         }
     }
 }
