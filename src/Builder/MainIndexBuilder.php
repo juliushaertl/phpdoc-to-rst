@@ -32,6 +32,9 @@ class MainIndexBuilder extends RstBuilder {
             $namespaceString = (string)$namespace->getFqsen();
             $subPath = $namespaceString;
             $path = substr(str_replace("\\", "/", $subPath), 1) . '/index';
+            if ($namespaceString === '\\') {
+                $path = 'index';
+            }
             $this->addIndentLine(1, $namespace->getFqsen() . ' <' . $path . '>');
         }
         $this->addLine();

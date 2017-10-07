@@ -2,9 +2,8 @@ PHP API documentation
 =====================
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Contents:
+   :glob:
 
-   api/JuliusHaertl/PHPDocToRst/index
-
-
+   api/index-namespaces-all

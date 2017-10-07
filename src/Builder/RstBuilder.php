@@ -28,7 +28,7 @@ use phpDocumentor\Reflection\Fqsen;
 
 /**
  * Helper class to build reStructuredText files
- * 
+ *
  * @package JuliusHaertl\PHPDocToRst\Builder
  */
 class RstBuilder {
