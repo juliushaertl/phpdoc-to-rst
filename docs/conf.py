@@ -48,8 +48,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'phpdoc-to-rst'
-copyright = '2017, Julius Härtl'
-author = 'Julius Härtl'
+copyright = '2017, Julius Haertl'
+author = 'Julius Haertl'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
