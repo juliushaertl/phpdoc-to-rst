@@ -36,29 +36,17 @@ class InterfaceBuilder extends Builder {
     protected function render() {
         /** @var Interface_ $interface */
         $interface = $this->element;
-        //echo ' rendering interface: ' . $interface->getFqsen() . PHP_EOL;
+
+        $namespace = str_replace('\\' . $interface->getName(), '', $interface->getFqsen());
 
         $docBlock = $interface->getDocBlock();
-        $this
-            ->addH1($interface->getFqsen())
-            ->addLine()
-            ->addLine('.. php:interface:: ' . $interface->getName())
-            ->addLine()
-            ->addIndentLine(1, $interface->getName() . ' interface')
-            ->addLine();
-
-        $this->addIndentLine(1, $this->file->path() . ' ' . $interface->getLocation()->getLineNumber());
-
-
-        /**
-         * Render extension custom views before the description
-         * @var Extension $extension
-         */
-        foreach ($this->extensions as $extension) {
-            $addition = $extension->render(self::SECTION_BEFORE_DESCRIPTION, $this);
-            $this->addIndentMultiline(1, $addition, true);
-            $this->addLine();
+        $this->addH1(self::escape($interface->getFqsen()))->addLine();
+        if($namespace !== '') {
+            $this->addLine('.. php:namespace:: ' . substr($namespace, 1));
         }
+        $this->addLine('.. php:interface:: ' . $interface->getName())->addLine();
+
+        $this->callExtensions(self::SECTION_BEFORE_DESCRIPTION);
 
         if ($docBlock) {
             $this
@@ -66,15 +54,14 @@ class InterfaceBuilder extends Builder {
                 ->addLine();
         }
 
-        /**
-         * Render extension custom views after the description
-         * @var Extension $extension
-         */
-        foreach ($this->extensions as $extension) {
-            $addition = $extension->render(self::SECTION_AFTER_DESCRIPTION, $this);
-            $this->addIndentMultiline(1, $addition, true);
-            $this->addLine();
+        // Add class details
+        $parents = '';
+        foreach ($interface->getParents() as $parent) {
+            $parents .= $this->getLink('interface', $parent) . ' ';
         }
+        $this->addFieldList('Parent', $parents);
+
+        $this->callExtensions(self::SECTION_AFTER_DESCRIPTION);
 
         foreach ($interface->getMethods() as $method) {
             /* Render method */
@@ -91,26 +78,42 @@ class InterfaceBuilder extends Builder {
                 $args .= '$' . $argument->getName() . ', ';
             }
             $args = substr($args, 0, -2);
-            $this->addIndentLine(1, '.. php:method:: ' . $method->getVisibility() . ' ' . $method->getName() . '(' . $args . ')');
+            $modifiers = $method->getVisibility();
+            $modifiers .= $method->isAbstract() ? ' abstract' : '';
+            $modifiers .= $method->isFinal() ? ' final' : '';
+            $modifiers .= $method->isStatic() ? ' static' : '';
+            $this->addIndentLine(1, '.. rst-class:: ' . $modifiers)->addLine();
+
+            $this->addIndentLine(2, '.. php:method:: ' . $method->getName() . '(' . $args . ')');
             $this->addLine();
             if ($docBlock) {
-                $this->addIndentMultiline(2, $docBlock->getDescription());
+                $this->addIndentMultiline(3, RstBuilder::escape($docBlock->getDescription()));
                 $this->addLine();
             }
-            // TODO: move line mention to extension
-            $this->addIndentLine(1, $this->file->path() . ' ' . $method->getLocation()->getLineNumber())->addLine();
 
             if (!empty($params)) {
                 foreach ($method->getArguments() as $argument) {
                     /** @var Param $param */
                     $param = $params[$argument->getName()];
-                    if ($param !== null) $this->addIndentMultiline(2, ':param ' . $param->getType() . ' $' . $argument->getName() . ': ' . $param->getDescription(), true);
+                    if ($param !== null) $this->addIndentMultiline(3, ':param ' . RstBuilder::escape($param->getType()) . ' $' . $argument->getName() . ': ' . RstBuilder::escape($param->getDescription()), true);
                 }
                 foreach ($docBlock->getTags() as $tag) {
-                    $this->addDocblockTag(2, $tag->getName(), $docBlock);
+                    $this->addDocblockTag($tag->getName(), $docBlock);
                 }
                 $this->addLine();
             }
+        }
+    }
+
+    /**
+     * Render extension custom views before the descriptioj
+     */
+    private function callExtensions($type) {
+
+        foreach ($this->extensions as $extension) {
+            $addition = $extension->render($type, $this);
+            $this->addIndentMultiline(1, $addition, true);
+            $this->addLine();
         }
     }
 }

@@ -24,34 +24,56 @@
 namespace JuliusHaertl\PHPDocToRst\Builder;
 
 
+use phpDocumentor\Reflection\Fqsen;
+
 class RstBuilder {
 
+    private $indentLevel = 0;
     /** @var string */
-    protected $content;
+    protected $content = '.. rst-class:: phpdoctorst' . PHP_EOL . PHP_EOL ;
 
     public function getContent() {
         return $this->content;
     }
 
+    public static function escape($text) {
+        // escape all common reStructuredText control chars
+        $text = preg_replace("/[\'\`\*\_\{\}\[\]\(\)\>\#\+\-\.\\\!]/", '\\\\$0', $text);
+        return $text;
+    }
+
+    public function indent() {
+        $this->indentLevel++;
+    }
+
+    public function unindent() {
+        $this->indentLevel--;
+    }
+
+    public function addFieldList($key, $value) {
+        $this->addLine(':'.self::escape($key).':');
+        $this->addIndentMultiline(1, $value, true);
+    }
+
     public function addH1($text) {
-        $this->add($text . PHP_EOL);
-        $this->add(str_repeat('=', strlen((string)$text)) . PHP_EOL);
+        $this->addLine($text);
+        $this->addLine(str_repeat('=', strlen((string)$text)))->addLine();
         return $this;
     }
 
     public function addH2($text) {
-        $this->add($text . PHP_EOL);
-        $this->add(str_repeat('-', strlen((string)$text)) . PHP_EOL);
+        $this->addLine($text);
+        $this->addLine(str_repeat('-', strlen((string)$text)))->addLine();
         return $this;
     }
 
     public function addLine($text = '') {
-        $this->add($text . PHP_EOL);
+        $this->add(str_repeat("\t", $this->indentLevel) . $text . PHP_EOL);
         return $this;
     }
 
     public function addIndentLine($indent, $text) {
-        $this->add(str_repeat("\t", $indent) . $text . PHP_EOL);
+        $this->addLine(str_repeat("\t", $indent) . $text);
         return $this;
     }
 
@@ -63,7 +85,7 @@ class RstBuilder {
             if ($blockIndent && $i === 1) {
                 $indent++;
             }
-            $this->addIndentLine($indent, $line);
+            $this->addIndentLine($this->indentLevel+$indent, $line);
             $i++;
         }
         return $this;

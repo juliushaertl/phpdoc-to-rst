@@ -23,26 +23,28 @@
 
 namespace JuliusHaertl\PHPDocToRst;
 
-use JuliusHaertl\PHPDocToRst\Extension\Extension;
 use phpDocumentor\Reflection\File\LocalFile;
-use phpDocumentor\Reflection\Php\Class_;
 use phpDocumentor\Reflection\Php\Namespace_;
 use phpDocumentor\Reflection\Php\Project;
 use phpDocumentor\Reflection\Php\ProjectFactory;
-
+use JuliusHaertl\PHPDocToRst\Builder\MainIndexBuilder;
+use JuliusHaertl\PHPDocToRst\Builder\NamespaceIndexBuilder;
+use JuliusHaertl\PHPDocToRst\Extension\Extension;
 use JuliusHaertl\PHPDocToRst\Builder\ClassBuilder;
 use JuliusHaertl\PHPDocToRst\Builder\InterfaceBuilder;
 
 class ApiDocBuilder {
 
-    private $reflectionProject;
-
     /** @var Project */
     private $project;
-
+    /** @var array */
     private $docFiles = [];
-
+    /** @var Extension[] */
     private $extensions;
+    /** @var string|string[] */
+    private $srcDir;
+    /** @var string */
+    private $dstDir;
 
 
     public function __construct($srcDir, $dstDir) {
@@ -117,7 +119,6 @@ class ApiDocBuilder {
         }
         foreach ($this->project->getFiles() as $file) {
             /**
-             * Constants, Traits not used in files
              * Go though interfaces/classes/functions of files and build documentation
              */
             foreach ($file->getInterfaces() as $interface) {
@@ -132,111 +133,36 @@ class ApiDocBuilder {
                 $filename = $this->dstDir . str_replace("\\", "/", $class->getFqsen()) . '.rst';
                 file_put_contents($filename, $builder->getContent());
                 $this->docFiles[(string)$class->getFqsen()] = str_replace("\\", "/", $class->getFqsen());
+
+                // also build root namespace
+                if (strpos((string)substr($class->getFqsen(), 1), '\\') === false) {
+                    $this->project->getRootNamespace()->addClass($class->getFqsen());
+                }
             }
 
-            // FIXME: add functions/constants/traits
+            // FIXME: traits
 
         }
     }
 
-    // FIXME: Builder class for indexes
-    public function buildNamespaceIndexes(Namespace_ $namespace) {
-        $label = str_replace('\\', '-', $namespace->getFqsen());
-        $len = strlen($namespace->getFqsen());
-
-        $content = '.. _namespace-' . $label . ':
-
-' . $namespace->getFqsen() . '
-' . str_repeat('=', $len) . '
-
-';
-
-        $content .= 'Classes' . PHP_EOL;
-        $content .= '-------' . PHP_EOL;
-        $content .= '.. toctree::' . PHP_EOL;
-        $content .= '  :maxdepth: 2' . PHP_EOL . PHP_EOL;
-        /** @var Class_ $entry */
-        foreach ($namespace->getClasses() as $entry) {
-            $subPath = str_replace($namespace->getFqsen(), '', $entry);
-            $path = substr(str_replace("\\", "/", $subPath), 1);
-            $content .= "  " . $entry . ' <' . $path . '>' . PHP_EOL;
-        }
-        $content .= PHP_EOL . PHP_EOL;
-
-        $content .= 'Interfaces' . PHP_EOL;
-        $content .= '----------' . PHP_EOL;
-        $content .= '.. toctree::' . PHP_EOL;
-        $content .= '  :maxdepth: 2' . PHP_EOL . PHP_EOL;
-        /** @var Class_ $entry */
-        foreach ($namespace->getInterfaces() as $entry) {
-            $subPath = str_replace($namespace->getFqsen(), '', $entry);
-            $path = substr(str_replace("\\", "/", $subPath), 1);
-            $content .= "  " . $entry . ' <' . $path . '>' . PHP_EOL;
-        }
-        $content .= PHP_EOL . PHP_EOL;
-
-        $path = substr(str_replace("\\", "/", $namespace->getFqsen()), 1);
-        $fullPath = $this->dstDir . '/' . $path . '/index.rst';
-        file_put_contents($fullPath, $content);
-
-
-    }
-
-    // FIXME: Builder class for toc
     public function buildToc() {
-
-        $content = '.. _namespaces:
-
-Public namespaces
-=================
-
-.. toctree::
-  :maxdepth: 2
-
-';
-
         $namespaces = $this->project->getNamespaces();
+        $namespaces['\\'] = $this->project->getRootNamespace();
         usort($namespaces, function (Namespace_ $a, Namespace_ $b) {
             return strcmp($a->getFqsen(), $b->getFqsen());
         });
+        /** @var Namespace_ $namespace */
         foreach ($namespaces as $namespace) {
-            $path = str_replace("\\", "/", $namespace->getFqsen());
-            $content .= "  " . $namespace->getFqsen() . ' <' . substr($path, 1) . '/index>' . PHP_EOL;
-            $this->buildNamespaceIndexes($namespace);
+            $builder = new NamespaceIndexBuilder($namespaces, $namespace);
+            $builder->render();
+            $path = $this->dstDir . str_replace("\\", "/", $namespace->getFqsen()) . '/index.rst';
+            echo $path . PHP_EOL;
+            file_put_contents($path, $builder->getContent());
         }
-        file_put_contents($this->dstDir . '/namespaces.rst', $content);
 
-
-        $content = '.. _interfaces:
-
-\OCP Interfaces
-===============
-
-.. toctree::
-  :maxdepth: 3
-
-';
-
-        ksort($this->docFiles);
-        foreach ($this->docFiles as $n => $f) {
-            $content .= "  " . $n . ' <' . substr($f, 1) . '>' . PHP_EOL;
-        }
-        file_put_contents($this->dstDir . '/interfaces.rst', $content);
-
-
-        $content = '.. _public-api-docs:
-
-Public API Docs
-===============
-
-.. toctree::
-  :maxdepth: 2
-
-  interfaces
-  namespaces
-';
-        file_put_contents($this->dstDir . '/index.rst', $content);
-
+        $builder = new MainIndexBuilder($namespaces);
+        $builder->render();
+        $path = $this->dstDir . '/index-namespaces-all.rst';
+        file_put_contents($path, $builder->getContent());
     }
-
 }

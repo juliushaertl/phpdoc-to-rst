@@ -25,6 +25,7 @@ namespace JuliusHaertl\PHPDocToRst\Extension;
 
 use JuliusHaertl\PHPDocToRst\Builder\Builder;
 use JuliusHaertl\PHPDocToRst\Builder\InterfaceBuilder;
+use JuliusHaertl\PHPDocToRst\Builder\RstBuilder;
 use phpDocumentor\Reflection\Php\Interface_;
 
 /**
@@ -64,7 +65,7 @@ class InterfaceImplementors extends Extension {
             $interface = $builder->getElement();
             $content = 'Implemented by ';
             foreach ($this->implementors[(string)$interface->getFqsen()] as $implementor) {
-                $content .= ':php:class:`' . str_replace('\\', '\\\\', $implementor) . '` ';
+                $content .= ':php:class:`' . RstBuilder::escape(substr($implementor, 1)) . '` ';
             }
             // FIXME: should work directly on $builder
             return $content;

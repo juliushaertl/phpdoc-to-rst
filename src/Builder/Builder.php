@@ -32,6 +32,7 @@ use phpDocumentor\Reflection\DocBlock\Tags\Since;
 use phpDocumentor\Reflection\DocBlock\Tags\Throws;
 use phpDocumentor\Reflection\Element;
 use phpDocumentor\Reflection\File;
+use phpDocumentor\Reflection\Fqsen;
 
 
 abstract class Builder extends RstBuilder {
@@ -44,6 +45,8 @@ abstract class Builder extends RstBuilder {
 
     /** @var Extension[] */
     protected $extensions = [];
+
+    private $phpDomains = [];
 
     protected abstract function render();
 
@@ -61,49 +64,66 @@ abstract class Builder extends RstBuilder {
         return $this->element;
     }
 
+    public function getLink($type, $fqsen) {
+        return ':php:' . $type . ':`' . RstBuilder::escape(substr($fqsen, 1)) . '`';
+    }
+
+    public function beginPhpDomain($type, $name, $indent=true) {
+        // FIXME: Add checks if it is properly ended
+        $this->addLine('.. php:' . $type . ':: '. $name)->addLine();
+        if ($indent === true) {
+            $this->indent();
+        }
+    }
+
+    public function endPhpDomain($type='') {
+        $this->unindent();
+        $this->addLine();
+    }
+
     /**
-     * @param int $indent Levels to indent
      * @param string $tag Name of the tag to parse
      * @param DocBlock $docBlock
      */
-    protected function addDocblockTag($indent, $tag, DocBlock $docBlock) {
+    protected function addDocblockTag($tag, DocBlock $docBlock) {
+        $indent = 0;
         $tags = $docBlock->getTagsByName($tag);
         switch ($tag) {
             case 'return':
                 if (sizeof($tags) === 0) continue;
                 /** @var Return_ $return */
                 $return = $tags[0];
-                $this->addIndentMultiline($indent, ':returns: ' . $return->getType() . ' ' . $return->getDescription(), true);
+                $this->addIndentMultiline($indent, ':returns: ' . $return->getType() . ' ' . RstBuilder::escape($return->getDescription()), true);
                 break;
             case 'throws':
                 if (sizeof($tags) === 0) continue;
                 /** @var Throws $return */
                 $return = $tags[0];
-                $this->addIndentMultiline($indent, ':throws: ' . $return->getType() . ' ' . $return->getDescription(), true);
+                $this->addIndentMultiline($indent, ':throws: ' . $return->getType() . ' ' . RstBuilder::escape($return->getDescription()), true);
                 break;
             case 'since':
                 if (sizeof($tags) === 0) continue;
                 /** @var Since $return */
                 $return = $tags[0];
-                $this->addIndentMultiline($indent, ':since: ' . $return->getVersion() . ' ' . $return->getDescription(), true);
+                $this->addIndentMultiline($indent, ':since: ' . $return->getVersion() . ' ' . RstBuilder::escape($return->getDescription()), true);
                 break;
             case 'deprecated':
                 if (sizeof($tags) === 0) continue;
                 /** @var Deprecated $return */
                 $return = $tags[0];
-                $this->addIndentMultiline($indent, ':deprecated: ' . $return->getVersion() . ' ' . $return->getDescription(), true);
+                $this->addIndentMultiline($indent, ':deprecated: ' . $return->getVersion() . ' ' . RstBuilder::escape($return->getDescription()), true);
                 break;
             case 'see':
                 if (sizeof($tags) === 0) continue;
                 /** @var See $return */
                 $return = $tags[0];
-                $this->addIndentMultiline($indent, ':see: ' . $return->getReference() . ' ' . $return->getDescription(), true);
+                $this->addIndentMultiline($indent, ':see: ' . $return->getReference() . ' ' . RstBuilder::escape($return->getDescription()), true);
                 break;
             case 'license':
                 if (sizeof($tags) === 0) continue;
                 /** @var DocBlock\Tags\BaseTag $return */
                 $return = $tags[0];
-                $this->addIndentMultiline($indent, ':license: ' . $return->getDescription(), true);
+                $this->addIndentMultiline($indent, ':license: ' . RstBuilder::escape($return->getDescription()), true);
                 break;
             case 'param':
                 // param handling is done by subclasses since it is more that docbook parsing
