@@ -10,8 +10,10 @@ Welcome to phpdoc-to-rst's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   cli
+   api
 
-   api/JuliusHaertl/PHPDocToRst/index
+
     
 
 
