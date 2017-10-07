@@ -26,6 +26,11 @@ namespace JuliusHaertl\PHPDocToRst\Builder;
 
 use phpDocumentor\Reflection\Fqsen;
 
+/**
+ * Helper class to build reStructuredText files
+ * 
+ * @package JuliusHaertl\PHPDocToRst\Builder
+ */
 class RstBuilder {
 
     private $indentLevel = 0;
