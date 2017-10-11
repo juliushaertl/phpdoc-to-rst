@@ -9,5 +9,5 @@ test:
 	phpunit -c tests/phpunit.xml
 
 clean:
-	rm -r docs/api/
-	rm -r docs/_build/
+	rm -fr docs/api/
+	rm -fr docs/_build/
