@@ -9,15 +9,15 @@
 
 .. php:class:: Extension
 
-:Parent:
-	
+	:Extends:
 		
-:Interfaces:
-	
+			
+	:Implements:
 		
-:Traits:
-	
+			
+	:Used traits:
 		
+			
 
 
 Constants
@@ -32,30 +32,31 @@ Properties
 Methods
 -------
 
-	.. rst-class:: public
+.. rst-class:: public
 
-		.. php:method:: __construct( $project)
-
-
-
-	.. rst-class:: public abstract
-
-		.. php:method:: prepare()
-
-		
-		
-
-
-	.. rst-class:: public abstract
-
-		.. php:method:: render( $type,  $builder)
-
-	It will be executed by Builder classes depending on the given type.
+	.. php:method:: __construct( $project)
 	
-	Currently supported types:
-	 - InterfaceBuilder::SECTION_BEFORE_DESCRIPTION
-	 - InterfaceBuilder::SECTION_AFTER_DESCRIPTION
+		
+	
+.. rst-class:: public abstract
 
-	:param  $type: 
-	:param \JuliusHaertl\PHPDocToRst\Builder\Builder $builder: 
+	.. php:method:: prepare()
+	
+		
+		
+		
+	
+.. rst-class:: public abstract
+
+	.. php:method:: render( $type,  $builder)
+	
+		It will be executed by Builder classes depending on the given type.
+		
+		Currently supported types:
+		 - InterfaceBuilder::SECTION_BEFORE_DESCRIPTION
+		 - InterfaceBuilder::SECTION_AFTER_DESCRIPTION
+		
+		:param  $type: 
+		:param \JuliusHaertl\PHPDocToRst\Builder\Builder $builder: 
+	
 

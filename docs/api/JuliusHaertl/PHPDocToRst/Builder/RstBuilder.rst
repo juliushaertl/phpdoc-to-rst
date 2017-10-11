@@ -9,16 +9,15 @@
 
 	
 	
-
-:Parent:
-	
+	:Extends:
 		
-:Interfaces:
-	
+			
+	:Implements:
 		
-:Traits:
-	
+			
+	:Used traits:
 		
+			
 
 
 Constants
@@ -36,69 +35,64 @@ Properties
 Methods
 -------
 
-	.. rst-class:: public
+.. rst-class:: public
 
-		.. php:method:: getContent()
+	.. php:method:: getContent()
+	
+		
+	
+.. rst-class:: public static
 
+	.. php:method:: escape( $text)
+	
+		
+	
+.. rst-class:: public
 
+	.. php:method:: indent()
+	
+		
+	
+.. rst-class:: public
 
-	.. rst-class:: public static
+	.. php:method:: unindent()
+	
+		
+	
+.. rst-class:: public
 
-		.. php:method:: escape( $text)
+	.. php:method:: addFieldList( $key,  $value)
+	
+		
+	
+.. rst-class:: public
 
+	.. php:method:: addH1( $text)
+	
+		
+	
+.. rst-class:: public
 
+	.. php:method:: addH2( $text)
+	
+		
+	
+.. rst-class:: public
 
-	.. rst-class:: public
+	.. php:method:: addLine( $text)
+	
+		
+	
+.. rst-class:: public
 
-		.. php:method:: indent()
+	.. php:method:: addMultiline( $text,  $blockIndent)
+	
+		
+	
+.. rst-class:: public
 
-
-
-	.. rst-class:: public
-
-		.. php:method:: unindent()
-
-
-
-	.. rst-class:: public
-
-		.. php:method:: addFieldList( $key,  $value)
-
-
-
-	.. rst-class:: public
-
-		.. php:method:: addH1( $text)
-
-
-
-	.. rst-class:: public
-
-		.. php:method:: addH2( $text)
-
-
-
-	.. rst-class:: public
-
-		.. php:method:: addLine( $text)
-
-
-
-	.. rst-class:: public
-
-		.. php:method:: addIndentLine( $indent,  $text)
-
-
-
-	.. rst-class:: public
-
-		.. php:method:: addIndentMultiline( $indent,  $text,  $blockIndent)
-
-
-
-	.. rst-class:: public
-
-		.. php:method:: add( $text)
-
-
+	.. php:method:: add( $text)
+	
+		
+	
 

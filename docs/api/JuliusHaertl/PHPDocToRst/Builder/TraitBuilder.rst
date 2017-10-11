@@ -1,11 +1,11 @@
 .. rst-class:: phpdoctorst
 
-\\JuliusHaertl\\PHPDocToRst\\Builder\\ClassBuilder
+\\JuliusHaertl\\PHPDocToRst\\Builder\\TraitBuilder
 ==================================================
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Builder
 
-.. php:class:: ClassBuilder
+.. php:class:: TraitBuilder
 
 	:Extends:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\Builder`

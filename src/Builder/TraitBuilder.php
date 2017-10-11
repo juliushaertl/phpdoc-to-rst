@@ -24,97 +24,91 @@
 namespace JuliusHaertl\PHPDocToRst\Builder;
 
 use phpDocumentor\Reflection\DocBlock\Tags\Param;
-use phpDocumentor\Reflection\Php\Interface_;
+use phpDocumentor\Reflection\Php\Argument;
+use phpDocumentor\Reflection\Php\Class_;
+use phpDocumentor\Reflection\Php\Trait_;
 
-
-class InterfaceBuilder extends Builder {
-
-    const SECTION_BEFORE_DESCRIPTION = self::class . '::SECTION_BEFORE_DESCRIPTION';
-    const SECTION_AFTER_DESCRIPTION = self::class . '::SECTION_AFTER_DESCRIPTION';
+class TraitBuilder extends Builder {
 
     protected function render() {
-        /** @var Interface_ $interface */
-        $interface = $this->element;
+        /** @var Trait_ $trait */
+        $trait = $this->element;
 
-        $namespace = str_replace('\\' . $interface->getName(), '', $interface->getFqsen());
+        $docBlock = $trait->getDocBlock();
 
-        $docBlock = $interface->getDocBlock();
-        $this->addH1(self::escape($interface->getFqsen()))->addLine();
+        $this->addH1(self::escape($trait->getFqsen()));
+
+        $namespace = str_replace('\\' . $trait->getName(), '', $trait->getFqsen());
         if($namespace !== '') {
             $this->beginPhpDomain('namespace', substr($namespace, 1), false);
         }
-        $this->beginPhpDomain('interface', $interface->getName(), false);
 
-        $this->addLine();
+        $this->beginPhpDomain('trait', $trait->getName(), false);
 
-        $this->callExtensions(self::SECTION_BEFORE_DESCRIPTION);
-
+        $this->indent();
         if ($docBlock) {
             $this
-                ->addMultiline($docBlock->getDescription())
+                ->addLine($docBlock->getDescription())
                 ->addLine();
         }
 
-        // Add class details
-        $parents = '';
-        foreach ($interface->getParents() as $parent) {
-            $parents .= $this->getLink('interface', $parent) . ' ';
+        $usedTraits = '';
+        foreach ($trait->getUsedTraits() as $trait) {
+            $usedTraits .= $this->getLink('trait', $trait) . ' ';
         }
-        $this->addFieldList('Parent', $parents)->addLine();
+        $this->addFieldList('Traits', $usedTraits);
 
-        $this->callExtensions(self::SECTION_AFTER_DESCRIPTION);
+        $this->unindent();
+        $this->addLine();
+        $this->addLine();
 
-        foreach ($interface->getMethods() as $method) {
-            /* Render method */
+        $this->addH2('Properties');
+        foreach ($trait->getProperties() as $property) {
+            $this->addProperty($property);
+        }
+
+        $this->addH2('Methods');
+        /* Render methods of a trait */
+        foreach ($trait->getMethods() as $method) {
             $docBlock = $method->getDocBlock();
             $params = [];
-            if ($docBlock !== null) {
+            if($docBlock !== null) {
                 /** @var Param $param */
                 foreach ($docBlock->getTagsByName('param') as $param) {
                     $params[$param->getVariableName()] = $param;
                 }
             }
             $args = '';
+            /** @var Argument $argument */
             foreach ($method->getArguments() as $argument) {
-                $args .= '$' . $argument->getName() . ', ';
+                // TODO: defaults, types
+                $args .=  ' $' . $argument->getName() . ', ';
             }
             $args = substr($args, 0, -2);
+
             $modifiers = $method->getVisibility();
             $modifiers .= $method->isAbstract() ? ' abstract' : '';
             $modifiers .= $method->isFinal() ? ' final' : '';
             $modifiers .= $method->isStatic() ? ' static' : '';
             $this->addLine('.. rst-class:: ' . $modifiers)->addLine();
             $this->indent();
-
-            $this->beginPhpDomain('method', $method->getName() . '(' . $args . ')');
+            $this->beginPhpDomain('method', $method->getName().'('.$args.')');
+            if ($docBlock)
+                $this->addMultiline($docBlock->getDescription());
             $this->addLine();
-            if ($docBlock) {
-                $this->addMultiline(RstBuilder::escape($docBlock->getDescription()));
-                $this->addLine();
-            }
-
             if (!empty($params)) {
                 foreach ($method->getArguments() as $argument) {
                     /** @var Param $param */
                     $param = $params[$argument->getName()];
-                    if ($param !== null) $this->addMultiline(':param ' . RstBuilder::escape($param->getType()) . ' $' . $argument->getName() . ': ' . RstBuilder::escape($param->getDescription()), true);
+                    if ($param !== null)
+                        $this->addMultiline(':param ' . $param->getType() . ' $' . $argument->getName() . ': ' . $param->getDescription(), true);
                 }
-                foreach ($docBlock->getTags() as $tag) {
-                    $this->addDocblockTag($tag->getName(), $docBlock);
-                }
-                $this->addLine();
             }
-            $this->unindent();
             $this->endPhpDomain('method');
+            $this->unindent();
+
         }
+        $this->endPhpDomain(); //trait
     }
 
-    /**
-     * Render extension custom views before the descriptioj
-     */
-    private function callExtensions($type) {
-        foreach ($this->extensions as $extension) {
-            $extension->render($type, $this);
-        }
-    }
 }

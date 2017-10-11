@@ -1,6 +1,7 @@
 .. rst-class:: phpdoctorst
 
-.. _namespace-root-namespace
+.. _namespace-root-namespace:
+
 \\
 ==
 
@@ -10,7 +11,7 @@ Namespaces
 
 .. toctree::
 	:maxdepth: 1
-
+	
 
 
 Interfaces
@@ -18,7 +19,7 @@ Interfaces
 
 .. toctree::
 	:maxdepth: 1
-
+	
 
 
 Classes
@@ -26,6 +27,9 @@ Classes
 
 .. toctree::
 	:maxdepth: 1
+	
 
 
+Functions
+---------
 

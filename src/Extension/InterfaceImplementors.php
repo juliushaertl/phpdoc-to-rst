@@ -57,20 +57,18 @@ class InterfaceImplementors extends Extension {
     /**
      * @param string $type
      * @param Builder $builder
-     * @return string
      */
     public function render($type, &$builder) {
         if ($type === InterfaceBuilder::SECTION_AFTER_DESCRIPTION) {
             /** @var Interface_ $interface */
             $interface = $builder->getElement();
-            $content = 'Implemented by ';
+            $content = '';
             foreach ($this->implementors[(string)$interface->getFqsen()] as $implementor) {
                 $content .= ':php:class:`' . RstBuilder::escape(substr($implementor, 1)) . '` ';
             }
-            // FIXME: should work directly on $builder
-            return $content;
+            $builder->addFieldList('Implemented by', $content);
+            $builder->addLine();
         }
-        return '';
     }
 
 }

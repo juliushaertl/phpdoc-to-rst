@@ -7,15 +7,15 @@
 
 .. php:class:: ApiDocBuilder
 
-:Parent:
-	
+	:Extends:
 		
-:Interfaces:
-	
+			
+	:Implements:
 		
-:Traits:
-	
+			
+	:Used traits:
 		
+			
 
 
 Constants
@@ -33,61 +33,95 @@ Properties
 .. php:attr:: extensions
 
 
+.. php:attr:: extensionNames
+
+
 .. php:attr:: srcDir
 
 
 .. php:attr:: dstDir
 
 
+.. php:attr:: verboseOutput
+
+
+.. php:attr:: debugOutput
+
+
 Methods
 -------
 
-	.. rst-class:: public
+.. rst-class:: public
 
-		.. php:method:: __construct( $srcDir,  $dstDir)
-
-
-
-	.. rst-class:: public
-
-		.. php:method:: build()
-
-
-
-	.. rst-class:: private
-
-		.. php:method:: setupReflection()
-
+	.. php:method:: __construct( $srcDir,  $dstDir)
 	
+		
 	
+.. rst-class:: public
 
+	.. php:method:: build()
+	
+		
+	
+.. rst-class:: public
 
-	.. rst-class:: public
+	.. php:method:: setVerboseOutput( $v)
+	
+		
+	
+.. rst-class:: public
 
-		.. php:method:: addExtension( $class)
+	.. php:method:: setDebugOutput( $v)
+	
+		
+	
+.. rst-class:: public
 
+	.. php:method:: log( $message)
+	
+		
+	
+.. rst-class:: public
 
+	.. php:method:: debug( $message)
+	
+		
+	
+.. rst-class:: private
 
+	.. php:method:: setupReflection()
+	
+		
+		
+		
+	
+.. rst-class:: public
 
-:param string $class: name of the extension class
+	.. php:method:: addExtension( $class)
+	
+		
+		
+		
+		:param string $class: name of the extension class
+	
+.. rst-class:: public
 
-	.. rst-class:: public
+	.. php:method:: createDirectoryStructure()
+	
+		
+		
+		
+	
+.. rst-class:: public
 
-		.. php:method:: createDirectoryStructure()
+	.. php:method:: parseFiles()
+	
+		
+	
+.. rst-class:: public
 
-
-
-
-
-	.. rst-class:: public
-
-		.. php:method:: parseFiles()
-
-
-
-	.. rst-class:: public
-
-		.. php:method:: buildToc()
-
-
+	.. php:method:: buildIndexes()
+	
+		
+	
 

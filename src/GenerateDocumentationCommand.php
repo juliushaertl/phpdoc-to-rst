@@ -45,7 +45,15 @@ class GenerateDocumentationCommand extends Command {
     protected function execute(InputInterface $input, OutputInterface $output) {
         $src = $input->getArgument('src');
         $dst = $input->getArgument('target');
+
         $apiDocBuilder = new ApiDocBuilder($src, $dst);
+        if ($output->getVerbosity() >= OutputInterface::VERBOSITY_VERBOSE) {
+            $apiDocBuilder->setVerboseOutput(true);
+        }
+        if ($output->getVerbosity() >= OutputInterface::VERBOSITY_VERY_VERBOSE) {
+            $apiDocBuilder->setVerboseOutput(true);
+            $apiDocBuilder->setDebugOutput(true);
+        }
         $apiDocBuilder->build();
     }
 }

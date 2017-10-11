@@ -23,11 +23,12 @@ class MainIndexBuilder extends RstBuilder {
 
     public function render() {
         $label = 'root-namespace';
-        $this->addLine('.. _namespace-all');
+        $this->addLine('.. _namespaces:')->addLine();
         $this->addH1(RstBuilder::escape('Namespaces'));
-        $this->addLine();
+
         $this->addLine('.. toctree::');
-        $this->addIndentLine(1, ':maxdepth: 1')->addLine();
+        $this->indent();
+        $this->addLine(':maxdepth: 1')->addLine();
         foreach ($this->namespaces as $namespace) {
             $namespaceString = (string)$namespace->getFqsen();
             $subPath = $namespaceString;
@@ -35,7 +36,7 @@ class MainIndexBuilder extends RstBuilder {
             if ($namespaceString === '\\') {
                 $path = 'index';
             }
-            $this->addIndentLine(1, $namespace->getFqsen() . ' <' . $path . '>');
+            $this->addLine($namespace->getFqsen() . ' <' . $path . '>');
         }
         $this->addLine();
         $this->addLine();

@@ -7,14 +7,14 @@
 
 .. php:class:: NamespaceIndexBuilder
 
-:Parent:
-	:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder`
-:Interfaces:
-	
+	:Extends:
+		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\PhpDomainBuilder`
+	:Implements:
 		
-:Traits:
-	
+			
+	:Used traits:
 		
+			
 
 
 Constants
@@ -32,15 +32,16 @@ Properties
 Methods
 -------
 
-	.. rst-class:: public
+.. rst-class:: public
 
-		.. php:method:: __construct( $namespaces,  $current)
+	.. php:method:: __construct( $namespaces,  $current)
+	
+		
+	
+.. rst-class:: public
 
-
-
-	.. rst-class:: public
-
-		.. php:method:: render()
-
-
+	.. php:method:: render()
+	
+		
+	
 

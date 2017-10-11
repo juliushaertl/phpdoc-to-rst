@@ -24,18 +24,15 @@
 namespace JuliusHaertl\PHPDocToRst\Builder;
 
 use JuliusHaertl\PHPDocToRst\Extension\Extension;
-use phpDocumentor\Reflection\DocBlock;
-use phpDocumentor\Reflection\DocBlock\Tags\Deprecated;
-use phpDocumentor\Reflection\DocBlock\Tags\Return_;
-use phpDocumentor\Reflection\DocBlock\Tags\See;
-use phpDocumentor\Reflection\DocBlock\Tags\Since;
-use phpDocumentor\Reflection\DocBlock\Tags\Throws;
 use phpDocumentor\Reflection\Element;
 use phpDocumentor\Reflection\File;
-use phpDocumentor\Reflection\Fqsen;
 
-
-abstract class Builder extends RstBuilder {
+/**
+ * Building class for sphinxcontrib-phpdomain
+ *
+ * @package JuliusHaertl\PHPDocToRst\Builder
+ */
+abstract class Builder extends PhpDomainBuilder {
 
     /** @var File */
     protected $file;
@@ -63,77 +60,5 @@ abstract class Builder extends RstBuilder {
     public function getElement() {
         return $this->element;
     }
-
-    public function getLink($type, $fqsen) {
-        return ':php:' . $type . ':`' . RstBuilder::escape(substr($fqsen, 1)) . '`';
-    }
-
-    public function beginPhpDomain($type, $name, $indent=true) {
-        // FIXME: Add checks if it is properly ended
-        $this->addLine('.. php:' . $type . ':: '. $name)->addLine();
-        if ($indent === true) {
-            $this->indent();
-        }
-    }
-
-    public function endPhpDomain($type='') {
-        $this->unindent();
-        $this->addLine();
-    }
-
-    /**
-     * @param string $tag Name of the tag to parse
-     * @param DocBlock $docBlock
-     */
-    protected function addDocblockTag($tag, DocBlock $docBlock) {
-        $indent = 0;
-        $tags = $docBlock->getTagsByName($tag);
-        switch ($tag) {
-            case 'return':
-                if (sizeof($tags) === 0) continue;
-                /** @var Return_ $return */
-                $return = $tags[0];
-                $this->addIndentMultiline($indent, ':returns: ' . $return->getType() . ' ' . RstBuilder::escape($return->getDescription()), true);
-                break;
-            case 'throws':
-                if (sizeof($tags) === 0) continue;
-                /** @var Throws $return */
-                $return = $tags[0];
-                $this->addIndentMultiline($indent, ':throws: ' . $return->getType() . ' ' . RstBuilder::escape($return->getDescription()), true);
-                break;
-            case 'since':
-                if (sizeof($tags) === 0) continue;
-                /** @var Since $return */
-                $return = $tags[0];
-                $this->addIndentMultiline($indent, ':since: ' . $return->getVersion() . ' ' . RstBuilder::escape($return->getDescription()), true);
-                break;
-            case 'deprecated':
-                if (sizeof($tags) === 0) continue;
-                /** @var Deprecated $return */
-                $return = $tags[0];
-                $this->addIndentMultiline($indent, ':deprecated: ' . $return->getVersion() . ' ' . RstBuilder::escape($return->getDescription()), true);
-                break;
-            case 'see':
-                if (sizeof($tags) === 0) continue;
-                /** @var See $return */
-                $return = $tags[0];
-                $this->addIndentMultiline($indent, ':see: ' . $return->getReference() . ' ' . RstBuilder::escape($return->getDescription()), true);
-                break;
-            case 'license':
-                if (sizeof($tags) === 0) continue;
-                /** @var DocBlock\Tags\BaseTag $return */
-                $return = $tags[0];
-                $this->addIndentMultiline($indent, ':license: ' . RstBuilder::escape($return->getDescription()), true);
-                break;
-            case 'param':
-                // param handling is done by subclasses since it is more that docbook parsing
-                break;
-            default:
-                echo 'Tag handling not defined for: ' . $tag . PHP_EOL;
-                break;
-        }
-
-    }
-
 
 }

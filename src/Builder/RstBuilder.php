@@ -49,15 +49,18 @@ class RstBuilder {
 
     public function indent() {
         $this->indentLevel++;
+        return $this;
     }
 
     public function unindent() {
         $this->indentLevel--;
+        return $this;
     }
 
     public function addFieldList($key, $value) {
         $this->addLine(':'.self::escape($key).':');
-        $this->addIndentMultiline(1, $value, true);
+        $this->indent()->addMultiline($value, true)->unindent();
+        return $this;
     }
 
     public function addH1($text) {
@@ -77,21 +80,17 @@ class RstBuilder {
         return $this;
     }
 
-    public function addIndentLine($indent, $text) {
-        $this->addLine(str_repeat("\t", $indent) . $text);
-        return $this;
-    }
-
-    public function addIndentMultiline($indent, $text, $blockIndent = false) {
-        // parse <code> / {@link seeMethod} / {@link https://}
+    public function addMultiline($text = '', $blockIndent = false) {
         $lines = preg_split('/$\R?^/m', $text);
         $i = 0;
         foreach ($lines as $line) {
-            if ($blockIndent && $i === 1) {
-                $indent++;
+            if ($blockIndent && $i++ === 1) {
+                $this->indent();
             }
-            $this->addIndentLine($this->indentLevel+$indent, $line);
-            $i++;
+            $this->addLine($line);
+        }
+        if ($blockIndent && sizeof($lines) > 1) {
+            $this->unindent();
         }
         return $this;
     }
@@ -100,5 +99,6 @@ class RstBuilder {
         $this->content .= $text;
         return $this;
     }
+
 
 }

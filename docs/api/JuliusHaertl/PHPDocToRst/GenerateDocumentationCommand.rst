@@ -7,14 +7,14 @@
 
 .. php:class:: GenerateDocumentationCommand
 
-:Parent:
-	:php:class:`Symfony\\Component\\Console\\Command\\Command`
-:Interfaces:
-	
+	:Extends:
+		:php:class:`Symfony\\Component\\Console\\Command\\Command`
+	:Implements:
 		
-:Traits:
-	
+			
+	:Used traits:
 		
+			
 
 
 Constants
@@ -26,15 +26,16 @@ Properties
 Methods
 -------
 
-	.. rst-class:: protected
+.. rst-class:: protected
 
-		.. php:method:: configure()
+	.. php:method:: configure()
+	
+		
+	
+.. rst-class:: protected
 
-
-
-	.. rst-class:: protected
-
-		.. php:method:: execute( $input,  $output)
-
-
+	.. php:method:: execute( $input,  $output)
+	
+		
+	
 

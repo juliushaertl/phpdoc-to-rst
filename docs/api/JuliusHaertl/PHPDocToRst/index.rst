@@ -1,6 +1,7 @@
 .. rst-class:: phpdoctorst
 
-.. _namespace-JuliusHaertl-PHPDocToRst
+.. _namespace-JuliusHaertl-PHPDocToRst:
+
 \\JuliusHaertl\\PHPDocToRst
 ===========================
 
@@ -10,7 +11,7 @@ Namespaces
 
 .. toctree::
 	:maxdepth: 1
-
+	
 	Builder <Builder/index>
 	Extension <Extension/index>
 
@@ -20,7 +21,7 @@ Interfaces
 
 .. toctree::
 	:maxdepth: 1
-
+	
 
 
 Classes
@@ -28,8 +29,12 @@ Classes
 
 .. toctree::
 	:maxdepth: 1
-
+	
+	WriteException <WriteException>
 	GenerateDocumentationCommand <GenerateDocumentationCommand>
 	ApiDocBuilder <ApiDocBuilder>
 
+
+Functions
+---------
 

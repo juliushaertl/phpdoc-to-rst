@@ -12,7 +12,7 @@ namespace JuliusHaertl\PHPDocToRst\Builder;
 use phpDocumentor\Reflection\Fqsen;
 use phpDocumentor\Reflection\Php\Namespace_;
 
-class NamespaceIndexBuilder extends RstBuilder {
+class NamespaceIndexBuilder extends PhpDomainBuilder {
 
     /** @var Namespace_ */
     private $currentNamespace;
@@ -50,27 +50,30 @@ class NamespaceIndexBuilder extends RstBuilder {
 
         if ($currentNamespaceFqsen !== '\\') {
             $label = str_replace('\\', '-', $currentNamespaceFqsen);
-            $this->addLine('.. _namespace' . $label . '');
+            $this->addLine('.. _namespace' . $label . ':')->addLine();
             $this->addH1(RstBuilder::escape($currentNamespaceFqsen));
         } else {
             $label = 'root-namespace';
-            $this->addLine('.. _namespace-' . $label . '');
+            $this->addLine('.. _namespace-' . $label . ':')->addLine();
             $this->addH1(RstBuilder::escape('\\'));
         }
         $this->addLine();
 
         $this->addH2('Namespaces');
         $this->addLine('.. toctree::');
-        $this->addIndentLine(1, ':maxdepth: 1')->addLine();
+        $this->indent();
+        $this->addLine(':maxdepth: 1')->addLine();
         /** @var Namespace_ $namespace */
         foreach ($childNamespaces as $namespace) {
-            $this->addIndentLine(1, $namespace->getName() . ' <' . $namespace->getName() . '/index>');
+            $this->addLine($namespace->getName() . ' <' . $namespace->getName() . '/index>');
         }
+        $this->unindent();
         $this->addLine()->addLine();
 
         $this->addH2('Interfaces');
         $this->addLine('.. toctree::');
-        $this->addIndentLine(1, ':maxdepth: 1')->addLine();
+        $this->indent();
+        $this->addLine(':maxdepth: 1')->addLine();
         /** @var Fqsen $entry */
         foreach ($this->currentNamespace->getInterfaces() as $entry) {
             $subPath = $entry;
@@ -78,13 +81,15 @@ class NamespaceIndexBuilder extends RstBuilder {
                 $subPath = substr($entry, strlen($currentNamespaceFqsen));
             }
             $path = substr(str_replace("\\", "/", $subPath), 1);
-            $this->addIndentLine(1, $entry->getName() . ' <' . $path . '>');
+            $this->addLine($entry->getName() . ' <' . $path . '>');
         }
+        $this->unindent();
         $this->addLine()->addLine();
 
         $this->addH2('Classes');
         $this->addLine('.. toctree::');
-        $this->addIndentLine(1, ':maxdepth: 1')->addLine();
+        $this->indent();
+        $this->addLine(':maxdepth: 1')->addLine();
         /** @var Fqsen $entry */
         foreach ($this->currentNamespace->getClasses() as $entry) {
             $subPath = $entry;
@@ -92,9 +97,17 @@ class NamespaceIndexBuilder extends RstBuilder {
                 $subPath = substr($entry, strlen($currentNamespaceFqsen));
             }
             $path = substr(str_replace("\\", "/", $subPath), 1);
-            $this->addIndentLine(1,$entry->getName() . ' <' . $path . '>');
+            $this->addLine($entry->getName() . ' <' . $path . '>');
         }
+        $this->unindent();
         $this->addLine()->addLine();
+
+        $this->addH2('Functions');
+        foreach ($this->currentNamespace->getFunctions() as $function) {
+            $this->beginPhpDomain('function', $function->getName(). '()');
+            $this->endPhpDomain('function');
+        }
+
 
         // FIXME: add functions / constants
 

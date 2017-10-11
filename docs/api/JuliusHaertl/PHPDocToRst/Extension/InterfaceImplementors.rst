@@ -9,15 +9,14 @@
 
 	
 	
-
-:Parent:
-	:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`
-:Interfaces:
-	
+	:Extends:
+		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`
+	:Implements:
 		
-:Traits:
-	
+			
+	:Used traits:
 		
+			
 
 
 Constants
@@ -32,19 +31,20 @@ Properties
 Methods
 -------
 
-	.. rst-class:: public
+.. rst-class:: public
 
-		.. php:method:: prepare()
+	.. php:method:: prepare()
+	
+		
+	
+.. rst-class:: public
 
-
-
-	.. rst-class:: public
-
-		.. php:method:: render( $type,  $builder)
-
+	.. php:method:: render( $type,  $builder)
+	
 		
 		
-
+		
 		:param string $type: 
 		:param \JuliusHaertl\PHPDocToRst\Builder\Builder $builder: 
+	
 

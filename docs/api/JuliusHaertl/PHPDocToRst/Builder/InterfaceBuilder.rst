@@ -7,14 +7,14 @@
 
 .. php:class:: InterfaceBuilder
 
-:Parent:
-	:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\Builder`
-:Interfaces:
-	
+	:Extends:
+		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\Builder`
+	:Implements:
 		
-:Traits:
-	
+			
+	:Used traits:
 		
+			
 
 
 Constants
@@ -32,17 +32,18 @@ Properties
 Methods
 -------
 
-	.. rst-class:: protected
+.. rst-class:: protected
 
-		.. php:method:: render()
+	.. php:method:: render()
+	
+		
+	
+.. rst-class:: private
 
-
-
-	.. rst-class:: private
-
-		.. php:method:: callExtensions( $type)
-
+	.. php:method:: callExtensions( $type)
+	
 		
 		
-
+		
+	
 

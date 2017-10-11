@@ -9,14 +9,16 @@
 
 .. php:class:: Builder
 
-:Parent:
-	:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder`
-:Interfaces:
 	
-		
-:Traits:
 	
+	:Extends:
+		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\PhpDomainBuilder`
+	:Implements:
 		
+			
+	:Used traits:
+		
+			
 
 
 Constants
@@ -40,51 +42,24 @@ Properties
 Methods
 -------
 
-	.. rst-class:: protected abstract
+.. rst-class:: protected abstract
 
-		.. php:method:: render()
-
-
-
-	.. rst-class:: public
-
-		.. php:method:: __construct( $file,  $element,  $extensions)
-
-
-
-	.. rst-class:: public
-
-		.. php:method:: getElement()
-
+	.. php:method:: render()
 	
+		
 	
+.. rst-class:: public
 
+	.. php:method:: __construct( $file,  $element,  $extensions)
+	
+		
+	
+.. rst-class:: public
 
-	.. rst-class:: public
-
-		.. php:method:: getLink( $type,  $fqsen)
-
-
-
-	.. rst-class:: public
-
-		.. php:method:: beginPhpDomain( $type,  $name,  $indent)
-
-
-
-	.. rst-class:: public
-
-		.. php:method:: endPhpDomain( $type)
-
-
-
-	.. rst-class:: protected
-
-		.. php:method:: addDocblockTag( $tag,  $docBlock)
-
-
-
-
-:param string $tag: Name of the tag to parse
-:param \phpDocumentor\Reflection\DocBlock $docBlock: 
+	.. php:method:: getElement()
+	
+		
+		
+		
+	
 
