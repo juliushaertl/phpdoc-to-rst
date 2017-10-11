@@ -6,8 +6,13 @@
 Welcome to phpdoc-to-rst's documentation!
 =========================================
 
+phpdoc-to-rst is a library that can generate reStructuredText based documentation
+to be build with sphinx from your PHPDoc annotated code.
+`sphinxcontrib-phpdomain <https://github.com/markstory/sphinxcontrib-phpdomain>`_
+is used to annotate the PHP objects in the documentation.
+
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :caption: Contents:
 
    cli
