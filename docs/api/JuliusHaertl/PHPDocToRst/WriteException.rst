@@ -1,7 +1,7 @@
 .. rst-class:: phpdoctorst
 
-\\JuliusHaertl\\PHPDocToRst\\WriteException
-===========================================
+WriteException
+==============
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst
 
@@ -9,21 +9,6 @@
 
 	:Extends:
 		:php:class:`Exception`
-	:Implements:
-		
-			
-	:Used traits:
-		
-			
 
-
-Constants
----------
-
-Properties
-----------
-
-Methods
--------
 
 

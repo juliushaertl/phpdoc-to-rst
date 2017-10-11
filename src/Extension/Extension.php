@@ -24,7 +24,8 @@
 namespace JuliusHaertl\PHPDocToRst\Extension;
 
 
-use JuliusHaertl\PHPDocToRst\Builder\Builder;
+use JuliusHaertl\PHPDocToRst\Builder\FileBuilder;
+use phpDocumentor\Reflection\Element;
 use phpDocumentor\Reflection\Php\Project;
 
 abstract class Extension {
@@ -41,20 +42,37 @@ abstract class Extension {
      * This is useful for preparing own data structures
      * to be used in the output documentation
      */
-    abstract public function prepare();
+    public function prepare() {
+
+    }
 
     /**
      * Implement custom rendering functionality here.
      * It will be executed by Builder classes depending on the given type.
      *
      * Currently supported types:
+     *
      *  - InterfaceBuilder::SECTION_BEFORE_DESCRIPTION
      *  - InterfaceBuilder::SECTION_AFTER_DESCRIPTION
      *
-     * @param $type
-     * @param Builder $builder
-     * @return mixed
+     * @param string $type
+     * @param FileBuilder $builder
      */
-    abstract function render($type, &$builder);
+    public function render($type, &$builder) {
+
+    }
+
+    /**
+     * This method will be called to check if a certain element should
+     * be rendered in the documentation.
+     *
+     * An example extension that makes use of it is PublicOnlyExtension
+     *
+     * @param Element $element
+     * @return bool
+     */
+    public function shouldRenderElement(Element $element) {
+        return true;
+    }
 
 }

@@ -2,8 +2,10 @@
 
 .. _namespace-JuliusHaertl-PHPDocToRst-Builder:
 
+Builder
+=======
+
 \\JuliusHaertl\\PHPDocToRst\\Builder
-====================================
 
 
 Namespaces
@@ -28,13 +30,13 @@ Classes
 .. toctree::
 	:maxdepth: 1
 	
-	TraitBuilder <TraitBuilder>
 	MainIndexBuilder <MainIndexBuilder>
 	PhpDomainBuilder <PhpDomainBuilder>
-	InterfaceBuilder <InterfaceBuilder>
 	RstBuilder <RstBuilder>
-	Builder <Builder>
-	ClassBuilder <ClassBuilder>
+	FileBuilder <FileBuilder>
+	ClassFileBuilder <ClassFileBuilder>
+	InterfaceFileBuilder <InterfaceFileBuilder>
+	TraitFileBuilder <TraitFileBuilder>
 	NamespaceIndexBuilder <NamespaceIndexBuilder>
 
 

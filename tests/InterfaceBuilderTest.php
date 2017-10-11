@@ -8,7 +8,7 @@
 
 namespace JuliusHaertl\PHPDocToRst\Test;
 
-use JuliusHaertl\PHPDocToRst\Builder\InterfaceBuilder;
+use JuliusHaertl\PHPDocToRst\Builder\InterfaceFileBuilder;
 use phpDocumentor\Reflection\Element;
 use phpDocumentor\Reflection\Php\File;
 use PHPUnit\Framework\TestCase;

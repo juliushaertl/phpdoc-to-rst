@@ -12,5 +12,6 @@ Namespaces
 	\JuliusHaertl\PHPDocToRst <JuliusHaertl/PHPDocToRst/index>
 	\JuliusHaertl\PHPDocToRst\Builder <JuliusHaertl/PHPDocToRst/Builder/index>
 	\JuliusHaertl\PHPDocToRst\Extension <JuliusHaertl/PHPDocToRst/Extension/index>
+	\JuliusHaertl\PHPDocToRst\Middleware <JuliusHaertl/PHPDocToRst/Middleware/index>
 	
 	

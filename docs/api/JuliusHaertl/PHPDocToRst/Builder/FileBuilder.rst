@@ -1,28 +1,22 @@
 .. rst-class:: phpdoctorst
 
-\\JuliusHaertl\\PHPDocToRst\\Builder\\Builder
-=============================================
+FileBuilder
+===========
 
-.. php:namespace:: JuliusHaertl\PHPDocToRst
+.. php:namespace:: JuliusHaertl\PHPDocToRst\Builder
 
 .. rst-class::  abstract
 
-.. php:class:: Builder
+.. php:class:: FileBuilder
 
+	Abstract building class to build sphinxcontrib-phpdomain from a php file
+	
+	
 	
 	
 	:Extends:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\PhpDomainBuilder`
-	:Implements:
-		
-			
-	:Used traits:
-		
-			
 
-
-Constants
----------
 
 Properties
 ----------
@@ -58,6 +52,10 @@ Methods
 
 	.. php:method:: getElement()
 	
+		
+		
+		
+		
 		
 		
 		

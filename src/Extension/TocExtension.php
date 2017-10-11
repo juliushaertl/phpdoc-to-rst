@@ -29,30 +29,11 @@ use JuliusHaertl\PHPDocToRst\Builder\RstBuilder;
 use phpDocumentor\Reflection\Php\Interface_;
 
 /**
- * Class InterfaceImplementors
- * @package JuliusHaertl\PHPDocToRst\Extension
- *
- * This extension parses all classes and interface relations.
- * A link to all classes implementing a specific interface
- * is added to the interface documentation.
+ * This extension will render a list of methods  for easy access
+ * at the beginning of classes, interfaces and traits
  */
 
-class InterfaceImplementors extends Extension {
-
-    private $implementors = [];
-
-    public function prepare() {
-        foreach ($this->project->getFiles() as $file) {
-            foreach ($file->getClasses() as $class) {
-                foreach ($class->getInterfaces() as $interface) {
-                    if (!array_key_exists((string)$interface, $this->implementors)) {
-                        $this->implementors[(string)$interface] = [];
-                    }
-                    $this->implementors[(string)$interface][] = $class->getFqsen();
-                }
-            }
-        }
-    }
+class TocExtension extends Extension {
 
     /**
      * @param string $type
@@ -60,13 +41,13 @@ class InterfaceImplementors extends Extension {
      */
     public function render($type, &$builder) {
         if ($type === InterfaceFileBuilder::SECTION_AFTER_DESCRIPTION) {
+            $builder->addLine();
             /** @var Interface_ $interface */
             $interface = $builder->getElement();
-            $content = '';
-            foreach ($this->implementors[(string)$interface->getFqsen()] as $implementor) {
-                $content .= ':php:class:`' . RstBuilder::escape(substr($implementor, 1)) . '` ';
+            $builder->addH2('Methods');
+            foreach ($interface->getMethods() as $method) {
+                $builder->addLine('* :php:meth:`' . $method->getName() . '`');
             }
-            $builder->addFieldList('Implemented by', $content);
             $builder->addLine();
         }
     }

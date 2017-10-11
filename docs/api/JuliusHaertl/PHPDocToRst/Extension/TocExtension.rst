@@ -1,13 +1,14 @@
 .. rst-class:: phpdoctorst
 
-InterfaceImplementors
-=====================
+TocExtension
+============
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Extension
 
-.. php:class:: InterfaceImplementors
+.. php:class:: TocExtension
 
-	Class InterfaceImplementors
+	This extension will render a list of methods  for easy access
+	at the beginning of classes, interfaces and traits
 	
 	
 	
@@ -16,21 +17,9 @@ InterfaceImplementors
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`
 
 
-Properties
-----------
-
-.. php:attr:: implementors
-
-
 Methods
 -------
 
-.. rst-class:: public
-
-	.. php:method:: prepare()
-	
-		
-	
 .. rst-class:: public
 
 	.. php:method:: render( $type,  $builder)

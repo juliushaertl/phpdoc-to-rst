@@ -23,11 +23,18 @@
 
 namespace JuliusHaertl\PHPDocToRst;
 
+use JuliusHaertl\PHPDocToRst\Extension\PublicOnlyExtension;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputArgument;
 
+/**
+ * Class GenerateDocumentationCommand
+ * @package JuliusHaertl\PHPDocToRst
+ * @internal Only for use of the phpdoc-to-rst cli tool
+ */
 class GenerateDocumentationCommand extends Command {
 
     protected function configure() {
@@ -39,7 +46,8 @@ class GenerateDocumentationCommand extends Command {
             ->addArgument(
                 'src',
                 InputArgument::IS_ARRAY,
-                'Source directories to parse');
+                'Source directories to parse')
+            ->addOption('public-only', 'p', InputOption::VALUE_NONE);
     }
 
     protected function execute(InputInterface $input, OutputInterface $output) {
@@ -53,6 +61,9 @@ class GenerateDocumentationCommand extends Command {
         if ($output->getVerbosity() >= OutputInterface::VERBOSITY_VERY_VERBOSE) {
             $apiDocBuilder->setVerboseOutput(true);
             $apiDocBuilder->setDebugOutput(true);
+        }
+        if($input->getOption('public-only')) {
+            $apiDocBuilder->addExtension(PublicOnlyExtension::class);
         }
         $apiDocBuilder->build();
     }

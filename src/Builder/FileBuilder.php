@@ -28,11 +28,11 @@ use phpDocumentor\Reflection\Element;
 use phpDocumentor\Reflection\File;
 
 /**
- * Building class for sphinxcontrib-phpdomain
+ * Abstract building class to build sphinxcontrib-phpdomain from a php file
  *
  * @package JuliusHaertl\PHPDocToRst\Builder
  */
-abstract class Builder extends PhpDomainBuilder {
+abstract class FileBuilder extends PhpDomainBuilder {
 
     /** @var File */
     protected $file;
@@ -48,8 +48,8 @@ abstract class Builder extends PhpDomainBuilder {
     protected abstract function render();
 
     public function __construct($file, $element, $extensions) {
+        parent::__construct($extensions);
         $this->file = $file;
-        $this->extensions = $extensions;
         $this->element = $element;
         $this->render();
     }

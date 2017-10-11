@@ -2,8 +2,10 @@
 
 .. _namespace-JuliusHaertl-PHPDocToRst:
 
+PHPDocToRst
+===========
+
 \\JuliusHaertl\\PHPDocToRst
-===========================
 
 
 Namespaces
@@ -14,6 +16,7 @@ Namespaces
 	
 	Builder <Builder/index>
 	Extension <Extension/index>
+	Middleware <Middleware/index>
 
 
 Interfaces

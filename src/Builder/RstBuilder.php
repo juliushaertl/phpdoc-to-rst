@@ -89,7 +89,7 @@ class RstBuilder {
             }
             $this->addLine($line);
         }
-        if ($blockIndent && sizeof($lines) > 1) {
+        if ($blockIndent && count($lines) > 1) {
             $this->unindent();
         }
         return $this;

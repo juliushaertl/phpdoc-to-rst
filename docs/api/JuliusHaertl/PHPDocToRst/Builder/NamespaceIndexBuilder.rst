@@ -1,24 +1,19 @@
 .. rst-class:: phpdoctorst
 
-\\JuliusHaertl\\PHPDocToRst\\Builder\\NamespaceIndexBuilder
-===========================================================
+NamespaceIndexBuilder
+=====================
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Builder
 
 .. php:class:: NamespaceIndexBuilder
 
+	This class will build an index for each namespace.
+	
+	It contains a toc for child namespaces, classes, traits, interfaces and functions
+	
 	:Extends:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\PhpDomainBuilder`
-	:Implements:
-		
-			
-	:Used traits:
-		
-			
 
-
-Constants
----------
 
 Properties
 ----------
@@ -34,7 +29,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: __construct( $namespaces,  $current)
+	.. php:method:: __construct( $extensions,  $namespaces,  $current)
 	
 		
 	

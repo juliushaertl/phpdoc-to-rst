@@ -7,11 +7,13 @@ Welcome to phpdoc-to-rst's documentation!
 =========================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
 
    cli
-   api
+   usage
+   extensions
+   api_docs
 
 
     

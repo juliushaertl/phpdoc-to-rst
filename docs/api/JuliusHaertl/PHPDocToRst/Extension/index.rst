@@ -2,8 +2,10 @@
 
 .. _namespace-JuliusHaertl-PHPDocToRst-Extension:
 
+Extension
+=========
+
 \\JuliusHaertl\\PHPDocToRst\\Extension
-======================================
 
 
 Namespaces
@@ -28,7 +30,9 @@ Classes
 .. toctree::
 	:maxdepth: 1
 	
+	TocExtension <TocExtension>
 	InterfaceImplementors <InterfaceImplementors>
+	PublicOnlyExtension <PublicOnlyExtension>
 	Extension <Extension>
 
 

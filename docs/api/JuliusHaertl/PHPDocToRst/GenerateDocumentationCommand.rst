@@ -1,27 +1,20 @@
 .. rst-class:: phpdoctorst
 
-\\JuliusHaertl\\PHPDocToRst\\GenerateDocumentationCommand
-=========================================================
+GenerateDocumentationCommand
+============================
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst
 
 .. php:class:: GenerateDocumentationCommand
 
+	Class GenerateDocumentationCommand
+	
+	
+	
+	
 	:Extends:
 		:php:class:`Symfony\\Component\\Console\\Command\\Command`
-	:Implements:
-		
-			
-	:Used traits:
-		
-			
 
-
-Constants
----------
-
-Properties
-----------
 
 Methods
 -------

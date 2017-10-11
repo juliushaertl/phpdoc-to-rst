@@ -1,24 +1,20 @@
 .. rst-class:: phpdoctorst
 
-\\JuliusHaertl\\PHPDocToRst\\Builder\\MainIndexBuilder
-======================================================
+MainIndexBuilder
+================
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Builder
 
 .. php:class:: MainIndexBuilder
 
+	This class builds a list of all available namespaces in the project.
+	
+	
+	
+	
 	:Extends:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder`
-	:Implements:
-		
-			
-	:Used traits:
-		
-			
 
-
-Constants
----------
 
 Properties
 ----------

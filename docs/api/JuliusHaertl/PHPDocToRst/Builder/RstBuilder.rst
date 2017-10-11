@@ -1,27 +1,18 @@
 .. rst-class:: phpdoctorst
 
-\\JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder
-================================================
+RstBuilder
+==========
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Builder
 
 .. php:class:: RstBuilder
 
+	Helper class to build reStructuredText files
 	
 	
-	:Extends:
-		
-			
-	:Implements:
-		
-			
-	:Used traits:
-		
-			
+	
+	
 
-
-Constants
----------
 
 Properties
 ----------
