@@ -13,8 +13,6 @@
 .. php:class:: TocExtension
 
 
-	:php:` class TocExtension {}`
-	
 	This extension will render a list of methods  for easy access
 	at the beginning of classes, interfaces and traits
 	

@@ -1,24 +1,5 @@
 /* API doc styles */
 
-dl.interface > dt,
-dl.class > dt
-{
-    margin-bottom: 20px;
-    font-size:24pt;
-    font-weight: 300;
-}
-
-dl.method > dt
-{
-    margin-bottom: 40px;
-    font-size:18pt;
-    font-weight: 300;
-}
-
-.phpdoctorst h1 {
-    display: none;
-}
-
 /** Hacky way to display visibility since sphinx-phpdomain currently doesn't seem support them */
 
 .public:before {

@@ -15,8 +15,6 @@
 .. php:class:: Extension
 
 
-	:php:`abstract class Extension {}`
-	
 
 Properties
 ----------

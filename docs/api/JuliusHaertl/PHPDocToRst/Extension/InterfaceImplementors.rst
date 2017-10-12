@@ -13,8 +13,6 @@
 .. php:class:: InterfaceImplementors
 
 
-	:php:` class InterfaceImplementors {}`
-	
 	Class InterfaceImplementors
 	
 	

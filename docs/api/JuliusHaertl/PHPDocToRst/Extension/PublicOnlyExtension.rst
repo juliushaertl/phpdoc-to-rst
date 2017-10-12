@@ -13,8 +13,6 @@
 .. php:class:: PublicOnlyExtension
 
 
-	:php:` class PublicOnlyExtension {}`
-	
 	Do not render classes marked with phpDoc internal tag
 	Do only render public methods/properties
 	

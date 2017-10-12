@@ -13,8 +13,6 @@
 .. php:class:: AddFullElementNameExtension
 
 
-	:php:` class AddFullElementNameExtension {}`
-	
 	Add the fully qualified element name including the namespace to each page
 	
 	

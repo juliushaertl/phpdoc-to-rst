@@ -12,7 +12,7 @@ to be build with sphinx from your PHPDoc annotated code.
 is used to annotate the PHP objects in the documentation.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Contents:
 
    cli

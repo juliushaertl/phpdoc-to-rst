@@ -13,8 +13,6 @@
 .. php:class:: WriteException
 
 
-	:php:` class WriteException {}`
-	
 	:Parent:
 		:php:class:`Exception`
 	

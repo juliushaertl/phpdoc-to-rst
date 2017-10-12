@@ -15,8 +15,6 @@
 .. php:class:: ErrorHandlingMiddleware
 
 
-	:php:` final class ErrorHandlingMiddleware {}`
-	
 	Class ErrorHandlingMiddleware
 	
 	

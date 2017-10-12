@@ -13,8 +13,6 @@
 .. php:class:: TraitFileBuilder
 
 
-	:php:` class TraitFileBuilder {}`
-	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder`
 	

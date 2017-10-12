@@ -13,8 +13,6 @@
 .. php:class:: PhpDomainBuilder
 
 
-	:php:` class PhpDomainBuilder {}`
-	
 	Class to build reStructuredText file with sphinxcontrib-phpdomain syntax
 	
 	

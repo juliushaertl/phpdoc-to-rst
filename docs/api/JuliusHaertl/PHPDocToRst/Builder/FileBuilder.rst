@@ -15,8 +15,6 @@
 .. php:class:: FileBuilder
 
 
-	:php:`abstract class FileBuilder {}`
-	
 	Abstract building class to build sphinxcontrib-phpdomain from a php file
 	
 	

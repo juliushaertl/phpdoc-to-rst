@@ -13,8 +13,6 @@
 .. php:class:: MainIndexBuilder
 
 
-	:php:` class MainIndexBuilder {}`
-	
 	This class builds a list of all available namespaces in the project.
 	
 	

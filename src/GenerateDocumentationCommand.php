@@ -66,7 +66,6 @@ class GenerateDocumentationCommand extends Command {
         if($input->getOption('public-only')) {
             $apiDocBuilder->addExtension(PublicOnlyExtension::class);
         }
-        $apiDocBuilder->addExtension(AddFullElementNameExtension::class);
         $apiDocBuilder->build();
     }
 }

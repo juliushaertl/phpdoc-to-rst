@@ -13,8 +13,6 @@
 .. php:class:: HideChildNamespaces
 
 
-	:php:` class HideChildNamespaces {}`
-	
 	Example for hiding a section in the namespace index page
 	
 	

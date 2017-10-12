@@ -13,8 +13,6 @@
 .. php:class:: RstBuilder
 
 
-	:php:` class RstBuilder {}`
-	
 	Helper class to build reStructuredText files
 	
 	

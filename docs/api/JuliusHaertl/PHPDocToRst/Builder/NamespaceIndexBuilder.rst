@@ -13,8 +13,6 @@
 .. php:class:: NamespaceIndexBuilder
 
 
-	:php:` class NamespaceIndexBuilder {}`
-	
 	This class will build an index for each namespace.
 	
 	It contains a toc for child namespaces, classes, traits, interfaces and functions

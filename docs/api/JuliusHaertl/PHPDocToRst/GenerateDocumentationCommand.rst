@@ -13,8 +13,6 @@
 .. php:class:: GenerateDocumentationCommand
 
 
-	:php:` class GenerateDocumentationCommand {}`
-	
 	Class GenerateDocumentationCommand
 	
 	

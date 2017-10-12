@@ -13,8 +13,6 @@
 .. php:class:: InterfaceFileBuilder
 
 
-	:php:` class InterfaceFileBuilder {}`
-	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder`
 	

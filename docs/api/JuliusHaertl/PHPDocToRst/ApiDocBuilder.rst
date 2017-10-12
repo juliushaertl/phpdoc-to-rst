@@ -15,8 +15,6 @@
 .. php:class:: ApiDocBuilder
 
 
-	:php:` final class ApiDocBuilder {}`
-	
 	This class is used to parse a project tree and generate rst files
 	for all of the containing PHP structures
 	
