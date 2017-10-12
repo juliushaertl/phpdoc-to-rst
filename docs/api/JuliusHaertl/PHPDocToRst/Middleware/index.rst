@@ -1,27 +1,15 @@
 .. rst-class:: phpdoctorst
 
+.. role:: php(code)
+	:language: php
+
+
 .. _namespace-JuliusHaertl-PHPDocToRst-Middleware:
 
 Middleware
 ==========
 
 \\JuliusHaertl\\PHPDocToRst\\Middleware
-
-
-Namespaces
-----------
-
-.. toctree::
-	:maxdepth: 1
-	
-
-
-Interfaces
-----------
-
-.. toctree::
-	:maxdepth: 1
-	
 
 
 Classes
@@ -32,7 +20,4 @@ Classes
 	
 	ErrorHandlingMiddleware <ErrorHandlingMiddleware>
 
-
-Functions
----------
 

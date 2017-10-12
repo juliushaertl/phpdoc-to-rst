@@ -23,6 +23,7 @@
 
 namespace JuliusHaertl\PHPDocToRst;
 
+use JuliusHaertl\PHPDocToRst\Builder\PhpDomainBuilder;
 use JuliusHaertl\PHPDocToRst\Builder\TraitFileBuilder;
 use JuliusHaertl\PHPDocToRst\Middleware\ErrorHandlingMiddleware;
 use phpDocumentor\Reflection\DocBlockFactory;
@@ -47,13 +48,19 @@ use phpDocumentor\Reflection\PrettyPrinter;
  *
  * @package JuliusHaertl\PHPDocToRst
  */
-class ApiDocBuilder {
+final class ApiDocBuilder {
 
     /** @var Project */
     private $project;
 
     /** @var array */
     private $docFiles = [];
+
+    /** @var array */
+    private $constants;
+
+    /** @var array */
+    private $functions;
 
     /** @var Extension[] */
     private $extensions;
@@ -264,10 +271,24 @@ class ApiDocBuilder {
                 $this->debug('Written trait documentation to ' . $filename);
             }
 
-            // TODO: document constants/functions without namespace
-            // $file->getConstants();
-            // $file->getFunctions();
-
+            // build array of functions per namespace
+            foreach ($file->getFunctions() as $function) {
+                $namespace = substr(PhpDomainBuilder::getNamespace($function), 0, -2);
+                $namespace = $namespace === '' ? '\\' : $namespace;
+                if (!array_key_exists($namespace, $this->functions)) {
+                    $this->functions[$namespace] = [];
+                }
+                $this->functions[$namespace][] = $function;
+            }
+            // build array of constants per namespace
+            foreach ($file->getConstants() as $constant) {
+                $namespace = PhpDomainBuilder::getNamespace($constant);
+                $namespace = $namespace === '' ? '\\' : $namespace;
+                if (!array_key_exists($namespace, $this->constants)) {
+                    $this->constants[$namespace] = [];
+                }
+                $this->constants[$namespace][] = $constant;
+            }
 
         }
     }
@@ -281,10 +302,19 @@ class ApiDocBuilder {
         });
         /** @var Namespace_ $namespace */
         foreach ($namespaces as $namespace) {
-            $this->debug('Build namespace index for ' . $namespace->getFqsen());
-            $builder = new NamespaceIndexBuilder($this->extensions, $namespaces, $namespace);
+            $fqsen = (string)$namespace->getFqsen();
+            $this->debug('Build namespace index for ' . $fqsen);
+            $functions = [];
+            $constants = [];
+            if (array_key_exists($fqsen, $this->functions)) {
+                $functions = $this->functions[$fqsen];
+            }
+            if (array_key_exists($fqsen, $this->constants)) {
+                $constants = $this->constants[$fqsen];
+            }
+            $builder = new NamespaceIndexBuilder($this->extensions, $namespaces, $namespace, $functions, $constants);
             $builder->render();
-            $path = $this->dstDir . str_replace('\\', '/', $namespace->getFqsen()) . '/index.rst';
+            $path = $this->dstDir . str_replace('\\', '/', $fqsen) . '/index.rst';
             file_put_contents($path, $builder->getContent());
         }
 

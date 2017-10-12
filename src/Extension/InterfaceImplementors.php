@@ -23,10 +23,13 @@
 
 namespace JuliusHaertl\PHPDocToRst\Extension;
 
+use JuliusHaertl\PHPDocToRst\Builder\ExtensionBuilder;
 use JuliusHaertl\PHPDocToRst\Builder\FileBuilder;
 use JuliusHaertl\PHPDocToRst\Builder\InterfaceFileBuilder;
+use JuliusHaertl\PHPDocToRst\Builder\PhpDomainBuilder;
 use JuliusHaertl\PHPDocToRst\Builder\RstBuilder;
 use phpDocumentor\Reflection\Php\Interface_;
+use PhpParser\Builder\Class_;
 
 /**
  * Class InterfaceImplementors
@@ -57,9 +60,13 @@ class InterfaceImplementors extends Extension {
     /**
      * @param string $type
      * @param FileBuilder $builder
+     * @param Element $element
      */
-    public function render($type, &$builder) {
-        if ($type === InterfaceFileBuilder::SECTION_AFTER_DESCRIPTION) {
+    public function render($type, &$builder, $element) {
+        if (!$builder instanceof FileBuilder && !$element instanceof Interface_) {
+            return;
+        }
+        if ($type === PhpDomainBuilder::SECTION_AFTER_DESCRIPTION && $builder->getElement() instanceof Interface_) {
             /** @var Interface_ $interface */
             $interface = $builder->getElement();
             $content = '';

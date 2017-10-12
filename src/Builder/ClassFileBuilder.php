@@ -37,109 +37,32 @@ class ClassFileBuilder extends FileBuilder {
         if (!$this->shouldRenderElement($class)) {
             return;
         }
-
-        $docBlock = $class->getDocBlock();
-
-        $this->addH1(self::escape($class->getName()));
-
-        $namespace = substr($class->getFqsen(), 0, strlen($class->getFqsen())-strlen('\\' . $class->getName()));
-        if($namespace !== '') {
-            $this->beginPhpDomain('namespace', substr($namespace, 1), false);
-        }
-
-        $modifiers = $class->isAbstract() ? ' abstract' : '';
-        $modifiers = $class->isFinal() ? ' final' : $modifiers;
-        if ($modifiers !== '') {
-            $this->addLine('.. rst-class:: ' . $modifiers)->addLine();
-        }
-        $this->beginPhpDomain('class', $class->getName(), false);
+        $this->addPageHeader($class);
 
         $this->indent();
-        $this->addDocBlockDescription($docBlock);
+        $this->addDocBlockDescription($class);
+        $this->addParent($class);
+        $this->addImplementedInterfaces($class);
+        $this->addUsedTraits($class);
+        $this->unindent();
 
-        if($class instanceof Class_) {
-            // Add class details
-            $parent = $class->getParent();
-            if ($parent !== null) {
-                $this->addFieldList('Extends', $parent !== null ? $this->getLink('class', $parent) : '');
-            }
-        }
+        $this->addConstants($class->getConstants());
+        $this->addProperties($class->getProperties());
+
+        $this->addMethods($class->getMethods());
+    }
+
+    /**
+     * @param Class_ $element
+     */
+    protected function addImplementedInterfaces($element) {
         $implementedInterfaces = '';
-        foreach ($class->getInterfaces() as $int) {
+        foreach ($element->getInterfaces() as $int) {
             $implementedInterfaces .= $this->getLink('interface', $int) . ' ';
         }
         if ($implementedInterfaces !== '') {
             $this->addFieldList('Implements', $implementedInterfaces);
         }
-
-        $usedTraits = '';
-        foreach ($class->getUsedTraits() as $trait) {
-            $usedTraits .= $this->getLink('trait', $trait) . ' ';
-        }
-        if ($usedTraits !== '') {
-            $this->addFieldList('Used traits', $usedTraits);
-        }
-
-        $this->unindent();
-        $this->addLine();
-        $this->addLine();
-
-        // Add class constants
-        if (count($class->getConstants()) > 0) {
-            $this->addH2('Constants');
-            foreach ($class->getConstants() as $constant) {
-                if ($this->shouldRenderElement($constant)) {
-                    $this->addConstant($constant);
-                }
-            }
-        }
-
-        $this->addProperties($class->getProperties());
-
-        if (count($class->getMethods()) > 0) {
-            $this->addH2('Methods');
-            /* Render methods of a class */
-            foreach ($class->getMethods() as $method) {
-                if (!$this->shouldRenderElement($method)) {
-                    continue;
-                }
-                $docBlock = $method->getDocBlock();
-                $params = [];
-                if ($docBlock !== null) {
-                    /** @var Param $param */
-                    foreach ($docBlock->getTagsByName('param') as $param) {
-                        $params[$param->getVariableName()] = $param;
-                    }
-                }
-                $args = '';
-                /** @var Argument $argument */
-                foreach ($method->getArguments() as $argument) {
-                    // TODO: defaults, types
-                    $args .= ' $' . $argument->getName() . ', ';
-                }
-                $args = substr($args, 0, -2);
-
-                $modifiers = $method->getVisibility();
-                $modifiers .= $method->isAbstract() ? ' abstract' : '';
-                $modifiers .= $method->isFinal() ? ' final' : '';
-                $modifiers .= $method->isStatic() ? ' static' : '';
-                $this->addLine('.. rst-class:: ' . $modifiers)->addLine();
-                $this->indent();
-                $this->beginPhpDomain('method', $method->getName() . '(' . $args . ')');
-                $this->addDocBlockDescription($docBlock);
-                $this->addLine();
-                if (!empty($params)) {
-                    foreach ($method->getArguments() as $argument) {
-                        /** @var Param $param */
-                        $param = $params[$argument->getName()];
-                        if ($param !== null) $this->addMultiline(':param ' . self::escape($param->getType()) . ' $' . $argument->getName() . ': ' . $param->getDescription(), true);
-                    }
-                }
-                $this->endPhpDomain('method');
-                $this->unindent();
-            }
-        }
-        $this->endPhpDomain(); //class
     }
 
 }

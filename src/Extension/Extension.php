@@ -24,6 +24,7 @@
 namespace JuliusHaertl\PHPDocToRst\Extension;
 
 
+use JuliusHaertl\PHPDocToRst\Builder\ExtensionBuilder;
 use JuliusHaertl\PHPDocToRst\Builder\FileBuilder;
 use phpDocumentor\Reflection\Element;
 use phpDocumentor\Reflection\Php\Project;
@@ -52,13 +53,14 @@ abstract class Extension {
      *
      * Currently supported types:
      *
-     *  - InterfaceBuilder::SECTION_BEFORE_DESCRIPTION
-     *  - InterfaceBuilder::SECTION_AFTER_DESCRIPTION
+     *  - PhpDomainBuilder::SECTION_BEFORE_DESCRIPTION
+     *  - PhpDomainBuilder::SECTION_AFTER_DESCRIPTION
      *
      * @param string $type
-     * @param FileBuilder $builder
+     * @param ExtensionBuilder $builder
+     * @param Element $element context for the render type
      */
-    public function render($type, &$builder) {
+    public function render($type, &$builder, $element) {
 
     }
 
@@ -72,6 +74,10 @@ abstract class Extension {
      * @return bool
      */
     public function shouldRenderElement(Element $element) {
+        return true;
+    }
+
+    public function shouldRenderIndex($type, $element) {
         return true;
     }
 

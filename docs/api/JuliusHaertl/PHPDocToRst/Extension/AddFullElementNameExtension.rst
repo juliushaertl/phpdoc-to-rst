@@ -4,19 +4,18 @@
 	:language: php
 
 
-\\JuliusHaertl\\PHPDocToRst\\Extension\\TocExtension
-====================================================
+\\JuliusHaertl\\PHPDocToRst\\Extension\\AddFullElementNameExtension
+===================================================================
 
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Extension
 
-.. php:class:: TocExtension
+.. php:class:: AddFullElementNameExtension
 
 
-	:php:` class TocExtension {}`
+	:php:` class AddFullElementNameExtension {}`
 	
-	This extension will render a list of methods  for easy access
-	at the beginning of classes, interfaces and traits
+	Add the fully qualified element name including the namespace to each page
 	
 	
 	

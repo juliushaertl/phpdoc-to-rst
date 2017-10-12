@@ -21,32 +21,21 @@
  *
  */
 
-namespace JuliusHaertl\PHPDocToRst\Builder;
+namespace JuliusHaertl\PHPDocToRst\Extension;
 
-use phpDocumentor\Reflection\DocBlock\Tags\Param;
-use phpDocumentor\Reflection\Php\Interface_;
+use JuliusHaertl\PHPDocToRst\Builder\NamespaceIndexBuilder;
 
+/**
+ * Example for hiding a section in the namespace index page
+ */
 
-class InterfaceFileBuilder extends FileBuilder {
+class HideChildNamespaces extends Extension {
 
-    protected function render() {
-        /** @var Interface_ $interface */
-        $interface = $this->element;
-
-        if (!$this->shouldRenderElement($interface)) {
-            return;
+    public function shouldRenderIndex($type, $element) {
+        if ($type === NamespaceIndexBuilder::RENDER_INDEX_NAMESPACE) {
+            return false;
         }
-
-        $docBlock = $interface->getDocBlock();
-        $this->addPageHeader($interface);
-
-        $this->indent();
-        $this->addDocBlockDescription($interface);
-        $this->addParent($interface);
-        $this->unindent();
-
-        $this->addConstants($interface->getConstants());
-        $this->addMethods($interface->getMethods());
+        return true;
     }
 
 }

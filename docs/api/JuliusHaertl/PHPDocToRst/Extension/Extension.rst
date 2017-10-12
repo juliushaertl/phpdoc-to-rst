@@ -1,7 +1,12 @@
 .. rst-class:: phpdoctorst
 
-Extension
-=========
+.. role:: php(code)
+	:language: php
+
+
+\\JuliusHaertl\\PHPDocToRst\\Extension\\Extension
+=================================================
+
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Extension
 
@@ -10,11 +15,21 @@ Extension
 .. php:class:: Extension
 
 
+	:php:`abstract class Extension {}`
+	
 
 Properties
 ----------
 
 .. php:attr:: project
+
+	
+	
+	
+	
+	
+	
+	:Type: `phpDocumentor\\Reflection\\Php\\Project` 
 
 
 Methods
@@ -26,6 +41,8 @@ Methods
 	
 		
 	
+	
+
 .. rst-class:: public
 
 	.. php:method:: prepare()
@@ -39,9 +56,11 @@ Methods
 		
 		
 	
+	
+
 .. rst-class:: public
 
-	.. php:method:: render( $type,  $builder)
+	.. php:method:: render( $type,  $builder,  $element)
 	
 		Implement custom rendering functionality here.
 		
@@ -49,13 +68,16 @@ Methods
 		
 		Currently supported types:
 		
-		 - InterfaceBuilder::SECTION_BEFORE_DESCRIPTION
-		 - InterfaceBuilder::SECTION_AFTER_DESCRIPTION
+		 - PhpDomainBuilder::SECTION_BEFORE_DESCRIPTION
+		 - PhpDomainBuilder::SECTION_AFTER_DESCRIPTION
 		
 		
 		:param string $type: 
-		:param \\JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder $builder: 
+		:param \\JuliusHaertl\\PHPDocToRst\\Builder\\ExtensionBuilder $builder: 
+		:param \\phpDocumentor\\Reflection\\Element $element: context for the render type
 	
+	
+
 .. rst-class:: public
 
 	.. php:method:: shouldRenderElement( $element)
@@ -67,5 +89,14 @@ Methods
 		
 		
 		:param \\phpDocumentor\\Reflection\\Element $element: 
+	
+	
+
+.. rst-class:: public
+
+	.. php:method:: shouldRenderIndex( $type,  $element)
+	
+		
+	
 	
 

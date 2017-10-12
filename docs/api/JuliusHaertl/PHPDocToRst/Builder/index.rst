@@ -1,27 +1,15 @@
 .. rst-class:: phpdoctorst
 
+.. role:: php(code)
+	:language: php
+
+
 .. _namespace-JuliusHaertl-PHPDocToRst-Builder:
 
 Builder
 =======
 
 \\JuliusHaertl\\PHPDocToRst\\Builder
-
-
-Namespaces
-----------
-
-.. toctree::
-	:maxdepth: 1
-	
-
-
-Interfaces
-----------
-
-.. toctree::
-	:maxdepth: 1
-	
 
 
 Classes
@@ -40,6 +28,12 @@ Classes
 	NamespaceIndexBuilder <NamespaceIndexBuilder>
 
 
-Functions
----------
+Traits
+------
+
+.. toctree::
+	:maxdepth: 1
+	
+	ExtensionBuilder <ExtensionBuilder>
+
 

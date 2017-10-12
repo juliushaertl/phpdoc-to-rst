@@ -1,20 +1,28 @@
 .. rst-class:: phpdoctorst
 
-GenerateDocumentationCommand
-============================
+.. role:: php(code)
+	:language: php
+
+
+\\JuliusHaertl\\PHPDocToRst\\GenerateDocumentationCommand
+=========================================================
+
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst
 
 .. php:class:: GenerateDocumentationCommand
 
+
+	:php:` class GenerateDocumentationCommand {}`
+	
 	Class GenerateDocumentationCommand
 	
 	
 	
 	
-	:Extends:
+	:Parent:
 		:php:class:`Symfony\\Component\\Console\\Command\\Command`
-
+	
 
 Methods
 -------
@@ -25,10 +33,13 @@ Methods
 	
 		
 	
+	
+
 .. rst-class:: protected
 
 	.. php:method:: execute( $input,  $output)
 	
 		
+	
 	
 

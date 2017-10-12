@@ -1,35 +1,12 @@
 .. rst-class:: phpdoctorst
 
+.. role:: php(code)
+	:language: php
+
+
 .. _namespace-root-namespace:
 
 \\
 ==
 
-
-Namespaces
-----------
-
-.. toctree::
-	:maxdepth: 1
-	
-
-
-Interfaces
-----------
-
-.. toctree::
-	:maxdepth: 1
-	
-
-
-Classes
--------
-
-.. toctree::
-	:maxdepth: 1
-	
-
-
-Functions
----------
 

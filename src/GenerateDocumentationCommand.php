@@ -23,6 +23,7 @@
 
 namespace JuliusHaertl\PHPDocToRst;
 
+use JuliusHaertl\PHPDocToRst\Extension\AddFullElementNameExtension;
 use JuliusHaertl\PHPDocToRst\Extension\PublicOnlyExtension;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -65,6 +66,7 @@ class GenerateDocumentationCommand extends Command {
         if($input->getOption('public-only')) {
             $apiDocBuilder->addExtension(PublicOnlyExtension::class);
         }
+        $apiDocBuilder->addExtension(AddFullElementNameExtension::class);
         $apiDocBuilder->build();
     }
 }

@@ -1,5 +1,9 @@
 .. rst-class:: phpdoctorst
 
+.. role:: php(code)
+	:language: php
+
+
 .. _namespace-JuliusHaertl-PHPDocToRst-Extension:
 
 Extension
@@ -8,34 +12,17 @@ Extension
 \\JuliusHaertl\\PHPDocToRst\\Extension
 
 
-Namespaces
-----------
-
-.. toctree::
-	:maxdepth: 1
-	
-
-
-Interfaces
-----------
-
-.. toctree::
-	:maxdepth: 1
-	
-
-
 Classes
 -------
 
 .. toctree::
 	:maxdepth: 1
 	
+	AddFullElementNameExtension <AddFullElementNameExtension>
 	TocExtension <TocExtension>
 	InterfaceImplementors <InterfaceImplementors>
+	HideChildNamespaces <HideChildNamespaces>
 	PublicOnlyExtension <PublicOnlyExtension>
 	Extension <Extension>
 
-
-Functions
----------
 

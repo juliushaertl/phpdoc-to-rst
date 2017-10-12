@@ -23,35 +23,34 @@
 
 namespace JuliusHaertl\PHPDocToRst\Extension;
 
+use JuliusHaertl\PHPDocToRst\Builder\ExtensionBuilder;
 use JuliusHaertl\PHPDocToRst\Builder\FileBuilder;
 use JuliusHaertl\PHPDocToRst\Builder\InterfaceFileBuilder;
 use JuliusHaertl\PHPDocToRst\Builder\PhpDomainBuilder;
 use JuliusHaertl\PHPDocToRst\Builder\RstBuilder;
 use phpDocumentor\Reflection\Php\Class_;
 use phpDocumentor\Reflection\Php\Interface_;
-use PhpParser\Builder\Trait_;
+use phpDocumentor\Reflection\Php\Trait_;
 
 /**
- * This extension will render a list of methods  for easy access
- * at the beginning of classes, interfaces and traits
+ * Add the fully qualified element name including the namespace to each page
  */
 
-class TocExtension extends Extension {
+class AddFullElementNameExtension extends Extension {
 
     /**
      * @param string $type
      * @param FileBuilder $builder
      */
     public function render($type, &$builder, $element) {
-        if ($type === PhpDomainBuilder::SECTION_AFTER_DESCRIPTION) {
-            if($element instanceof Class_ || $element instanceof Interface_ || $element instanceof Trait_) {
-                $builder->addLine();
-                /** @var Interface_ $interface */
-                $interface = $builder->getElement();
-                $builder->addH2('Methods');
-                foreach ($interface->getMethods() as $method) {
-                    $builder->addLine('* :php:meth:`' . $method->getName() . '`');
-                }
+        if (!$builder instanceof FileBuilder) {
+            return;
+        }
+        if ($type === PhpDomainBuilder::SECTION_BEFORE_DESCRIPTION) {
+            if($element instanceof Class_) {
+                $modifiers = $element->isAbstract() ? 'abstract' : '';
+                $modifiers = $element->isFinal() ? ' final' : $modifiers;
+                $builder->addLine(':php:`' . $modifiers . ' class ' . RstBuilder::escape($builder->getElement()->getName()) . ' {}`');
                 $builder->addLine();
             }
         }

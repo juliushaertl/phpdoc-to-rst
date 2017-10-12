@@ -1,15 +1,23 @@
 .. rst-class:: phpdoctorst
 
-TraitFileBuilder
-================
+.. role:: php(code)
+	:language: php
+
+
+\\JuliusHaertl\\PHPDocToRst\\Builder\\TraitFileBuilder
+======================================================
+
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Builder
 
 .. php:class:: TraitFileBuilder
 
-	:Extends:
-		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder`
 
+	:php:` class TraitFileBuilder {}`
+	
+	:Parent:
+		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder`
+	
 
 Methods
 -------
@@ -19,5 +27,6 @@ Methods
 	.. php:method:: render()
 	
 		
+	
 	
 

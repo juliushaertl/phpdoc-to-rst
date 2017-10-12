@@ -1,25 +1,34 @@
 .. rst-class:: phpdoctorst
 
-InterfaceImplementors
-=====================
+.. role:: php(code)
+	:language: php
+
+
+\\JuliusHaertl\\PHPDocToRst\\Extension\\InterfaceImplementors
+=============================================================
+
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Extension
 
 .. php:class:: InterfaceImplementors
 
+
+	:php:` class InterfaceImplementors {}`
+	
 	Class InterfaceImplementors
 	
 	
 	
 	
-	:Extends:
+	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`
-
+	
 
 Properties
 ----------
 
 .. php:attr:: implementors
+
 
 
 Methods
@@ -31,9 +40,11 @@ Methods
 	
 		
 	
+	
+
 .. rst-class:: public
 
-	.. php:method:: render( $type,  $builder)
+	.. php:method:: render( $type,  $builder,  $element)
 	
 		
 		
@@ -44,5 +55,7 @@ Methods
 		
 		:param string $type: 
 		:param \\JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder $builder: 
+		:param \\JuliusHaertl\\PHPDocToRst\\Extension\\Element $element: 
+	
 	
 

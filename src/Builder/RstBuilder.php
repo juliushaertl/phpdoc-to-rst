@@ -54,6 +54,7 @@ class RstBuilder {
 
     public function unindent() {
         $this->indentLevel--;
+        $this->addLine();
         return $this;
     }
 

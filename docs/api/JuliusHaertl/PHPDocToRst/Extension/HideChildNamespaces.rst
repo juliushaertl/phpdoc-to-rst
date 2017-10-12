@@ -4,19 +4,18 @@
 	:language: php
 
 
-\\JuliusHaertl\\PHPDocToRst\\Extension\\PublicOnlyExtension
+\\JuliusHaertl\\PHPDocToRst\\Extension\\HideChildNamespaces
 ===========================================================
 
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Extension
 
-.. php:class:: PublicOnlyExtension
+.. php:class:: HideChildNamespaces
 
 
-	:php:` class PublicOnlyExtension {}`
+	:php:` class HideChildNamespaces {}`
 	
-	Do not render classes marked with phpDoc internal tag
-	Do only render public methods/properties
+	Example for hiding a section in the namespace index page
 	
 	
 	
@@ -30,7 +29,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: shouldRenderElement( $element)
+	.. php:method:: shouldRenderIndex( $type,  $element)
 	
 		
 	

@@ -1,14 +1,21 @@
 .. rst-class:: phpdoctorst
 
-WriteException
-==============
+.. role:: php(code)
+	:language: php
+
+
+\\JuliusHaertl\\PHPDocToRst\\WriteException
+===========================================
+
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst
 
 .. php:class:: WriteException
 
-	:Extends:
+
+	:php:` class WriteException {}`
+	
+	:Parent:
 		:php:class:`Exception`
-
-
+	
 

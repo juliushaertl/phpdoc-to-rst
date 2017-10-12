@@ -1,5 +1,9 @@
 .. rst-class:: phpdoctorst
 
+.. role:: php(code)
+	:language: php
+
+
 .. _namespace-JuliusHaertl-PHPDocToRst:
 
 PHPDocToRst
@@ -19,14 +23,6 @@ Namespaces
 	Middleware <Middleware/index>
 
 
-Interfaces
-----------
-
-.. toctree::
-	:maxdepth: 1
-	
-
-
 Classes
 -------
 
@@ -37,7 +33,4 @@ Classes
 	GenerateDocumentationCommand <GenerateDocumentationCommand>
 	ApiDocBuilder <ApiDocBuilder>
 
-
-Functions
----------
 

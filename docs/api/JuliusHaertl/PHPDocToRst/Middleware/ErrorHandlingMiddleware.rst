@@ -1,7 +1,12 @@
 .. rst-class:: phpdoctorst
 
-ErrorHandlingMiddleware
-=======================
+.. role:: php(code)
+	:language: php
+
+
+\\JuliusHaertl\\PHPDocToRst\\Middleware\\ErrorHandlingMiddleware
+================================================================
+
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Middleware
 
@@ -9,6 +14,9 @@ ErrorHandlingMiddleware
 
 .. php:class:: ErrorHandlingMiddleware
 
+
+	:php:` final class ErrorHandlingMiddleware {}`
+	
 	Class ErrorHandlingMiddleware
 	
 	
@@ -16,12 +24,13 @@ ErrorHandlingMiddleware
 	
 	:Implements:
 		:php:interface:`phpDocumentor\\Reflection\\Middleware\\Middleware` 
-
+	
 
 Properties
 ----------
 
 .. php:attr:: apiDocBuilder
+
 
 
 Methods
@@ -33,6 +42,8 @@ Methods
 	
 		
 	
+	
+
 .. rst-class:: public
 
 	.. php:method:: execute( $command,  $next)
@@ -45,5 +56,6 @@ Methods
 		
 		:param \\phpDocumentor\\Reflection\\Php\\Factory\\File\\CreateCommand $command: 
 		:param callable $next: 
+	
 	
 

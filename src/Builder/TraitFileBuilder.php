@@ -34,76 +34,20 @@ class TraitFileBuilder extends FileBuilder {
         /** @var Trait_ $trait */
         $trait = $this->element;
 
-        $docBlock = $trait->getDocBlock();
-
-        $this->addH1(self::escape($trait->getFqsen()));
-
-        $namespace = str_replace('\\' . $trait->getName(), '', $trait->getFqsen());
-        if($namespace !== '') {
-            $this->beginPhpDomain('namespace', substr($namespace, 1), false);
+        if (!$this->shouldRenderElement($trait)) {
+            return;
         }
 
-        $this->beginPhpDomain('trait', $trait->getName(), false);
+        $this->addPageHeader($trait);
 
         $this->indent();
-        if ($docBlock) {
-            $this
-                ->addLine($docBlock->getDescription())
-                ->addLine();
-        }
-
-        $usedTraits = '';
-        foreach ($trait->getUsedTraits() as $trait) {
-            $usedTraits .= $this->getLink('trait', $trait) . ' ';
-        }
-        $this->addFieldList('Traits', $usedTraits);
-
+        $this->addDocBlockDescription($trait);
+        $this->addUsedTraits($trait);
         $this->unindent();
-        $this->addLine();
-        $this->addLine();
 
         $this->addProperties($trait->getProperties());
 
-        $this->addH2('Methods');
-        /* Render methods of a trait */
-        foreach ($trait->getMethods() as $method) {
-            $docBlock = $method->getDocBlock();
-            $params = [];
-            if($docBlock !== null) {
-                /** @var Param $param */
-                foreach ($docBlock->getTagsByName('param') as $param) {
-                    $params[$param->getVariableName()] = $param;
-                }
-            }
-            $args = '';
-            /** @var Argument $argument */
-            foreach ($method->getArguments() as $argument) {
-                // TODO: defaults, types
-                $args .=  ' $' . $argument->getName() . ', ';
-            }
-            $args = substr($args, 0, -2);
-
-            $modifiers = $method->getVisibility();
-            $modifiers .= $method->isAbstract() ? ' abstract' : '';
-            $modifiers .= $method->isFinal() ? ' final' : '';
-            $modifiers .= $method->isStatic() ? ' static' : '';
-            $this->addLine('.. rst-class:: ' . $modifiers)->addLine();
-            $this->indent();
-            $this->beginPhpDomain('method', $method->getName().'('.$args.')');
-            $this->addDocBlockDescription($docBlock);
-            if (!empty($params)) {
-                foreach ($method->getArguments() as $argument) {
-                    /** @var Param $param */
-                    $param = $params[$argument->getName()];
-                    if ($param !== null)
-                        $this->addMultiline(':param ' . $param->getType() . ' $' . $argument->getName() . ': ' . $param->getDescription(), true);
-                }
-            }
-            $this->endPhpDomain('method');
-            $this->unindent();
-
-        }
-        $this->endPhpDomain(); //trait
+        $this->addMethods($trait->getMethods());
     }
 
 }

@@ -1,24 +1,23 @@
 .. rst-class:: phpdoctorst
 
-InterfaceFileBuilder
-====================
+.. role:: php(code)
+	:language: php
+
+
+\\JuliusHaertl\\PHPDocToRst\\Builder\\InterfaceFileBuilder
+==========================================================
+
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Builder
 
 .. php:class:: InterfaceFileBuilder
 
-	:Extends:
+
+	:php:` class InterfaceFileBuilder {}`
+	
+	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder`
-
-
-Constants
----------
-
-.. php:const:: SECTION_BEFORE_DESCRIPTION = self::class . ::SECTION_BEFORE_DESCRIPTION
-
-
-.. php:const:: SECTION_AFTER_DESCRIPTION = self::class . ::SECTION_AFTER_DESCRIPTION
-
+	
 
 Methods
 -------
@@ -29,15 +28,5 @@ Methods
 	
 		
 	
-.. rst-class:: private
-
-	.. php:method:: callExtensions( $type)
-	
-		Render extension custom views before the descriptioj
-		
-		
-		
-		
-		
 	
 
