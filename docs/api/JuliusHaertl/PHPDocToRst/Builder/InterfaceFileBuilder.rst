@@ -4,12 +4,20 @@
 	:language: php
 
 
-\\JuliusHaertl\\PHPDocToRst\\Builder\\InterfaceFileBuilder
-==========================================================
+InterfaceFileBuilder
+====================
 
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Builder
 
+
+Summary
+-------
+
+Methods
+~~~~~~~
+
+* :php:meth:`protected render\(\)<JuliusHaertl\\PHPDocToRst\\Builder\\InterfaceFileBuilder::render\(\)>`
 .. php:class:: InterfaceFileBuilder
 
 

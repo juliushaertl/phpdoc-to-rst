@@ -4,12 +4,21 @@
 	:language: php
 
 
-\\JuliusHaertl\\PHPDocToRst\\Extension\\InterfaceImplementors
-=============================================================
+InterfaceImplementors
+=====================
 
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Extension
 
+
+Summary
+-------
+
+Methods
+~~~~~~~
+
+* :php:meth:`public prepare\(\)<JuliusHaertl\\PHPDocToRst\\Extension\\InterfaceImplementors::prepare\(\)>`
+* :php:meth:`public render\($type, $builder, $element\)<JuliusHaertl\\PHPDocToRst\\Extension\\InterfaceImplementors::render\(\)>`
 .. php:class:: InterfaceImplementors
 
 

@@ -4,8 +4,8 @@
 	:language: php
 
 
-\\JuliusHaertl\\PHPDocToRst\\Builder\\ExtensionBuilder
-======================================================
+ExtensionBuilder
+================
 
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Builder

@@ -76,6 +76,12 @@ class RstBuilder {
         return $this;
     }
 
+    public function addH3($text) {
+        $this->addLine($text);
+        $this->addLine(str_repeat('~', strlen((string)$text)))->addLine();
+        return $this;
+    }
+
     public function addLine($text = '') {
         $this->add(str_repeat("\t", $this->indentLevel) . $text . PHP_EOL);
         return $this;

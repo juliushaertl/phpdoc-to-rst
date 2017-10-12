@@ -4,12 +4,20 @@
 	:language: php
 
 
-\\JuliusHaertl\\PHPDocToRst\\Extension\\AddFullElementNameExtension
-===================================================================
+AddFullElementNameExtension
+===========================
 
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Extension
 
+
+Summary
+-------
+
+Methods
+~~~~~~~
+
+* :php:meth:`public render\($type, $builder, $element\)<JuliusHaertl\\PHPDocToRst\\Extension\\AddFullElementNameExtension::render\(\)>`
 .. php:class:: AddFullElementNameExtension
 
 

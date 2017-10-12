@@ -4,12 +4,21 @@
 	:language: php
 
 
-\\JuliusHaertl\\PHPDocToRst\\Builder\\MainIndexBuilder
-======================================================
+MainIndexBuilder
+================
 
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Builder
 
+
+Summary
+-------
+
+Methods
+~~~~~~~
+
+* :php:meth:`public \_\_construct\($namespaces\)<JuliusHaertl\\PHPDocToRst\\Builder\\MainIndexBuilder::\_\_construct\(\)>`
+* :php:meth:`public render\(\)<JuliusHaertl\\PHPDocToRst\\Builder\\MainIndexBuilder::render\(\)>`
 .. php:class:: MainIndexBuilder
 
 

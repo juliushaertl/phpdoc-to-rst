@@ -27,6 +27,7 @@ use JuliusHaertl\PHPDocToRst\Builder\FileBuilder;
 use JuliusHaertl\PHPDocToRst\Builder\InterfaceFileBuilder;
 use JuliusHaertl\PHPDocToRst\Builder\PhpDomainBuilder;
 use JuliusHaertl\PHPDocToRst\Builder\RstBuilder;
+use phpDocumentor\Reflection\Php\Argument;
 use phpDocumentor\Reflection\Php\Class_;
 use phpDocumentor\Reflection\Php\Interface_;
 use PhpParser\Builder\Trait_;
@@ -43,18 +44,33 @@ class TocExtension extends Extension {
      * @param FileBuilder $builder
      */
     public function render($type, &$builder, $element) {
-        if ($type === PhpDomainBuilder::SECTION_AFTER_DESCRIPTION) {
-            if($element instanceof Class_ || $element instanceof Interface_ || $element instanceof Trait_) {
+        if ($type === PhpDomainBuilder::SECTION_AFTER_TITLE) {
+            if ($element instanceof Class_ || $element instanceof Interface_ || $element instanceof Trait_) {
                 $builder->addLine();
+                $builder->addH2('Summary');
+
                 /** @var Interface_ $interface */
                 $interface = $builder->getElement();
-                $builder->addH2('Methods');
+                $builder->addH3('Methods');
                 foreach ($interface->getMethods() as $method) {
-                    $builder->addLine('* :php:meth:`' . $method->getName() . '`');
+                    $args = '';
+                    /** @var Argument $argument */
+                    foreach ($method->getArguments() as $argument) {
+                        // TODO: defaults, types
+                        $args .= '$' . $argument->getName() . ', ';
+                    }
+                    $args = substr($args, 0, -2);
+                    $modifiers = $method->getVisibility();
+                    $modifiers .= $method->isAbstract() ? ' abstract' : '';
+                    $modifiers .= $method->isFinal() ? ' final' : '';
+                    $modifiers .= $method->isStatic() ? ' static' : '';
+                    $signature = $modifiers . ' ' . $method->getName() . '(' . $args . ')';
+
+                    $builder->addLine('* ' . PhpDomainBuilder::getLink('meth', $method->getFqsen(), $signature));
+
                 }
-                $builder->addLine();
             }
         }
-    }
 
+    }
 }

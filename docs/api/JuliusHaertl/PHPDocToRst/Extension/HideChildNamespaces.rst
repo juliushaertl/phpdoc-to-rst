@@ -4,12 +4,20 @@
 	:language: php
 
 
-\\JuliusHaertl\\PHPDocToRst\\Extension\\HideChildNamespaces
-===========================================================
+HideChildNamespaces
+===================
 
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Extension
 
+
+Summary
+-------
+
+Methods
+~~~~~~~
+
+* :php:meth:`public shouldRenderIndex\($type, $element\)<JuliusHaertl\\PHPDocToRst\\Extension\\HideChildNamespaces::shouldRenderIndex\(\)>`
 .. php:class:: HideChildNamespaces
 
 

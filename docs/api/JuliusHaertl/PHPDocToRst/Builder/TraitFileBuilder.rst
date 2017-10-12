@@ -4,12 +4,20 @@
 	:language: php
 
 
-\\JuliusHaertl\\PHPDocToRst\\Builder\\TraitFileBuilder
-======================================================
+TraitFileBuilder
+================
 
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Builder
 
+
+Summary
+-------
+
+Methods
+~~~~~~~
+
+* :php:meth:`protected render\(\)<JuliusHaertl\\PHPDocToRst\\Builder\\TraitFileBuilder::render\(\)>`
 .. php:class:: TraitFileBuilder
 
 

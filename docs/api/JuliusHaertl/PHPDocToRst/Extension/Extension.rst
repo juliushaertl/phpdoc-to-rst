@@ -4,14 +4,26 @@
 	:language: php
 
 
-\\JuliusHaertl\\PHPDocToRst\\Extension\\Extension
-=================================================
+Extension
+=========
 
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Extension
 
 .. rst-class::  abstract
 
+
+Summary
+-------
+
+Methods
+~~~~~~~
+
+* :php:meth:`public \_\_construct\($project\)<JuliusHaertl\\PHPDocToRst\\Extension\\Extension::\_\_construct\(\)>`
+* :php:meth:`public prepare\(\)<JuliusHaertl\\PHPDocToRst\\Extension\\Extension::prepare\(\)>`
+* :php:meth:`public render\($type, $builder, $element\)<JuliusHaertl\\PHPDocToRst\\Extension\\Extension::render\(\)>`
+* :php:meth:`public shouldRenderElement\($element\)<JuliusHaertl\\PHPDocToRst\\Extension\\Extension::shouldRenderElement\(\)>`
+* :php:meth:`public shouldRenderIndex\($type, $element\)<JuliusHaertl\\PHPDocToRst\\Extension\\Extension::shouldRenderIndex\(\)>`
 .. php:class:: Extension
 
 

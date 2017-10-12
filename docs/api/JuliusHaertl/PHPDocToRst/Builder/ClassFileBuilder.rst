@@ -4,12 +4,21 @@
 	:language: php
 
 
-\\JuliusHaertl\\PHPDocToRst\\Builder\\ClassFileBuilder
-======================================================
+ClassFileBuilder
+================
 
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Builder
 
+
+Summary
+-------
+
+Methods
+~~~~~~~
+
+* :php:meth:`protected render\(\)<JuliusHaertl\\PHPDocToRst\\Builder\\ClassFileBuilder::render\(\)>`
+* :php:meth:`protected addImplementedInterfaces\($element\)<JuliusHaertl\\PHPDocToRst\\Builder\\ClassFileBuilder::addImplementedInterfaces\(\)>`
 .. php:class:: ClassFileBuilder
 
 

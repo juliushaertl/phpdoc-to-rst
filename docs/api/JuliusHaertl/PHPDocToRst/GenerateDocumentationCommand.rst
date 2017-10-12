@@ -4,12 +4,21 @@
 	:language: php
 
 
-\\JuliusHaertl\\PHPDocToRst\\GenerateDocumentationCommand
-=========================================================
+GenerateDocumentationCommand
+============================
 
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst
 
+
+Summary
+-------
+
+Methods
+~~~~~~~
+
+* :php:meth:`protected configure\(\)<JuliusHaertl\\PHPDocToRst\\GenerateDocumentationCommand::configure\(\)>`
+* :php:meth:`protected execute\($input, $output\)<JuliusHaertl\\PHPDocToRst\\GenerateDocumentationCommand::execute\(\)>`
 .. php:class:: GenerateDocumentationCommand
 
 

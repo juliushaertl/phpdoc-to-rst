@@ -4,12 +4,20 @@
 	:language: php
 
 
-\\JuliusHaertl\\PHPDocToRst\\Extension\\PublicOnlyExtension
-===========================================================
+PublicOnlyExtension
+===================
 
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Extension
 
+
+Summary
+-------
+
+Methods
+~~~~~~~
+
+* :php:meth:`public shouldRenderElement\($element\)<JuliusHaertl\\PHPDocToRst\\Extension\\PublicOnlyExtension::shouldRenderElement\(\)>`
 .. php:class:: PublicOnlyExtension
 
 

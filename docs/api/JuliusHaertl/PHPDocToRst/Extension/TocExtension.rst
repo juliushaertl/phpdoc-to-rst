@@ -4,12 +4,20 @@
 	:language: php
 
 
-\\JuliusHaertl\\PHPDocToRst\\Extension\\TocExtension
-====================================================
+TocExtension
+============
 
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Extension
 
+
+Summary
+-------
+
+Methods
+~~~~~~~
+
+* :php:meth:`public render\($type, $builder, $element\)<JuliusHaertl\\PHPDocToRst\\Extension\\TocExtension::render\(\)>`
 .. php:class:: TocExtension
 
 

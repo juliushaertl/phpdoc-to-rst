@@ -50,6 +50,7 @@ class PhpDomainBuilder extends RstBuilder {
 
     const SECTION_BEFORE_DESCRIPTION = self::class . '::SECTION_BEFORE_DESCRIPTION';
     const SECTION_AFTER_DESCRIPTION = self::class . '::SECTION_AFTER_DESCRIPTION';
+    const SECTION_AFTER_TITLE = self::class . '::SECTION_AFTER_TITLE';
 
     use ExtensionBuilder {
         ExtensionBuilder::__construct as private __extensionConstructor;
@@ -77,7 +78,7 @@ class PhpDomainBuilder extends RstBuilder {
      * @param Element $element
      */
     protected function addPageHeader(Element $element) {
-        $this->addH1(self::escape($element->getFqsen()))->addLine();
+        $this->addH1(self::escape($element->getName()))->addLine();
         if (self::getNamespace($element) !== '') {
             $this->beginPhpDomain('namespace', substr(self::getNamespace($element), 1), false);
         }
@@ -88,6 +89,9 @@ class PhpDomainBuilder extends RstBuilder {
                 $this->addLine('.. rst-class:: ' . $modifiers)->addLine();
             }
         }
+
+        $this->callExtensions(self::SECTION_AFTER_TITLE, $element);
+
 
         $this->beginPhpDomain($this->getTypeForClass($element), $element->getName(), false);
         $this->addLine();
@@ -261,7 +265,10 @@ class PhpDomainBuilder extends RstBuilder {
      * @param $fqsen string
      * @return string
      */
-    public function getLink($type, $fqsen) {
+    public static function getLink($type, $fqsen, $description='') {
+        if($description !== '') {
+            return ':php:' . $type . ':`' . RstBuilder::escape($description) . '<' . RstBuilder::escape(substr($fqsen, 1)) . '>`';
+        }
         return ':php:' . $type . ':`' . RstBuilder::escape(substr($fqsen, 1)) . '`';
     }
 

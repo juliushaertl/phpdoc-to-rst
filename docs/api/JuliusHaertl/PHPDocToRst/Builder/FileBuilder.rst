@@ -4,14 +4,24 @@
 	:language: php
 
 
-\\JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder
-=================================================
+FileBuilder
+===========
 
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Builder
 
 .. rst-class::  abstract
 
+
+Summary
+-------
+
+Methods
+~~~~~~~
+
+* :php:meth:`protected abstract render\(\)<JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder::render\(\)>`
+* :php:meth:`public \_\_construct\($file, $element, $extensions\)<JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder::\_\_construct\(\)>`
+* :php:meth:`public getElement\(\)<JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder::getElement\(\)>`
 .. php:class:: FileBuilder
 
 

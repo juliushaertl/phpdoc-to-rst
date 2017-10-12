@@ -4,12 +4,30 @@
 	:language: php
 
 
-\\JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder
-================================================
+RstBuilder
+==========
 
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Builder
 
+
+Summary
+-------
+
+Methods
+~~~~~~~
+
+* :php:meth:`public getContent\(\)<JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder::getContent\(\)>`
+* :php:meth:`public static escape\($text\)<JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder::escape\(\)>`
+* :php:meth:`public indent\(\)<JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder::indent\(\)>`
+* :php:meth:`public unindent\(\)<JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder::unindent\(\)>`
+* :php:meth:`public addFieldList\($key, $value\)<JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder::addFieldList\(\)>`
+* :php:meth:`public addH1\($text\)<JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder::addH1\(\)>`
+* :php:meth:`public addH2\($text\)<JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder::addH2\(\)>`
+* :php:meth:`public addH3\($text\)<JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder::addH3\(\)>`
+* :php:meth:`public addLine\($text\)<JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder::addLine\(\)>`
+* :php:meth:`public addMultiline\($text, $blockIndent\)<JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder::addMultiline\(\)>`
+* :php:meth:`public add\($text\)<JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder::add\(\)>`
 .. php:class:: RstBuilder
 
 
@@ -91,6 +109,14 @@ Methods
 .. rst-class:: public
 
 	.. php:method:: addH2( $text)
+	
+		
+	
+	
+
+.. rst-class:: public
+
+	.. php:method:: addH3( $text)
 	
 		
 	

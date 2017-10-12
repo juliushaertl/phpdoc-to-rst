@@ -4,11 +4,18 @@
 	:language: php
 
 
-\\JuliusHaertl\\PHPDocToRst\\WriteException
-===========================================
+WriteException
+==============
 
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst
+
+
+Summary
+-------
+
+Methods
+~~~~~~~
 
 .. php:class:: WriteException
 
