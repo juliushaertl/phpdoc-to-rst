@@ -23,13 +23,11 @@
 
 namespace JuliusHaertl\PHPDocToRst\Extension;
 
-use JuliusHaertl\PHPDocToRst\Builder\ExtensionBuilder;
 use JuliusHaertl\PHPDocToRst\Builder\FileBuilder;
-use JuliusHaertl\PHPDocToRst\Builder\InterfaceFileBuilder;
 use JuliusHaertl\PHPDocToRst\Builder\PhpDomainBuilder;
 use JuliusHaertl\PHPDocToRst\Builder\RstBuilder;
+use phpDocumentor\Reflection\Element;
 use phpDocumentor\Reflection\Php\Interface_;
-use PhpParser\Builder\Class_;
 
 /**
  * Class InterfaceImplementors

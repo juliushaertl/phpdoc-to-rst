@@ -60,7 +60,7 @@ Methods
 		
 		:param string $type: 
 		:param \\JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder $builder: 
-		:param \\JuliusHaertl\\PHPDocToRst\\Extension\\Element $element: 
+		:param \\phpDocumentor\\Reflection\\Element $element: 
 	
 	
 

@@ -46,7 +46,7 @@ class PublicOnlyExtension extends Extension {
             }
         }
         if ($element instanceof Method || $element instanceof Property) {
-            /** @var Method|Property|Constant $class */
+            /** @var Method|Property $class */
             $class = $element;
             if ((string)$class->getVisibility() !== 'public') {
                 return false;

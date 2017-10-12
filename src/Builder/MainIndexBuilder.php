@@ -42,7 +42,6 @@ class MainIndexBuilder extends RstBuilder {
     }
 
     public function render() {
-        $label = 'root-namespace';
         $this->addLine('.. _namespaces:')->addLine();
         $this->addH1(RstBuilder::escape('Namespaces'));
 

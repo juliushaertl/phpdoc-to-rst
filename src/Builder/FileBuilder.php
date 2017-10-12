@@ -43,8 +43,6 @@ abstract class FileBuilder extends PhpDomainBuilder {
     /** @var Extension[] */
     protected $extensions = [];
 
-    private $phpDomains = [];
-
     protected abstract function render();
 
     public function __construct($file, $element, $extensions) {

@@ -174,7 +174,7 @@ Methods
 	.. php:method:: addParent( $element)
 	
 		
-		:param \\phpDocumentor\\Reflection\\Php\\Interface\_|\\phpDocumentor\\Reflection\\Php\\Class\_|\\phpDocumentor\\Reflection\\Php\\Trait\_ $element: 
+		:param \\phpDocumentor\\Reflection\\Php\\Interface\_|\\phpDocumentor\\Reflection\\Php\\Class\_ $element: 
 	
 	
 

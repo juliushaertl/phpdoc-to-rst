@@ -56,10 +56,6 @@ Properties
 	:Type: `JuliusHaertl\\PHPDocToRst\\Extension\\Extension` 
 
 
-.. php:attr:: phpDomains
-
-
-
 Methods
 -------
 

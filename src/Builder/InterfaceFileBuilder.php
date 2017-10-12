@@ -37,7 +37,6 @@ class InterfaceFileBuilder extends FileBuilder {
             return;
         }
 
-        $docBlock = $interface->getDocBlock();
         $this->addPageHeader($interface);
 
         $this->indent();

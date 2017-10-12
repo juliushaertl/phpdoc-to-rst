@@ -102,16 +102,12 @@ class PhpDomainBuilder extends RstBuilder {
         switch (get_class($element)) {
             case Class_::class:
                 return 'class';
-                break;
             case Interface_::class:
                 return 'interface';
-                break;
             case Trait_::class:
                 return 'trait';
-                break;
             case Function_::class:
                 return 'function';
-                break;
             case Method::class:
                 return 'method';
             default:
@@ -180,19 +176,13 @@ class PhpDomainBuilder extends RstBuilder {
     }
 
     /**
-     * @param Interface_|Class_|Trait_ $element
+     * @param Interface_|Class_ $element
      */
     protected function addParent($element) {
         if ($element instanceof Class_) {
             $parent = $element->getParent();
             if ($parent !== null) {
                 $this->addFieldList('Parent', $parent !== null ? $this->getLink('class', $parent) : '');
-            }
-        }
-        if ($element instanceof Trait_) {
-            $parent = $element->getParent();
-            if ($parent !== null) {
-                $this->addFieldList('Parent', $parent !== null ? $this->getLink('trait', $parent) : '');
             }
         }
         if ($element instanceof Interface_) {
