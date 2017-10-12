@@ -10,6 +10,23 @@ HideChildNamespaces
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Extension
 
+.. php:class:: HideChildNamespaces
+
+
+	.. rst-class:: phpdoc-description
+	
+	::
+	
+		Example for hiding a section in the namespace index page
+		
+		
+		
+		
+	
+	:Parent:
+		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`
+	
+
 
 Summary
 -------
@@ -18,17 +35,7 @@ Methods
 ~~~~~~~
 
 * :php:meth:`public shouldRenderIndex\($type, $element\)<JuliusHaertl\\PHPDocToRst\\Extension\\HideChildNamespaces::shouldRenderIndex\(\)>`
-.. php:class:: HideChildNamespaces
 
-
-	Example for hiding a section in the namespace index page
-	
-	
-	
-	
-	:Parent:
-		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`
-	
 
 Methods
 -------

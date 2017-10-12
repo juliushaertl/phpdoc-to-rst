@@ -10,6 +10,23 @@ InterfaceImplementors
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Extension
 
+.. php:class:: InterfaceImplementors
+
+
+	.. rst-class:: phpdoc-description
+	
+	::
+	
+		Class InterfaceImplementors
+		
+		
+		
+		
+	
+	:Parent:
+		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`
+	
+
 
 Summary
 -------
@@ -19,17 +36,7 @@ Methods
 
 * :php:meth:`public prepare\(\)<JuliusHaertl\\PHPDocToRst\\Extension\\InterfaceImplementors::prepare\(\)>`
 * :php:meth:`public render\($type, $builder, $element\)<JuliusHaertl\\PHPDocToRst\\Extension\\InterfaceImplementors::render\(\)>`
-.. php:class:: InterfaceImplementors
 
-
-	Class InterfaceImplementors
-	
-	
-	
-	
-	:Parent:
-		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`
-	
 
 Properties
 ----------
@@ -53,12 +60,6 @@ Methods
 
 	.. php:method:: render( $type,  $builder,  $element)
 	
-		
-		
-		
-		
-		
-		
 		
 		:param string $type: 
 		:param \\JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder $builder: 

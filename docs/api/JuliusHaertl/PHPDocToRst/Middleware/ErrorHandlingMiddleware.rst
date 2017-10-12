@@ -12,6 +12,23 @@ ErrorHandlingMiddleware
 
 .. rst-class::  final
 
+.. php:class:: ErrorHandlingMiddleware
+
+
+	.. rst-class:: phpdoc-description
+	
+	::
+	
+		Class ErrorHandlingMiddleware
+		
+		
+		
+		
+	
+	:Implements:
+		:php:interface:`phpDocumentor\\Reflection\\Middleware\\Middleware` 
+	
+
 
 Summary
 -------
@@ -21,17 +38,7 @@ Methods
 
 * :php:meth:`public \_\_construct\($apiDocBuilder\)<JuliusHaertl\\PHPDocToRst\\Middleware\\ErrorHandlingMiddleware::\_\_construct\(\)>`
 * :php:meth:`public execute\($command, $next\)<JuliusHaertl\\PHPDocToRst\\Middleware\\ErrorHandlingMiddleware::execute\(\)>`
-.. php:class:: ErrorHandlingMiddleware
 
-
-	Class ErrorHandlingMiddleware
-	
-	
-	
-	
-	:Implements:
-		:php:interface:`phpDocumentor\\Reflection\\Middleware\\Middleware` 
-	
 
 Properties
 ----------
@@ -55,10 +62,15 @@ Methods
 
 	.. php:method:: execute( $command,  $next)
 	
-		Executes this middleware class.
+		.. rst-class:: phpdoc-description
 		
+		::
 		
-		
+			Executes this middleware class.
+			
+			
+			
+			
 		
 		
 		:param \\phpDocumentor\\Reflection\\Php\\Factory\\File\\CreateCommand $command: 

@@ -44,6 +44,7 @@ class TraitFileBuilder extends FileBuilder {
         $this->addDocBlockDescription($trait);
         $this->addUsedTraits($trait);
         $this->unindent();
+        $this->addAfterIntroduction($trait);
 
         $this->addProperties($trait->getProperties());
 

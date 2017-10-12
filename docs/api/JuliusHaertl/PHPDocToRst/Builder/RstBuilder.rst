@@ -10,6 +10,20 @@ RstBuilder
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Builder
 
+.. php:class:: RstBuilder
+
+
+	.. rst-class:: phpdoc-description
+	
+	::
+	
+		Helper class to build reStructuredText files
+		
+		
+		
+		
+	
+
 
 Summary
 -------
@@ -28,14 +42,7 @@ Methods
 * :php:meth:`public addLine\($text\)<JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder::addLine\(\)>`
 * :php:meth:`public addMultiline\($text, $blockIndent\)<JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder::addMultiline\(\)>`
 * :php:meth:`public add\($text\)<JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder::add\(\)>`
-.. php:class:: RstBuilder
 
-
-	Helper class to build reStructuredText files
-	
-	
-	
-	
 
 Properties
 ----------
@@ -46,12 +53,6 @@ Properties
 
 .. php:attr:: content
 
-	
-	
-	
-	
-	
-	
 	:Type: string 
 
 

@@ -12,6 +12,10 @@ Extension
 
 .. rst-class::  abstract
 
+.. php:class:: Extension
+
+
+
 
 Summary
 -------
@@ -24,8 +28,6 @@ Methods
 * :php:meth:`public render\($type, $builder, $element\)<JuliusHaertl\\PHPDocToRst\\Extension\\Extension::render\(\)>`
 * :php:meth:`public shouldRenderElement\($element\)<JuliusHaertl\\PHPDocToRst\\Extension\\Extension::shouldRenderElement\(\)>`
 * :php:meth:`public shouldRenderIndex\($type, $element\)<JuliusHaertl\\PHPDocToRst\\Extension\\Extension::shouldRenderIndex\(\)>`
-.. php:class:: Extension
-
 
 
 Properties
@@ -33,12 +35,6 @@ Properties
 
 .. php:attr:: project
 
-	
-	
-	
-	
-	
-	
 	:Type: `phpDocumentor\\Reflection\\Php\\Project` 
 
 
@@ -57,12 +53,17 @@ Methods
 
 	.. php:method:: prepare()
 	
-		Method that will be ran before generating any documentation files
-		This is useful for preparing own data structures
-		to be used in the output documentation
+		.. rst-class:: phpdoc-description
 		
+		::
 		
-		
+			Method that will be ran before generating any documentation files
+			This is useful for preparing own data structures
+			to be used in the output documentation
+			
+			
+			
+			
 		
 		
 	
@@ -72,14 +73,19 @@ Methods
 
 	.. php:method:: render( $type,  $builder,  $element)
 	
-		Implement custom rendering functionality here.
+		.. rst-class:: phpdoc-description
 		
-		It will be executed by Builder classes depending on the given type.
+		::
 		
-		Currently supported types:
-		
-		 - PhpDomainBuilder::SECTION_BEFORE_DESCRIPTION
-		 - PhpDomainBuilder::SECTION_AFTER_DESCRIPTION
+			Implement custom rendering functionality here.
+			
+			It will be executed by Builder classes depending on the given type.
+			
+			Currently supported types:
+			
+			 - PhpDomainBuilder::SECTION_BEFORE_DESCRIPTION
+			 - PhpDomainBuilder::SECTION_AFTER_DESCRIPTION
+			
 		
 		
 		:param string $type: 
@@ -92,10 +98,15 @@ Methods
 
 	.. php:method:: shouldRenderElement( $element)
 	
-		This method will be called to check if a certain element should
-		be rendered in the documentation.
+		.. rst-class:: phpdoc-description
 		
-		An example extension that makes use of it is PublicOnlyExtension
+		::
+		
+			This method will be called to check if a certain element should
+			be rendered in the documentation.
+			
+			An example extension that makes use of it is PublicOnlyExtension
+			
 		
 		
 		:param \\phpDocumentor\\Reflection\\Element $element: 

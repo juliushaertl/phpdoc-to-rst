@@ -19,12 +19,6 @@ Properties
 
 .. php:attr:: extensions
 
-	
-	
-	
-	
-	
-	
 	:Type: `JuliusHaertl\\PHPDocToRst\\Extension\\Extension` 
 
 

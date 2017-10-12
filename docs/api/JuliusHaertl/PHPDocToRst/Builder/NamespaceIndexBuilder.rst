@@ -10,6 +10,22 @@ NamespaceIndexBuilder
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Builder
 
+.. php:class:: NamespaceIndexBuilder
+
+
+	.. rst-class:: phpdoc-description
+	
+	::
+	
+		This class will build an index for each namespace.
+		
+		It contains a toc for child namespaces, classes, traits, interfaces and functions
+		
+	
+	:Parent:
+		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\PhpDomainBuilder`
+	
+
 
 Summary
 -------
@@ -26,16 +42,7 @@ Methods
 * :php:meth:`private shouldRenderIndex\($type, $element\)<JuliusHaertl\\PHPDocToRst\\Builder\\NamespaceIndexBuilder::shouldRenderIndex\(\)>`
 * :php:meth:`private getHeaderForType\($type\)<JuliusHaertl\\PHPDocToRst\\Builder\\NamespaceIndexBuilder::getHeaderForType\(\)>`
 * :php:meth:`private getElementList\($type\)<JuliusHaertl\\PHPDocToRst\\Builder\\NamespaceIndexBuilder::getElementList\(\)>`
-.. php:class:: NamespaceIndexBuilder
 
-
-	This class will build an index for each namespace.
-	
-	It contains a toc for child namespaces, classes, traits, interfaces and functions
-	
-	:Parent:
-		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\PhpDomainBuilder`
-	
 
 Constants
 ---------
@@ -69,56 +76,26 @@ Properties
 
 .. php:attr:: currentNamespace
 
-	
-	
-	
-	
-	
-	
 	:Type: `phpDocumentor\\Reflection\\Php\\Namespace\_` 
 
 
 .. php:attr:: namespaces
 
-	
-	
-	
-	
-	
-	
 	:Type: `phpDocumentor\\Reflection\\Php\\Namespace\_` 
 
 
 .. php:attr:: childNamespaces
 
-	
-	
-	
-	
-	
-	
 	:Type: `phpDocumentor\\Reflection\\Php\\Namespace\_` 
 
 
 .. php:attr:: functions
 
-	
-	
-	
-	
-	
-	
 	:Type: `phpDocumentor\\Reflection\\Php\\Function\_` 
 
 
 .. php:attr:: constants
 
-	
-	
-	
-	
-	
-	
 	:Type: `phpDocumentor\\Reflection\\Php\\Constant` 
 
 
@@ -137,10 +114,15 @@ Methods
 
 	.. php:method:: findChildNamespaces()
 	
-		Find child namespaces for current namespace
+		.. rst-class:: phpdoc-description
 		
+		::
 		
-		
+			Find child namespaces for current namespace
+			
+			
+			
+			
 		
 		
 	
@@ -198,12 +180,6 @@ Methods
 
 	.. php:method:: getElementList( $type)
 	
-		
-		
-		
-		
-		
-		
 		
 		:param int $type: 
 	

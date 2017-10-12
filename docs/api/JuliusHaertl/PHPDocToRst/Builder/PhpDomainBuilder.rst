@@ -10,6 +10,26 @@ PhpDomainBuilder
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Builder
 
+.. php:class:: PhpDomainBuilder
+
+
+	.. rst-class:: phpdoc-description
+	
+	::
+	
+		Class to build reStructuredText file with sphinxcontrib-phpdomain syntax
+		
+		
+		
+		
+	
+	:Parent:
+		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder`
+	
+	:Used traits:
+		:php:trait:`JuliusHaertl\\PHPDocToRst\\Builder\\ExtensionBuilder` 
+	
+
 
 Summary
 -------
@@ -21,6 +41,7 @@ Methods
 * :php:meth:`public static getNamespace\($element\)<JuliusHaertl\\PHPDocToRst\\Builder\\PhpDomainBuilder::getNamespace\(\)>`
 * :php:meth:`protected addPageHeader\($element\)<JuliusHaertl\\PHPDocToRst\\Builder\\PhpDomainBuilder::addPageHeader\(\)>`
 * :php:meth:`private getTypeForClass\($element\)<JuliusHaertl\\PHPDocToRst\\Builder\\PhpDomainBuilder::getTypeForClass\(\)>`
+* :php:meth:`protected addAfterIntroduction\($element\)<JuliusHaertl\\PHPDocToRst\\Builder\\PhpDomainBuilder::addAfterIntroduction\(\)>`
 * :php:meth:`protected addConstants\($constants\)<JuliusHaertl\\PHPDocToRst\\Builder\\PhpDomainBuilder::addConstants\(\)>`
 * :php:meth:`private addConstant\($constant\)<JuliusHaertl\\PHPDocToRst\\Builder\\PhpDomainBuilder::addConstant\(\)>`
 * :php:meth:`protected addProperties\($properties\)<JuliusHaertl\\PHPDocToRst\\Builder\\PhpDomainBuilder::addProperties\(\)>`
@@ -36,20 +57,7 @@ Methods
 * :php:meth:`protected addDocblockTag\($tagName, $docBlock\)<JuliusHaertl\\PHPDocToRst\\Builder\\PhpDomainBuilder::addDocblockTag\(\)>`
 * :php:meth:`public static typesToRst\($types\)<JuliusHaertl\\PHPDocToRst\\Builder\\PhpDomainBuilder::typesToRst\(\)>`
 * :php:meth:`public shouldRenderElement\($element\)<JuliusHaertl\\PHPDocToRst\\Builder\\PhpDomainBuilder::shouldRenderElement\(\)>`
-.. php:class:: PhpDomainBuilder
 
-
-	Class to build reStructuredText file with sphinxcontrib-phpdomain syntax
-	
-	
-	
-	
-	:Parent:
-		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder`
-	
-	:Used traits:
-		:php:trait:`JuliusHaertl\\PHPDocToRst\\Builder\\ExtensionBuilder` 
-	
 
 Constants
 ---------
@@ -63,6 +71,10 @@ Constants
 
 
 .. php:const:: SECTION_AFTER_TITLE = self::class . ::SECTION_AFTER_TITLE
+
+
+
+.. php:const:: SECTION_AFTER_INTRODUCTION = self::class . ::SECTION_AFTER_INTRODUCTION
 
 
 
@@ -81,10 +93,15 @@ Methods
 
 	.. php:method:: getNamespace( $element)
 	
-		Strip element name from Fqsen to return the namespace only
+		.. rst-class:: phpdoc-description
 		
+		::
 		
-		
+			Strip element name from Fqsen to return the namespace only
+			
+			
+			
+			
 		
 		
 		:param \\phpDocumentor\\Reflection\\Element $element: 
@@ -95,10 +112,15 @@ Methods
 
 	.. php:method:: addPageHeader( $element)
 	
-		Add namespace
+		.. rst-class:: phpdoc-description
 		
+		::
 		
-		
+			Add namespace
+			
+			
+			
+			
 		
 		
 		:param \\phpDocumentor\\Reflection\\Element $element: 
@@ -108,6 +130,14 @@ Methods
 .. rst-class:: private
 
 	.. php:method:: getTypeForClass( $element)
+	
+		
+	
+	
+
+.. rst-class:: protected
+
+	.. php:method:: addAfterIntroduction( $element)
 	
 		
 	
@@ -126,12 +156,6 @@ Methods
 	.. php:method:: addConstant( $constant)
 	
 		
-		
-		
-		
-		
-		
-		
 		:param \\phpDocumentor\\Reflection\\Php\\Constant $constant: 
 	
 	
@@ -140,12 +164,6 @@ Methods
 
 	.. php:method:: addProperties( $properties)
 	
-		
-		
-		
-		
-		
-		
 		
 		:param \\phpDocumentor\\Reflection\\Php\\Property\[\] $properties: 
 	
@@ -156,12 +174,6 @@ Methods
 	.. php:method:: addProperty( $property)
 	
 		
-		
-		
-		
-		
-		
-		
 		:param \\phpDocumentor\\Reflection\\Php\\Property $property: 
 	
 	
@@ -171,12 +183,6 @@ Methods
 	.. php:method:: addParent( $element)
 	
 		
-		
-		
-		
-		
-		
-		
 		:param \\phpDocumentor\\Reflection\\Php\\Interface\_|\\phpDocumentor\\Reflection\\Php\\Class\_|\\phpDocumentor\\Reflection\\Php\\Trait\_ $element: 
 	
 	
@@ -185,12 +191,6 @@ Methods
 
 	.. php:method:: addUsedTraits( $element)
 	
-		
-		
-		
-		
-		
-		
 		
 		:param \\phpDocumentor\\Reflection\\Php\\Class\_|\\phpDocumentor\\Reflection\\Php\\Trait\_ $element: 
 	
@@ -217,12 +217,6 @@ Methods
 	.. php:method:: getLink( $type,  $fqsen,  $description)
 	
 		
-		
-		
-		
-		
-		
-		
 		:param  $type: string
 		:param  $fqsen: string
 	
@@ -232,12 +226,6 @@ Methods
 
 	.. php:method:: beginPhpDomain( $type,  $name,  $indent)
 	
-		
-		
-		
-		
-		
-		
 		
 		:param  $type: string
 		:param  $name: string
@@ -250,12 +238,6 @@ Methods
 	.. php:method:: endPhpDomain( $type)
 	
 		
-		
-		
-		
-		
-		
-		
 		:param string $type: 
 	
 	
@@ -265,12 +247,6 @@ Methods
 	.. php:method:: addDocBlockDescription( $element)
 	
 		
-		
-		
-		
-		
-		
-		
 		:param \\phpDocumentor\\Reflection\\Php\\Class\_|\\phpDocumentor\\Reflection\\Php\\Interface\_|\\phpDocumentor\\Reflection\\Php\\Trait\_|\\phpDocumentor\\Reflection\\Php\\Property|\\phpDocumentor\\Reflection\\Php\\Method|\\phpDocumentor\\Reflection\\Php\\Constant $element: 
 	
 	
@@ -279,12 +255,6 @@ Methods
 
 	.. php:method:: addDocblockTag( $tagName,  $docBlock)
 	
-		
-		
-		
-		
-		
-		
 		
 		:param string $tagName: Name of the tag to parse
 		:param \\phpDocumentor\\Reflection\\DocBlock $docBlock: 

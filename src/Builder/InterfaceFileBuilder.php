@@ -44,6 +44,7 @@ class InterfaceFileBuilder extends FileBuilder {
         $this->addDocBlockDescription($interface);
         $this->addParent($interface);
         $this->unindent();
+        $this->addAfterIntroduction($interface);
 
         $this->addConstants($interface->getConstants());
         $this->addMethods($interface->getMethods());

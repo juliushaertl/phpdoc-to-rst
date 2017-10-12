@@ -10,6 +10,13 @@ InterfaceFileBuilder
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Builder
 
+.. php:class:: InterfaceFileBuilder
+
+
+	:Parent:
+		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder`
+	
+
 
 Summary
 -------
@@ -18,12 +25,7 @@ Methods
 ~~~~~~~
 
 * :php:meth:`protected render\(\)<JuliusHaertl\\PHPDocToRst\\Builder\\InterfaceFileBuilder::render\(\)>`
-.. php:class:: InterfaceFileBuilder
 
-
-	:Parent:
-		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder`
-	
 
 Methods
 -------

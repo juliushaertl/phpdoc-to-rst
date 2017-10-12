@@ -44,7 +44,7 @@ class TocExtension extends Extension {
      * @param FileBuilder $builder
      */
     public function render($type, &$builder, $element) {
-        if ($type === PhpDomainBuilder::SECTION_AFTER_TITLE) {
+        if ($type === PhpDomainBuilder::SECTION_AFTER_INTRODUCTION) {
             if ($element instanceof Class_ || $element instanceof Interface_ || $element instanceof Trait_) {
                 $builder->addLine();
                 $builder->addH2('Summary');
@@ -69,6 +69,7 @@ class TocExtension extends Extension {
                     $builder->addLine('* ' . PhpDomainBuilder::getLink('meth', $method->getFqsen(), $signature));
 
                 }
+                $builder->addLine()->addLine();
             }
         }
 

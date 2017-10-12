@@ -46,6 +46,8 @@ class ClassFileBuilder extends FileBuilder {
         $this->addUsedTraits($class);
         $this->unindent();
 
+        $this->addAfterIntroduction($class);
+
         $this->addConstants($class->getConstants());
         $this->addProperties($class->getProperties());
 

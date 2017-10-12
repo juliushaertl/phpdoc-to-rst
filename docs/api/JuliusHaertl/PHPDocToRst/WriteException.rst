@@ -10,6 +10,13 @@ WriteException
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst
 
+.. php:class:: WriteException
+
+
+	:Parent:
+		:php:class:`Exception`
+	
+
 
 Summary
 -------
@@ -17,10 +24,5 @@ Summary
 Methods
 ~~~~~~~
 
-.. php:class:: WriteException
 
-
-	:Parent:
-		:php:class:`Exception`
-	
 

@@ -10,6 +10,13 @@ ClassFileBuilder
 
 .. php:namespace:: JuliusHaertl\PHPDocToRst\Builder
 
+.. php:class:: ClassFileBuilder
+
+
+	:Parent:
+		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder`
+	
+
 
 Summary
 -------
@@ -19,12 +26,7 @@ Methods
 
 * :php:meth:`protected render\(\)<JuliusHaertl\\PHPDocToRst\\Builder\\ClassFileBuilder::render\(\)>`
 * :php:meth:`protected addImplementedInterfaces\($element\)<JuliusHaertl\\PHPDocToRst\\Builder\\ClassFileBuilder::addImplementedInterfaces\(\)>`
-.. php:class:: ClassFileBuilder
 
-
-	:Parent:
-		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder`
-	
 
 Methods
 -------
@@ -41,12 +43,6 @@ Methods
 
 	.. php:method:: addImplementedInterfaces( $element)
 	
-		
-		
-		
-		
-		
-		
 		
 		:param \\phpDocumentor\\Reflection\\Php\\Class\_ $element: 
 	
