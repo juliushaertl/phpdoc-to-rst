@@ -22,5 +22,6 @@
             "JuliusHaertl\\PHPDocToRst\\": ["src"],
             "JuliusHaertl\\PHPDocToRst\\Test\\": ["tests"]
         }
-    }
+    },
+    "bin": ["bin/phpdoc-to-rst"]
 }
