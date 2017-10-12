@@ -17,13 +17,10 @@ ApiDocBuilder
 
 	.. rst-class:: phpdoc-description
 	
-	::
+	| This class is used to parse a project tree and generate rst files
+	| for all of the containing PHP structures
 	
-		This class is used to parse a project tree and generate rst files
-		for all of the containing PHP structures
-		
-		Example usage is documented in examples/example.php
-		
+	| Example usage is documented in examples/example.php
 	
 
 
@@ -108,13 +105,10 @@ Methods
 	
 		.. rst-class:: phpdoc-description
 		
-		::
+		| ApiDocBuilder constructor.
 		
-			ApiDocBuilder constructor.
-			
-			
-			
-			
+		| 
+		| 
 		
 		
 		:param string\[\] $srcDir: array of paths that should be analysed
@@ -128,13 +122,10 @@ Methods
 	
 		.. rst-class:: phpdoc-description
 		
-		::
+		| Run this to build the documentation
 		
-			Run this to build the documentation
-			
-			
-			
-			
+		| 
+		| 
 		
 		
 	
@@ -146,13 +137,10 @@ Methods
 	
 		.. rst-class:: phpdoc-description
 		
-		::
+		| Enable verbose logging output
 		
-			Enable verbose logging output
-			
-			
-			
-			
+		| 
+		| 
 		
 		
 		:param bool $v: Set to true to enable
@@ -165,13 +153,10 @@ Methods
 	
 		.. rst-class:: phpdoc-description
 		
-		::
+		| Enable debug logging output
 		
-			Enable debug logging output
-			
-			
-			
-			
+		| 
+		| 
 		
 		
 		:param bool $v: Set to true to enable
@@ -184,13 +169,10 @@ Methods
 	
 		.. rst-class:: phpdoc-description
 		
-		::
+		| Log a message
 		
-			Log a message
-			
-			
-			
-			
+		| 
+		| 
 		
 		
 		:param string $message: Message to be logged
@@ -203,13 +185,10 @@ Methods
 	
 		.. rst-class:: phpdoc-description
 		
-		::
+		| Log a debug message
 		
-			Log a debug message
-			
-			
-			
-			
+		| 
+		| 
 		
 		
 		:param string $message: Message to be logged
@@ -239,13 +218,10 @@ Methods
 	
 		.. rst-class:: phpdoc-description
 		
-		::
+		| Create directory structure for the rst output
 		
-			Create directory structure for the rst output
-			
-			
-			
-			
+		| 
+		| 
 		
 		
 	

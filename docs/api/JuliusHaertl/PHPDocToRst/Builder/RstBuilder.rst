@@ -15,13 +15,10 @@ RstBuilder
 
 	.. rst-class:: phpdoc-description
 	
-	::
+	| Helper class to build reStructuredText files
 	
-		Helper class to build reStructuredText files
-		
-		
-		
-		
+	| 
+	| 
 	
 
 
@@ -41,6 +38,7 @@ Methods
 * :php:meth:`public addH3\($text\)<JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder::addH3\(\)>`
 * :php:meth:`public addLine\($text\)<JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder::addLine\(\)>`
 * :php:meth:`public addMultiline\($text, $blockIndent\)<JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder::addMultiline\(\)>`
+* :php:meth:`public addMultilineWithoutRendering\($text\)<JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder::addMultilineWithoutRendering\(\)>`
 * :php:meth:`public add\($text\)<JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder::add\(\)>`
 
 
@@ -134,6 +132,14 @@ Methods
 .. rst-class:: public
 
 	.. php:method:: addMultiline( $text,  $blockIndent)
+	
+		
+	
+	
+
+.. rst-class:: public
+
+	.. php:method:: addMultilineWithoutRendering( $text)
 	
 		
 	

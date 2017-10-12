@@ -102,6 +102,15 @@ class RstBuilder {
         return $this;
     }
 
+    public function addMultilineWithoutRendering($text) {
+        $lines = preg_split('/$\R?^/m', $text);
+        foreach ($lines as $line) {
+            $this->addLine('| ' . $line);
+        }
+
+        return $this;
+    }
+
     public function add($text) {
         $this->content .= $text;
         return $this;

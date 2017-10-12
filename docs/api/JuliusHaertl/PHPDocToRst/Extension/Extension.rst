@@ -55,15 +55,12 @@ Methods
 	
 		.. rst-class:: phpdoc-description
 		
-		::
+		| Method that will be ran before generating any documentation files
+		| This is useful for preparing own data structures
+		| to be used in the output documentation
 		
-			Method that will be ran before generating any documentation files
-			This is useful for preparing own data structures
-			to be used in the output documentation
-			
-			
-			
-			
+		| 
+		| 
 		
 		
 	
@@ -75,17 +72,14 @@ Methods
 	
 		.. rst-class:: phpdoc-description
 		
-		::
+		| Implement custom rendering functionality here.
 		
-			Implement custom rendering functionality here.
-			
-			It will be executed by Builder classes depending on the given type.
-			
-			Currently supported types:
-			
-			 - PhpDomainBuilder::SECTION_BEFORE_DESCRIPTION
-			 - PhpDomainBuilder::SECTION_AFTER_DESCRIPTION
-			
+		| It will be executed by Builder classes depending on the given type.
+		| 
+		| Currently supported types:
+		| 
+		|  - PhpDomainBuilder::SECTION_BEFORE_DESCRIPTION
+		|  - PhpDomainBuilder::SECTION_AFTER_DESCRIPTION
 		
 		
 		:param string $type: 
@@ -100,13 +94,10 @@ Methods
 	
 		.. rst-class:: phpdoc-description
 		
-		::
+		| This method will be called to check if a certain element should
+		| be rendered in the documentation.
 		
-			This method will be called to check if a certain element should
-			be rendered in the documentation.
-			
-			An example extension that makes use of it is PublicOnlyExtension
-			
+		| An example extension that makes use of it is PublicOnlyExtension
 		
 		
 		:param \\phpDocumentor\\Reflection\\Element $element: 

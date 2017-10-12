@@ -15,14 +15,11 @@ PublicOnlyExtension
 
 	.. rst-class:: phpdoc-description
 	
-	::
+	| Do not render classes marked with phpDoc internal tag
+	| Do only render public methods/properties
 	
-		Do not render classes marked with phpDoc internal tag
-		Do only render public methods/properties
-		
-		
-		
-		
+	| 
+	| 
 	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`

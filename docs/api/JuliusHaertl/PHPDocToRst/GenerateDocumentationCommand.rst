@@ -15,13 +15,10 @@ GenerateDocumentationCommand
 
 	.. rst-class:: phpdoc-description
 	
-	::
+	| Class GenerateDocumentationCommand
 	
-		Class GenerateDocumentationCommand
-		
-		
-		
-		
+	| 
+	| 
 	
 	:Parent:
 		:php:class:`Symfony\\Component\\Console\\Command\\Command`
