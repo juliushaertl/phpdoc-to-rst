@@ -300,8 +300,10 @@ class PhpDomainBuilder extends RstBuilder {
         $this->callExtensions(self::SECTION_BEFORE_DESCRIPTION, $element);
         if ($docBlock !== null && $docBlock->getSummary() !== '') {
             $this->addLine('.. rst-class:: phpdoc-description')->addLine();
-            $this->addMultilineWithoutRendering($docBlock->getSummary())->addLine();
-            $this->addMultilineWithoutRendering($docBlock->getDescription())->addLine();
+            $this->indent();
+            $this->addMultilineWithoutRendering(RstBuilder::escape($docBlock->getSummary()))->addLine();
+            $this->addMultilineWithoutRendering(RstBuilder::escape($docBlock->getDescription()))->addLine();
+            $this->unindent();
         }
         $this->callExtensions(self::SECTION_AFTER_DESCRIPTION, $element);
         return $this;

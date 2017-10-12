@@ -15,10 +15,11 @@ AddFullElementNameExtension
 
 	.. rst-class:: phpdoc-description
 	
-	| Add the fully qualified element name including the namespace to each page
-	
-	| 
-	| 
+		| Add the fully qualified element name including the namespace to each page
+		
+		| 
+		| 
+		
 	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`

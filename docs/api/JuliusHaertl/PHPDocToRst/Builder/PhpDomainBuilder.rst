@@ -15,10 +15,11 @@ PhpDomainBuilder
 
 	.. rst-class:: phpdoc-description
 	
-	| Class to build reStructuredText file with sphinxcontrib-phpdomain syntax
-	
-	| 
-	| 
+		| Class to build reStructuredText file with sphinxcontrib\-phpdomain syntax
+		
+		| 
+		| 
+		
 	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder`
@@ -92,10 +93,11 @@ Methods
 	
 		.. rst-class:: phpdoc-description
 		
-		| Strip element name from Fqsen to return the namespace only
-		
-		| 
-		| 
+			| Strip element name from Fqsen to return the namespace only
+			
+			| 
+			| 
+			
 		
 		
 		:param \\phpDocumentor\\Reflection\\Element $element: 
@@ -108,10 +110,11 @@ Methods
 	
 		.. rst-class:: phpdoc-description
 		
-		| Add namespace
-		
-		| 
-		| 
+			| Add namespace
+			
+			| 
+			| 
+			
 		
 		
 		:param \\phpDocumentor\\Reflection\\Element $element: 
@@ -237,14 +240,6 @@ Methods
 
 	.. php:method:: addDocBlockDescription( $element)
 	
-		.. rst-class:: phpdoc-description
-		
-		| We can have
-		
-		| an multline function() {
-		|      echo "hellO";
-		| }
-		
 		
 		:param \\phpDocumentor\\Reflection\\Php\\Class\_|\\phpDocumentor\\Reflection\\Php\\Interface\_|\\phpDocumentor\\Reflection\\Php\\Trait\_|\\phpDocumentor\\Reflection\\Php\\Property|\\phpDocumentor\\Reflection\\Php\\Method|\\phpDocumentor\\Reflection\\Php\\Constant $element: 
 	

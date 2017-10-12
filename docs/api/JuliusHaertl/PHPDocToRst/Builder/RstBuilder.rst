@@ -15,10 +15,11 @@ RstBuilder
 
 	.. rst-class:: phpdoc-description
 	
-	| Helper class to build reStructuredText files
-	
-	| 
-	| 
+		| Helper class to build reStructuredText files
+		
+		| 
+		| 
+		
 	
 
 

@@ -15,10 +15,11 @@ MainIndexBuilder
 
 	.. rst-class:: phpdoc-description
 	
-	| This class builds a list of all available namespaces in the project.
-	
-	| 
-	| 
+		| This class builds a list of all available namespaces in the project\.
+		
+		| 
+		| 
+		
 	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder`

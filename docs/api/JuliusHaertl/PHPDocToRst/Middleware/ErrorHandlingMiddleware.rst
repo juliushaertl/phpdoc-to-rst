@@ -17,10 +17,11 @@ ErrorHandlingMiddleware
 
 	.. rst-class:: phpdoc-description
 	
-	| Class ErrorHandlingMiddleware
-	
-	| 
-	| 
+		| Class ErrorHandlingMiddleware
+		
+		| 
+		| 
+		
 	
 	:Implements:
 		:php:interface:`phpDocumentor\\Reflection\\Middleware\\Middleware` 
@@ -61,10 +62,11 @@ Methods
 	
 		.. rst-class:: phpdoc-description
 		
-		| Executes this middleware class.
-		
-		| 
-		| 
+			| Executes this middleware class\.
+			
+			| 
+			| 
+			
 		
 		
 		:param \\phpDocumentor\\Reflection\\Php\\Factory\\File\\CreateCommand $command: 

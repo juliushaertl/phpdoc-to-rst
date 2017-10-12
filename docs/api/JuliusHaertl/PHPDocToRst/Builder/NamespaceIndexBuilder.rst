@@ -15,9 +15,10 @@ NamespaceIndexBuilder
 
 	.. rst-class:: phpdoc-description
 	
-	| This class will build an index for each namespace.
-	
-	| It contains a toc for child namespaces, classes, traits, interfaces and functions
+		| This class will build an index for each namespace\.
+		
+		| It contains a toc for child namespaces, classes, traits, interfaces and functions
+		
 	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\PhpDomainBuilder`
@@ -113,10 +114,11 @@ Methods
 	
 		.. rst-class:: phpdoc-description
 		
-		| Find child namespaces for current namespace
-		
-		| 
-		| 
+			| Find child namespaces for current namespace
+			
+			| 
+			| 
+			
 		
 		
 	

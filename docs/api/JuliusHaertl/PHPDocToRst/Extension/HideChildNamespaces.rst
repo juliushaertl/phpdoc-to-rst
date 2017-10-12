@@ -15,10 +15,11 @@ HideChildNamespaces
 
 	.. rst-class:: phpdoc-description
 	
-	| Example for hiding a section in the namespace index page
-	
-	| 
-	| 
+		| Example for hiding a section in the namespace index page
+		
+		| 
+		| 
+		
 	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`

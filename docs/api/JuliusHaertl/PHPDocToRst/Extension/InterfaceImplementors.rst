@@ -15,10 +15,11 @@ InterfaceImplementors
 
 	.. rst-class:: phpdoc-description
 	
-	| Class InterfaceImplementors
-	
-	| 
-	| 
+		| Class InterfaceImplementors
+		
+		| 
+		| 
+		
 	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`

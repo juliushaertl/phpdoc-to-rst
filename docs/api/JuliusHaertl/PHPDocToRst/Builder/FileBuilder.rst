@@ -17,10 +17,11 @@ FileBuilder
 
 	.. rst-class:: phpdoc-description
 	
-	| Abstract building class to build sphinxcontrib-phpdomain from a php file
-	
-	| 
-	| 
+		| Abstract building class to build sphinxcontrib\-phpdomain from a php file
+		
+		| 
+		| 
+		
 	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\PhpDomainBuilder`

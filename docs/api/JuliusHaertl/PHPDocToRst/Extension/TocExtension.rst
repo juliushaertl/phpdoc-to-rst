@@ -15,11 +15,12 @@ TocExtension
 
 	.. rst-class:: phpdoc-description
 	
-	| This extension will render a list of methods  for easy access
-	| at the beginning of classes, interfaces and traits
-	
-	| 
-	| 
+		| This extension will render a list of methods  for easy access
+		| at the beginning of classes, interfaces and traits
+		
+		| 
+		| 
+		
 	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`
