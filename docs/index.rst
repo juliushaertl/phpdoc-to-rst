@@ -18,7 +18,8 @@ is used to annotate the PHP objects in the documentation.
    cli
    usage
    extensions
-   api_docs
+   API documentation <api/JuliusHaertl/PHPDocToRst/index>
+
 
 
     
