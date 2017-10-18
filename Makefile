@@ -2,7 +2,7 @@ default: test docs
 
 
 docs: clean
-	./bin/phpdoc-to-rst generate -t ./docs/api src
+	./bin/phpdoc-to-rst generate --repo-base $(CURDIR) --repo-github https://github.com/juliushaertl/phpdoc-to-rst -t ./docs/api src
 	cd docs && make html
 
 test:

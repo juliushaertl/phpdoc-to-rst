@@ -18,6 +18,7 @@ Classes
 .. toctree::
 	:maxdepth: 1
 	
+	GithubLocationExtension <GithubLocationExtension>
 	AddFullElementNameExtension <AddFullElementNameExtension>
 	TocExtension <TocExtension>
 	NoPrivateExtension <NoPrivateExtension>

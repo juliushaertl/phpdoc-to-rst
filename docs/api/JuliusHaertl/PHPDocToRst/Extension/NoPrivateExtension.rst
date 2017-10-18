@@ -22,6 +22,10 @@ NoPrivateExtension
 		| 
 		
 	
+	:Source:
+		`src/Extension/NoPrivateExtension.php#38 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/NoPrivateExtension.php#L38>`_
+	
+	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`
 	
@@ -43,6 +47,10 @@ Methods
 
 	.. php:method:: public shouldRenderElement(phpDocumentor\\Reflection\\Element $element)
 	
+		:Source:
+			`src/Extension/NoPrivateExtension.php#40 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/NoPrivateExtension.php#L40>`_
+		
+		
 		
 	
 	

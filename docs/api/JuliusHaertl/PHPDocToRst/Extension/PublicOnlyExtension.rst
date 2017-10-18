@@ -22,6 +22,10 @@ PublicOnlyExtension
 		| 
 		
 	
+	:Source:
+		`src/Extension/PublicOnlyExtension.php#38 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/PublicOnlyExtension.php#L38>`_
+	
+	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`
 	
@@ -43,6 +47,10 @@ Methods
 
 	.. php:method:: public shouldRenderElement(phpDocumentor\\Reflection\\Element $element)
 	
+		:Source:
+			`src/Extension/PublicOnlyExtension.php#40 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/PublicOnlyExtension.php#L40>`_
+		
+		
 		
 	
 	

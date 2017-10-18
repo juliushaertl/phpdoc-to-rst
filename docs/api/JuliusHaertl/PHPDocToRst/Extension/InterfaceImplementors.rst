@@ -21,6 +21,10 @@ InterfaceImplementors
 		| 
 		
 	
+	:Source:
+		`src/Extension/InterfaceImplementors.php#41 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/InterfaceImplementors.php#L41>`_
+	
+	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`
 	
@@ -46,6 +50,10 @@ Methods
 
 	.. php:method:: public prepare()
 	
+		:Source:
+			`src/Extension/InterfaceImplementors.php#45 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/InterfaceImplementors.php#L45>`_
+		
+		
 		
 	
 	
@@ -54,6 +62,10 @@ Methods
 
 	.. php:method:: public render( $type, &$builder, $element)
 	
+		:Source:
+			`src/Extension/InterfaceImplementors.php#63 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/InterfaceImplementors.php#L63>`_
+		
+		
 		
 		:param string $type: 
 		:param JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder $builder: 

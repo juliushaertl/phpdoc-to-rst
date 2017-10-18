@@ -34,8 +34,12 @@ abstract class Extension {
     /** @var Project */
     protected $project;
 
-    public function __construct(Project &$project) {
+    /** @var array */
+    protected $arguments;
+
+    public function __construct(Project $project, $arguments=[]) {
         $this->project = $project;
+        $this->arguments = $arguments;
     }
 
     /**

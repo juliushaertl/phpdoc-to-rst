@@ -21,6 +21,10 @@ RstBuilder
 		| 
 		
 	
+	:Source:
+		`src/Builder/RstBuilder.php#34 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L34>`_
+	
+	
 
 
 Summary
@@ -48,6 +52,10 @@ Properties
 
 .. php:attr:: protected static content
 
+	:Source:
+		`src/Builder/RstBuilder.php#38 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L38>`_
+	
+	
 	:Type: string 
 
 
@@ -58,6 +66,10 @@ Methods
 
 	.. php:method:: public getContent()
 	
+		:Source:
+			`src/Builder/RstBuilder.php#40 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L40>`_
+		
+		
 		
 	
 	
@@ -66,6 +78,10 @@ Methods
 
 	.. php:method:: public static escape( $text)
 	
+		:Source:
+			`src/Builder/RstBuilder.php#44 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L44>`_
+		
+		
 		
 	
 	
@@ -74,6 +90,10 @@ Methods
 
 	.. php:method:: public indent()
 	
+		:Source:
+			`src/Builder/RstBuilder.php#50 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L50>`_
+		
+		
 		
 	
 	
@@ -82,6 +102,10 @@ Methods
 
 	.. php:method:: public unindent()
 	
+		:Source:
+			`src/Builder/RstBuilder.php#55 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L55>`_
+		
+		
 		
 	
 	
@@ -90,6 +114,10 @@ Methods
 
 	.. php:method:: public addFieldList( $key, $value)
 	
+		:Source:
+			`src/Builder/RstBuilder.php#61 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L61>`_
+		
+		
 		
 	
 	
@@ -98,6 +126,10 @@ Methods
 
 	.. php:method:: public addH1(string $text)
 	
+		:Source:
+			`src/Builder/RstBuilder.php#71 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L71>`_
+		
+		
 		
 		:param string $text: 
 		:Returns: $this 
@@ -108,6 +140,10 @@ Methods
 
 	.. php:method:: public addH2( $text)
 	
+		:Source:
+			`src/Builder/RstBuilder.php#77 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L77>`_
+		
+		
 		
 	
 	
@@ -116,6 +152,10 @@ Methods
 
 	.. php:method:: public addH3( $text)
 	
+		:Source:
+			`src/Builder/RstBuilder.php#83 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L83>`_
+		
+		
 		
 	
 	
@@ -124,6 +164,10 @@ Methods
 
 	.. php:method:: public addLine( $text="")
 	
+		:Source:
+			`src/Builder/RstBuilder.php#89 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L89>`_
+		
+		
 		
 	
 	
@@ -132,6 +176,10 @@ Methods
 
 	.. php:method:: public addMultiline( $text="", $blockIndent=false)
 	
+		:Source:
+			`src/Builder/RstBuilder.php#94 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L94>`_
+		
+		
 		
 	
 	
@@ -140,6 +188,10 @@ Methods
 
 	.. php:method:: public addMultilineWithoutRendering( $text)
 	
+		:Source:
+			`src/Builder/RstBuilder.php#109 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L109>`_
+		
+		
 		
 	
 	
@@ -148,6 +200,10 @@ Methods
 
 	.. php:method:: public add( $text)
 	
+		:Source:
+			`src/Builder/RstBuilder.php#118 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L118>`_
+		
+		
 		
 	
 	

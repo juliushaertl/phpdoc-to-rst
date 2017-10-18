@@ -31,6 +31,5 @@ Classes
 	
 	WriteException <WriteException>
 	GenerateDocumentationCommand <GenerateDocumentationCommand>
-	ApiDocBuilder <ApiDocBuilder>
 
 

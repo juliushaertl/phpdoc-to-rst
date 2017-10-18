@@ -21,6 +21,10 @@ PhpDomainBuilder
 		| 
 		
 	
+	:Source:
+		`src/Builder/PhpDomainBuilder.php#49 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L49>`_
+	
+	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder`
 	
@@ -62,18 +66,34 @@ Constants
 
 .. php:const:: SECTION_BEFORE_DESCRIPTION = self::class . ::SECTION_BEFORE_DESCRIPTION
 
+	:Source:
+		`src/Builder/PhpDomainBuilder.php#51 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L51>`_
+	
+	
 
 
 .. php:const:: SECTION_AFTER_DESCRIPTION = self::class . ::SECTION_AFTER_DESCRIPTION
 
+	:Source:
+		`src/Builder/PhpDomainBuilder.php#52 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L52>`_
+	
+	
 
 
 .. php:const:: SECTION_AFTER_TITLE = self::class . ::SECTION_AFTER_TITLE
 
+	:Source:
+		`src/Builder/PhpDomainBuilder.php#53 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L53>`_
+	
+	
 
 
 .. php:const:: SECTION_AFTER_INTRODUCTION = self::class . ::SECTION_AFTER_INTRODUCTION
 
+	:Source:
+		`src/Builder/PhpDomainBuilder.php#54 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L54>`_
+	
+	
 
 
 Methods
@@ -83,6 +103,10 @@ Methods
 
 	.. php:method:: public __construct( $extensions)
 	
+		:Source:
+			`src/Builder/PhpDomainBuilder.php#60 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L60>`_
+		
+		
 		
 	
 	
@@ -98,6 +122,10 @@ Methods
 			| 
 			| 
 			
+		
+		:Source:
+			`src/Builder/PhpDomainBuilder.php#72 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L72>`_
+		
 		
 		
 		:param phpDocumentor\\Reflection\\Element $element: 
@@ -117,6 +145,10 @@ Methods
 			| 
 			
 		
+		:Source:
+			`src/Builder/PhpDomainBuilder.php#81 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L81>`_
+		
+		
 		
 		:param phpDocumentor\\Reflection\\Element $element: 
 	
@@ -126,6 +158,10 @@ Methods
 
 	.. php:method:: protected addAfterIntroduction( $element)
 	
+		:Source:
+			`src/Builder/PhpDomainBuilder.php#118 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L118>`_
+		
+		
 		
 	
 	
@@ -134,6 +170,10 @@ Methods
 
 	.. php:method:: protected addConstants( $constants)
 	
+		:Source:
+			`src/Builder/PhpDomainBuilder.php#123 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L123>`_
+		
+		
 		
 	
 	
@@ -142,6 +182,10 @@ Methods
 
 	.. php:method:: protected addProperties( $properties)
 	
+		:Source:
+			`src/Builder/PhpDomainBuilder.php#152 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L152>`_
+		
+		
 		
 		:param phpDocumentor\\Reflection\\Php\\Property\[\] $properties: 
 	
@@ -151,6 +195,10 @@ Methods
 
 	.. php:method:: protected addParent( $element)
 	
+		:Source:
+			`src/Builder/PhpDomainBuilder.php#182 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L182>`_
+		
+		
 		
 		:param phpDocumentor\\Reflection\\Php\\Interface\_|\\phpDocumentor\\Reflection\\Php\\Class\_ $element: 
 	
@@ -160,6 +208,10 @@ Methods
 
 	.. php:method:: protected addUsedTraits( $element)
 	
+		:Source:
+			`src/Builder/PhpDomainBuilder.php#200 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L200>`_
+		
+		
 		
 		:param phpDocumentor\\Reflection\\Php\\Class\_|\\phpDocumentor\\Reflection\\Php\\Trait\_ $element: 
 	
@@ -169,6 +221,10 @@ Methods
 
 	.. php:method:: protected addMethods( $methods)
 	
+		:Source:
+			`src/Builder/PhpDomainBuilder.php#213 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L213>`_
+		
+		
 		
 		:param  $methods: 
 	
@@ -178,6 +234,10 @@ Methods
 
 	.. php:method:: public static getLink( $type, $fqsen, $description="")
 	
+		:Source:
+			`src/Builder/PhpDomainBuilder.php#293 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L293>`_
+		
+		
 		
 		:param  $type: string
 		:param  $fqsen: string
@@ -189,6 +249,10 @@ Methods
 
 	.. php:method:: public beginPhpDomain( $type, $name, $indent=true)
 	
+		:Source:
+			`src/Builder/PhpDomainBuilder.php#305 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L305>`_
+		
+		
 		
 		:param  $type: string
 		:param  $name: string
@@ -200,6 +264,10 @@ Methods
 
 	.. php:method:: public endPhpDomain( $type="")
 	
+		:Source:
+			`src/Builder/PhpDomainBuilder.php#317 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L317>`_
+		
+		
 		
 		:param string $type: 
 		:Returns: $this 
@@ -210,6 +278,10 @@ Methods
 
 	.. php:method:: public addDocBlockDescription( $element)
 	
+		:Source:
+			`src/Builder/PhpDomainBuilder.php#326 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L326>`_
+		
+		
 		
 		:param phpDocumentor\\Reflection\\Php\\Class\_|\\phpDocumentor\\Reflection\\Php\\Interface\_|\\phpDocumentor\\Reflection\\Php\\Trait\_|\\phpDocumentor\\Reflection\\Php\\Property|\\phpDocumentor\\Reflection\\Php\\Method|\\phpDocumentor\\Reflection\\Php\\Constant $element: 
 		:Returns: $this 
@@ -220,6 +292,10 @@ Methods
 
 	.. php:method:: protected addDocblockTag( $tagName, phpDocumentor\\Reflection\\DocBlock $docBlock)
 	
+		:Source:
+			`src/Builder/PhpDomainBuilder.php#347 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L347>`_
+		
+		
 		
 		:param string $tagName: Name of the tag to parse
 		:param phpDocumentor\\Reflection\\DocBlock $docBlock: 
@@ -230,6 +306,10 @@ Methods
 
 	.. php:method:: public static typesToRst( $typesString)
 	
+		:Source:
+			`src/Builder/PhpDomainBuilder.php#407 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L407>`_
+		
+		
 		
 		:param string $typesString: 
 		:Returns: bool | string 
@@ -240,6 +320,10 @@ Methods
 
 	.. php:method:: public shouldRenderElement(phpDocumentor\\Reflection\\Element $element)
 	
+		:Source:
+			`src/Builder/PhpDomainBuilder.php#433 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L433>`_
+		
+		
 		
 		:param phpDocumentor\\Reflection\\Element $element: 
 		:Returns: bool 

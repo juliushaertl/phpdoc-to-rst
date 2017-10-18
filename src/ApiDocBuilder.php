@@ -68,6 +68,9 @@ final class ApiDocBuilder {
     /** @var string[] */
     private $extensionNames = [];
 
+    /** @var [][] */
+    private $extensionArguments = [];
+
     /** @var string[] */
     private $srcDir;
 
@@ -186,7 +189,7 @@ final class ApiDocBuilder {
 
         // load extensions
         foreach ($this->extensionNames as $extensionName) {
-            $extension = new $extensionName($this->project);
+            $extension = new $extensionName($this->project, $this->extensionArguments[$extensionName]);
             if (!is_subclass_of($extension, Extension::class)) {
                 $this->log('Failed to load extension ' . $extensionName . '.');
             }
@@ -199,8 +202,10 @@ final class ApiDocBuilder {
      * @param string $class name of the extension class
      * @throws \Exception
      */
-    public function addExtension($class) {
+    public function addExtension($class, $arguments=[]) {
         $this->extensionNames[] = $class;
+        $this->extensionArguments[$class] = $arguments;
+
     }
 
     /**

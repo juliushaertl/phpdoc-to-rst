@@ -25,7 +25,7 @@ namespace JuliusHaertl\PHPDocToRst\Builder;
 
 use JuliusHaertl\PHPDocToRst\Extension\Extension;
 use phpDocumentor\Reflection\Element;
-use phpDocumentor\Reflection\File;
+use phpDocumentor\Reflection\Php\File;
 
 /**
  * Abstract building class to build sphinxcontrib-phpdomain from a php file
@@ -57,6 +57,13 @@ abstract class FileBuilder extends PhpDomainBuilder {
      */
     public function getElement() {
         return $this->element;
+    }
+
+    /**
+     * @return File
+     */
+    public function getFile() {
+        return $this->file;
     }
 
 }

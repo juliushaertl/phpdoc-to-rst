@@ -21,6 +21,10 @@ AddFullElementNameExtension
 		| 
 		
 	
+	:Source:
+		`src/Extension/AddFullElementNameExtension.php#39 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/AddFullElementNameExtension.php#L39>`_
+	
+	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`
 	
@@ -42,6 +46,10 @@ Methods
 
 	.. php:method:: public render( $type, &$builder, $element)
 	
+		:Source:
+			`src/Extension/AddFullElementNameExtension.php#45 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/AddFullElementNameExtension.php#L45>`_
+		
+		
 		
 		:param string $type: 
 		:param JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder $builder: 
