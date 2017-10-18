@@ -51,25 +51,28 @@ class TocExtension extends Extension {
 
                 /** @var Interface_ $interface */
                 $interface = $builder->getElement();
-                $builder->addH3('Methods');
-                foreach ($interface->getMethods() as $method) {
-                    $args = '';
-                    /** @var Argument $argument */
-                    foreach ($method->getArguments() as $argument) {
-                        // TODO: defaults, types
-                        $args .= '$' . $argument->getName() . ', ';
+
+                if(count($interface->getMethods()) > 0) {
+                    $builder->addH3('Methods');
+                    foreach ($interface->getMethods() as $method) {
+                        $args = '';
+                        /** @var Argument $argument */
+                        foreach ($method->getArguments() as $argument) {
+                            // TODO: defaults, types
+                            $args .= '$' . $argument->getName() . ', ';
+                        }
+                        $args = substr($args, 0, -2);
+                        $modifiers = $method->getVisibility();
+                        $modifiers .= $method->isAbstract() ? ' abstract' : '';
+                        $modifiers .= $method->isFinal() ? ' final' : '';
+                        $modifiers .= $method->isStatic() ? ' static' : '';
+                        $signature = $modifiers . ' ' . $method->getName() . '(' . $args . ')';
+
+                        $builder->addLine('* ' . PhpDomainBuilder::getLink('meth', $method->getFqsen(), $signature));
+
                     }
-                    $args = substr($args, 0, -2);
-                    $modifiers = $method->getVisibility();
-                    $modifiers .= $method->isAbstract() ? ' abstract' : '';
-                    $modifiers .= $method->isFinal() ? ' final' : '';
-                    $modifiers .= $method->isStatic() ? ' static' : '';
-                    $signature = $modifiers . ' ' . $method->getName() . '(' . $args . ')';
-
-                    $builder->addLine('* ' . PhpDomainBuilder::getLink('meth', $method->getFqsen(), $signature));
-
+                    $builder->addLine()->addLine();
                 }
-                $builder->addLine()->addLine();
             }
         }
 

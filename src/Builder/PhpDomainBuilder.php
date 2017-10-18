@@ -401,21 +401,21 @@ class PhpDomainBuilder extends RstBuilder {
     }
 
     /**
-     * @param array $types
+     * @param string $typesString
      * @return bool|string
      */
-    public static function typesToRst(array $types) {
+    public static function typesToRst($typesString) {
         // http://docs.phpdoc.org/guides/types.html
         $whitelist = [
             'string', 'int', 'integer', 'float', 'bool', 'boolean', 'array', 'resource', 'null', 'callable',
             'mixed', 'void', 'object', 'false', 'true', 'self', 'static', '$this'
         ];
-        $types = explode('|', $types);
+        $types = explode('|', $typesString);
         $result = '';
         /** @var string $type */
         foreach ($types as $type) {
             $type = str_replace('[]', '', $type);
-            if (in_array($type, $whitelist)) {
+            if (in_array($type, $whitelist, true)) {
                 $result .= $type . ' | ';
                 continue;
             }
