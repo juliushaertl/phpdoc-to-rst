@@ -365,7 +365,7 @@ class PhpDomainBuilder extends RstBuilder {
                 if (count($tags) === 0) continue;
                 /** @var Throws $tag */
                 foreach ($tags as $tag) {
-                    $this->addMultiline(':Throws: ' . $tag->getType() . ' ' . RstBuilder::escape($tag->getDescription()), true);
+                    $this->addMultiline(':Throws: ' . self::typesToRst($tag->getType()) . ' ' . RstBuilder::escape($tag->getDescription()), true);
                 }
                 break;
             case 'since':
@@ -384,7 +384,7 @@ class PhpDomainBuilder extends RstBuilder {
                 if (count($tags) === 0) continue;
                 /** @var See $return */
                 $return = $tags[0];
-                $this->addMultiline(':See: ' . $return->getReference() . ' ' . RstBuilder::escape($return->getDescription()), true);
+                $this->addMultiline(':See: ' . self::typesToRst($return->getReference()) . ' ' . RstBuilder::escape($return->getDescription()), true);
                 break;
             case 'license':
                 if (count($tags) === 0) continue;
