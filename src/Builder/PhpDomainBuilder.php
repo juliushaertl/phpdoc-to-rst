@@ -415,15 +415,15 @@ class PhpDomainBuilder extends RstBuilder {
         $types = explode('|', $typesString);
         $result = '';
         /** @var string $type */
-        foreach ($types as $type) {
-            $type = str_replace('[]', '', $type);
+        foreach ($types as $typeFull) {
+            $type = str_replace('[]', '', $typeFull);
             if (in_array($type, $whitelist, true)) {
-                $result .= $type . ' | ';
+                $result .= $typeFull . ' | ';
                 continue;
             }
             if (0 === strpos($type, '\\'))
                 $type = substr($type, 1);
-            $result .= ':any:`' . RstBuilder::escape($type) . '` | ';
+            $result .= ':any:`' . RstBuilder::escape($typeFull) . ' <' . RstBuilder::escape($type) . '>` | ';
         }
         return substr($result, 0, -3);
     }

@@ -43,7 +43,7 @@ Properties
 		`src/Extension/Extension.php#35 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/Extension.php#L35>`_
 	
 	
-	:Type: :any:`phpDocumentor\\Reflection\\Php\\Project` 
+	:Type: :any:`\\phpDocumentor\\Reflection\\Php\\Project <phpDocumentor\\Reflection\\Php\\Project>` 
 
 
 .. php:attr:: protected static arguments

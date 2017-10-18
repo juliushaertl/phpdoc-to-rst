@@ -53,7 +53,7 @@ Properties
 		`src/Builder/FileBuilder.php#38 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/FileBuilder.php#L38>`_
 	
 	
-	:Type: :any:`phpDocumentor\\Reflection\\Php\\File` 
+	:Type: :any:`\\phpDocumentor\\Reflection\\Php\\File <phpDocumentor\\Reflection\\Php\\File>` 
 
 
 .. php:attr:: protected static element
@@ -62,7 +62,7 @@ Properties
 		`src/Builder/FileBuilder.php#41 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/FileBuilder.php#L41>`_
 	
 	
-	:Type: :any:`phpDocumentor\\Reflection\\Element` 
+	:Type: :any:`\\phpDocumentor\\Reflection\\Element <phpDocumentor\\Reflection\\Element>` 
 
 
 .. php:attr:: protected static extensions
@@ -71,7 +71,7 @@ Properties
 		`src/Builder/FileBuilder.php#44 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/FileBuilder.php#L44>`_
 	
 	
-	:Type: :any:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension` 
+	:Type: :any:`\\JuliusHaertl\\PHPDocToRst\\Extension\\Extension\[\] <JuliusHaertl\\PHPDocToRst\\Extension\\Extension>` 
 
 
 Methods
@@ -110,7 +110,7 @@ Methods
 		
 		
 		
-		:Returns: :any:`phpDocumentor\\Reflection\\Element` that is used to build the rst file
+		:Returns: :any:`\\phpDocumentor\\Reflection\\Element <phpDocumentor\\Reflection\\Element>` that is used to build the rst file
 	
 	
 
@@ -123,7 +123,7 @@ Methods
 		
 		
 		
-		:Returns: :any:`phpDocumentor\\Reflection\\Php\\File` 
+		:Returns: :any:`\\phpDocumentor\\Reflection\\Php\\File <phpDocumentor\\Reflection\\Php\\File>` 
 	
 	
 

@@ -27,7 +27,7 @@ Properties
 		`src/Builder/ExtensionBuilder.php#16 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/ExtensionBuilder.php#L16>`_
 	
 	
-	:Type: :any:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension` 
+	:Type: :any:`\\JuliusHaertl\\PHPDocToRst\\Extension\\Extension\[\] <JuliusHaertl\\PHPDocToRst\\Extension\\Extension>` 
 
 
 Methods
