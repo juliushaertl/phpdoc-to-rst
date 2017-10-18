@@ -62,8 +62,6 @@ class GithubLocationExtension extends Extension {
             $filePath = preg_replace('/^' . preg_quote($this->basePath, '/') . '/', '', $filePath);
             $lineNumber = $element->getLocation()->getLineNumber();
             $url = $this->getGithubLink($filePath, $lineNumber);
-            print_r($filePath);
-            print_r($url);
             $builder->addFieldList('Source', '`' . $filePath. '#' . $lineNumber . ' <'.$url.'>`_');
             $builder->addLine();
         }
