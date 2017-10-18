@@ -24,6 +24,7 @@
 namespace JuliusHaertl\PHPDocToRst;
 
 use JuliusHaertl\PHPDocToRst\Extension\AddFullElementNameExtension;
+use JuliusHaertl\PHPDocToRst\Extension\NoPrivateExtension;
 use JuliusHaertl\PHPDocToRst\Extension\PublicOnlyExtension;
 use JuliusHaertl\PHPDocToRst\Extension\TocExtension;
 use Symfony\Component\Console\Command\Command;
@@ -50,6 +51,8 @@ class GenerateDocumentationCommand extends Command {
                 InputArgument::IS_ARRAY,
                 'Source directories to parse')
             ->addOption('public-only', 'p', InputOption::VALUE_NONE)
+            ->addOption('show-private', null, InputOption::VALUE_NONE)
+
             ->addOption('element-toc', 't', InputOption::VALUE_NONE);
 
     }
@@ -68,6 +71,9 @@ class GenerateDocumentationCommand extends Command {
         }
         if($input->getOption('public-only')) {
             $apiDocBuilder->addExtension(PublicOnlyExtension::class);
+        }
+        if(!$input->getOption('show-private')) {
+            $apiDocBuilder->addExtension(NoPrivateExtension::class);
         }
         if($input->getOption('element-toc')) {
             $apiDocBuilder->addExtension(TocExtension::class);
