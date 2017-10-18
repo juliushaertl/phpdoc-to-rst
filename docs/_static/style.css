@@ -1,43 +1,5 @@
 /* API doc styles */
 
-/** Hacky way to display visibility since sphinx-phpdomain currently doesn't seem support them */
-
-.public:before {
-    content: 'public ';
-}
-.private:before {
-    content: 'private ';
-}
-.protected:before {
-    content: 'protected ';
-}
-.final dt:before{
-    content: 'final ';
-}
-.abstract dt:before {
-    content: 'abstract ';
-}
-
-/* Apply rtd default styling to prepended visibility strings */
-.public:before, .private:before {
-    display: inline-block;
-    margin: 0;
-    font-size: 90%;
-    line-height: normal;
-    background: #e7f2fa;
-    color: #2980B9;
-    border-top: solid 3px #6ab0de;
-    padding: 6px;
-    position: relative;
-}
-.public dt, .private dt {
-    margin-left: -4px !important;
-}
-.abstract dt:before,
-.final dt:before {
-    padding-right: 10px;
-}
-
 .method .descclassname,
 .attr .descclassname {
     display: none;
