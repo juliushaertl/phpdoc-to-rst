@@ -110,6 +110,7 @@ Methods
 		
 		
 		
+		:Returns: :any:`phpDocumentor\\Reflection\\Element` that is used to build the rst file
 	
 	
 
@@ -122,6 +123,7 @@ Methods
 		
 		
 		
+		:Returns: :any:`phpDocumentor\\Reflection\\Php\\File` 
 	
 	
 

@@ -271,12 +271,14 @@ class PhpDomainBuilder extends RstBuilder {
                 if ($param !== null) {
                     $typString = $param->getType();
                     // Remove first \ to allow references
-                    if(0 === strpos($typString, '\\')) {
+                    if (0 === strpos($typString, '\\')) {
                         $typString = substr($typString, 1);
                     }
-                    $this->addMultiline(':param '.self::escape($typString).' $' . $argument->getName() . ': ' . $param->getDescription(), true);
+                    $this->addMultiline(':param ' . self::escape($typString) . ' $' . $argument->getName() . ': ' . $param->getDescription(), true);
                 }
             }
+        }
+        if ($docBlock !== null) {
             foreach ($docBlock->getTags() as $tag) {
                 $this->addDocblockTag($tag->getName(), $docBlock);
             }
