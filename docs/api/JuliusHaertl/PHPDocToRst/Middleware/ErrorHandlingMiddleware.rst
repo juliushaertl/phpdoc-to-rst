@@ -50,7 +50,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: __construct( $apiDocBuilder)
+	.. php:method:: public __construct(JuliusHaertl\\PHPDocToRst\\ApiDocBuilder $apiDocBuilder)
 	
 		
 	
@@ -58,7 +58,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: execute( $command,  $next)
+	.. php:method:: public execute( $command, callable $next)
 	
 		.. rst-class:: phpdoc-description
 		
@@ -69,8 +69,9 @@ Methods
 			
 		
 		
-		:param \\phpDocumentor\\Reflection\\Php\\Factory\\File\\CreateCommand $command: 
-		:param callable $next: 
+		:param \\phpDocumentor\\Reflection\\Php\\Factory\\File\\CreateCommand $command: :any:`phpDocumentor\\Reflection\\Php\\Factory\\File\\CreateCommand` 
+		:param callable $next: callable 
+		:Returns: object 
 	
 	
 

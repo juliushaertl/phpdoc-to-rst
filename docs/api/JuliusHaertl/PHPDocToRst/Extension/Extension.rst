@@ -35,7 +35,7 @@ Properties
 
 .. php:attr:: project
 
-	:Type: `phpDocumentor\\Reflection\\Php\\Project` 
+	:Type: :any:`phpDocumentor\\Reflection\\Php\\Project` 
 
 
 Methods
@@ -43,7 +43,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: __construct( $project)
+	.. php:method:: public __construct(phpDocumentor\\Reflection\\Php\\Project $project)
 	
 		
 	
@@ -51,7 +51,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: prepare()
+	.. php:method:: public prepare()
 	
 		.. rst-class:: phpdoc-description
 		
@@ -69,7 +69,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: render( $type,  $builder,  $element)
+	.. php:method:: public render( $type, $builder, $element)
 	
 		.. rst-class:: phpdoc-description
 		
@@ -84,15 +84,15 @@ Methods
 			
 		
 		
-		:param string $type: 
-		:param \\JuliusHaertl\\PHPDocToRst\\Builder\\ExtensionBuilder $builder: 
-		:param \\phpDocumentor\\Reflection\\Element $element: context for the render type
+		:param string $type: string 
+		:param \\JuliusHaertl\\PHPDocToRst\\Builder\\ExtensionBuilder $builder: :any:`JuliusHaertl\\PHPDocToRst\\Builder\\ExtensionBuilder` 
+		:param \\phpDocumentor\\Reflection\\Element $element: :any:`phpDocumentor\\Reflection\\Element` context for the render type
 	
 	
 
 .. rst-class:: public
 
-	.. php:method:: shouldRenderElement( $element)
+	.. php:method:: public shouldRenderElement(phpDocumentor\\Reflection\\Element $element)
 	
 		.. rst-class:: phpdoc-description
 		
@@ -103,13 +103,14 @@ Methods
 			
 		
 		
-		:param \\phpDocumentor\\Reflection\\Element $element: 
+		:param \\phpDocumentor\\Reflection\\Element $element: :any:`phpDocumentor\\Reflection\\Element` 
+		:Returns: bool 
 	
 	
 
 .. rst-class:: public
 
-	.. php:method:: shouldRenderIndex( $type,  $element)
+	.. php:method:: public shouldRenderIndex( $type, $element)
 	
 		
 	

@@ -44,17 +44,17 @@ Properties
 
 .. php:attr:: file
 
-	:Type: `phpDocumentor\\Reflection\\File` 
+	:Type: :any:`phpDocumentor\\Reflection\\File` 
 
 
 .. php:attr:: element
 
-	:Type: `phpDocumentor\\Reflection\\Element` 
+	:Type: :any:`phpDocumentor\\Reflection\\Element` 
 
 
 .. php:attr:: extensions
 
-	:Type: `JuliusHaertl\\PHPDocToRst\\Extension\\Extension` 
+	:Type: :any:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension` 
 
 
 Methods
@@ -62,7 +62,7 @@ Methods
 
 .. rst-class:: protected abstract
 
-	.. php:method:: render()
+	.. php:method:: protected abstract render()
 	
 		
 	
@@ -70,7 +70,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: __construct( $file,  $element,  $extensions)
+	.. php:method:: public __construct( $file, $element, $extensions)
 	
 		
 	
@@ -78,7 +78,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: getElement()
+	.. php:method:: public getElement()
 	
 		
 	

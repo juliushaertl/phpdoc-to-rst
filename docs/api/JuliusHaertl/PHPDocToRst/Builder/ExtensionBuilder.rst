@@ -19,7 +19,7 @@ Properties
 
 .. php:attr:: extensions
 
-	:Type: `JuliusHaertl\\PHPDocToRst\\Extension\\Extension` 
+	:Type: :any:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension` 
 
 
 Methods
@@ -27,7 +27,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: __construct( $extensions)
+	.. php:method:: public __construct( $extensions)
 	
 		
 	
@@ -35,7 +35,7 @@ Methods
 
 .. rst-class:: protected
 
-	.. php:method:: callExtensions( $type,  $element)
+	.. php:method:: protected callExtensions( $type, $element)
 	
 		
 	

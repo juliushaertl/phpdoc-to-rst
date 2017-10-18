@@ -81,7 +81,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: __construct( $extensions)
+	.. php:method:: public __construct( $extensions)
 	
 		
 	
@@ -89,7 +89,7 @@ Methods
 
 .. rst-class:: public static
 
-	.. php:method:: getNamespace( $element)
+	.. php:method:: public static getNamespace(phpDocumentor\\Reflection\\Element $element)
 	
 		.. rst-class:: phpdoc-description
 		
@@ -100,13 +100,14 @@ Methods
 			
 		
 		
-		:param \\phpDocumentor\\Reflection\\Element $element: 
+		:param \\phpDocumentor\\Reflection\\Element $element: :any:`phpDocumentor\\Reflection\\Element` 
+		:Returns: mixed 
 	
 	
 
 .. rst-class:: protected
 
-	.. php:method:: addPageHeader( $element)
+	.. php:method:: protected addPageHeader(phpDocumentor\\Reflection\\Element $element)
 	
 		.. rst-class:: phpdoc-description
 		
@@ -117,13 +118,13 @@ Methods
 			
 		
 		
-		:param \\phpDocumentor\\Reflection\\Element $element: 
+		:param \\phpDocumentor\\Reflection\\Element $element: :any:`phpDocumentor\\Reflection\\Element` 
 	
 	
 
 .. rst-class:: private
 
-	.. php:method:: getTypeForClass( $element)
+	.. php:method:: private getTypeForClass( $element)
 	
 		
 	
@@ -131,7 +132,7 @@ Methods
 
 .. rst-class:: protected
 
-	.. php:method:: addAfterIntroduction( $element)
+	.. php:method:: protected addAfterIntroduction( $element)
 	
 		
 	
@@ -139,60 +140,7 @@ Methods
 
 .. rst-class:: protected
 
-	.. php:method:: addConstants( $constants)
-	
-		
-	
-	
-
-.. rst-class:: private
-
-	.. php:method:: addConstant( $constant)
-	
-		
-		:param \\phpDocumentor\\Reflection\\Php\\Constant $constant: 
-	
-	
-
-.. rst-class:: protected
-
-	.. php:method:: addProperties( $properties)
-	
-		
-		:param \\phpDocumentor\\Reflection\\Php\\Property\[\] $properties: 
-	
-	
-
-.. rst-class:: private
-
-	.. php:method:: addProperty( $property)
-	
-		
-		:param \\phpDocumentor\\Reflection\\Php\\Property $property: 
-	
-	
-
-.. rst-class:: protected
-
-	.. php:method:: addParent( $element)
-	
-		
-		:param \\phpDocumentor\\Reflection\\Php\\Interface\_|\\phpDocumentor\\Reflection\\Php\\Class\_ $element: 
-	
-	
-
-.. rst-class:: protected
-
-	.. php:method:: addUsedTraits( $element)
-	
-		
-		:param \\phpDocumentor\\Reflection\\Php\\Class\_|\\phpDocumentor\\Reflection\\Php\\Trait\_ $element: 
-	
-	
-
-.. rst-class:: protected
-
-	.. php:method:: addMethods( $methods)
+	.. php:method:: protected addConstants( $constants)
 	
 		
 	
@@ -200,7 +148,60 @@ Methods
 
 .. rst-class:: private
 
-	.. php:method:: addMethod( $method)
+	.. php:method:: private addConstant(phpDocumentor\\Reflection\\Php\\Constant $constant)
+	
+		
+		:param \\phpDocumentor\\Reflection\\Php\\Constant $constant: :any:`phpDocumentor\\Reflection\\Php\\Constant` 
+	
+	
+
+.. rst-class:: protected
+
+	.. php:method:: protected addProperties( $properties)
+	
+		
+		:param \\phpDocumentor\\Reflection\\Php\\Property\[\] $properties: :any:`phpDocumentor\\Reflection\\Php\\Property` 
+	
+	
+
+.. rst-class:: private
+
+	.. php:method:: private addProperty(phpDocumentor\\Reflection\\Php\\Property $property)
+	
+		
+		:param \\phpDocumentor\\Reflection\\Php\\Property $property: :any:`phpDocumentor\\Reflection\\Php\\Property` 
+	
+	
+
+.. rst-class:: protected
+
+	.. php:method:: protected addParent( $element)
+	
+		
+		:param \\phpDocumentor\\Reflection\\Php\\Interface\_|\\phpDocumentor\\Reflection\\Php\\Class\_ $element: :any:`phpDocumentor\\Reflection\\Php\\Interface\_` | :any:`phpDocumentor\\Reflection\\Php\\Class\_` 
+	
+	
+
+.. rst-class:: protected
+
+	.. php:method:: protected addUsedTraits( $element)
+	
+		
+		:param \\phpDocumentor\\Reflection\\Php\\Class\_|\\phpDocumentor\\Reflection\\Php\\Trait\_ $element: :any:`phpDocumentor\\Reflection\\Php\\Class\_` | :any:`phpDocumentor\\Reflection\\Php\\Trait\_` 
+	
+	
+
+.. rst-class:: protected
+
+	.. php:method:: protected addMethods( $methods)
+	
+		
+	
+	
+
+.. rst-class:: private
+
+	.. php:method:: private addMethod(phpDocumentor\\Reflection\\Php\\Method $method)
 	
 		
 	
@@ -208,56 +209,58 @@ Methods
 
 .. rst-class:: public static
 
-	.. php:method:: getLink( $type,  $fqsen,  $description)
+	.. php:method:: public static getLink( $type, $fqsen, $description=)
 	
 		
-		:param  $type: string
-		:param  $fqsen: string
+		:param  $type: :any:`` string
+		:param  $fqsen: :any:`` string
+		:Returns: string 
 	
 	
 
 .. rst-class:: public
 
-	.. php:method:: beginPhpDomain( $type,  $name,  $indent)
+	.. php:method:: public beginPhpDomain( $type, $name, $indent=)
 	
 		
-		:param  $type: string
-		:param  $name: string
-		:param  $indent: bool Should indent after the section started
+		:param  $type: :any:`` string
+		:param  $name: :any:`` string
+		:param  $indent: :any:`` bool Should indent after the section started
 	
 	
 
 .. rst-class:: public
 
-	.. php:method:: endPhpDomain( $type)
+	.. php:method:: public endPhpDomain( $type=)
 	
 		
-		:param string $type: 
+		:param string $type: string 
 	
 	
 
 .. rst-class:: public
 
-	.. php:method:: addDocBlockDescription( $element)
+	.. php:method:: public addDocBlockDescription( $element)
 	
 		
-		:param \\phpDocumentor\\Reflection\\Php\\Class\_|\\phpDocumentor\\Reflection\\Php\\Interface\_|\\phpDocumentor\\Reflection\\Php\\Trait\_|\\phpDocumentor\\Reflection\\Php\\Property|\\phpDocumentor\\Reflection\\Php\\Method|\\phpDocumentor\\Reflection\\Php\\Constant $element: 
+		:param \\phpDocumentor\\Reflection\\Php\\Class\_|\\phpDocumentor\\Reflection\\Php\\Interface\_|\\phpDocumentor\\Reflection\\Php\\Trait\_|\\phpDocumentor\\Reflection\\Php\\Property|\\phpDocumentor\\Reflection\\Php\\Method|\\phpDocumentor\\Reflection\\Php\\Constant $element: :any:`phpDocumentor\\Reflection\\Php\\Class\_` | :any:`phpDocumentor\\Reflection\\Php\\Interface\_` | :any:`phpDocumentor\\Reflection\\Php\\Trait\_` | :any:`phpDocumentor\\Reflection\\Php\\Property` | :any:`phpDocumentor\\Reflection\\Php\\Method` | :any:`phpDocumentor\\Reflection\\Php\\Constant` 
+		:Returns: $this 
 	
 	
 
 .. rst-class:: protected
 
-	.. php:method:: addDocblockTag( $tagName,  $docBlock)
+	.. php:method:: protected addDocblockTag( $tagName, phpDocumentor\\Reflection\\DocBlock $docBlock)
 	
 		
-		:param string $tagName: Name of the tag to parse
-		:param \\phpDocumentor\\Reflection\\DocBlock $docBlock: 
+		:param string $tagName: string Name of the tag to parse
+		:param \\phpDocumentor\\Reflection\\DocBlock $docBlock: :any:`phpDocumentor\\Reflection\\DocBlock` 
 	
 	
 
 .. rst-class:: public static
 
-	.. php:method:: typesToRst( $types)
+	.. php:method:: public static typesToRst( $types)
 	
 		
 	
@@ -265,7 +268,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: shouldRenderElement( $element)
+	.. php:method:: public shouldRenderElement(phpDocumentor\\Reflection\\Element $element)
 	
 		
 	

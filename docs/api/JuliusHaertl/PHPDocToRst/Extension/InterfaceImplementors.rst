@@ -48,7 +48,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: prepare()
+	.. php:method:: public prepare()
 	
 		
 	
@@ -56,12 +56,12 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: render( $type,  $builder,  $element)
+	.. php:method:: public render( $type, $builder, $element)
 	
 		
-		:param string $type: 
-		:param \\JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder $builder: 
-		:param \\phpDocumentor\\Reflection\\Element $element: 
+		:param string $type: string 
+		:param \\JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder $builder: :any:`JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder` 
+		:param \\phpDocumentor\\Reflection\\Element $element: :any:`phpDocumentor\\Reflection\\Element` 
 	
 	
 

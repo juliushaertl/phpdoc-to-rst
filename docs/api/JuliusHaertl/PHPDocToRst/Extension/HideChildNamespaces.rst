@@ -40,7 +40,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: shouldRenderIndex( $type,  $element)
+	.. php:method:: public shouldRenderIndex( $type, $element)
 	
 		
 	

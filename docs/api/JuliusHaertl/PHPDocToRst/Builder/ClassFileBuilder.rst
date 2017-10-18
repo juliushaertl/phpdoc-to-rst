@@ -33,7 +33,7 @@ Methods
 
 .. rst-class:: protected
 
-	.. php:method:: render()
+	.. php:method:: protected render()
 	
 		
 	
@@ -41,10 +41,10 @@ Methods
 
 .. rst-class:: protected
 
-	.. php:method:: addImplementedInterfaces( $element)
+	.. php:method:: protected addImplementedInterfaces( $element)
 	
 		
-		:param \\phpDocumentor\\Reflection\\Php\\Class\_ $element: 
+		:param \\phpDocumentor\\Reflection\\Php\\Class\_ $element: :any:`phpDocumentor\\Reflection\\Php\\Class\_` 
 	
 	
 

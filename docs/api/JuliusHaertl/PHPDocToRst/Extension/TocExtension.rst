@@ -41,11 +41,11 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: render( $type,  $builder,  $element)
+	.. php:method:: public render( $type, $builder, $element)
 	
 		
-		:param string $type: 
-		:param \\JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder $builder: 
+		:param string $type: string 
+		:param \\JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder $builder: :any:`JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder` 
 	
 	
 

@@ -32,7 +32,7 @@ Methods
 
 .. rst-class:: protected
 
-	.. php:method:: render()
+	.. php:method:: protected render()
 	
 		
 	

@@ -230,8 +230,18 @@ class PhpDomainBuilder extends RstBuilder {
         $args = '';
         /** @var Argument $argument */
         foreach ($method->getArguments() as $argument) {
-            // TODO: defaults, types
-            $args .= ' $' . $argument->getName() . ', ';
+            // FIXME: This will work after https://github.com/phpDocumentor/Reflection/pull/109 is merged
+            foreach ($argument->getTypes() as $type) {
+                $args .= self::escape($type) . '|';
+            }
+            //FIXME: $argument->isByReference()
+            $args = substr($args, 0, -1);
+            $args .= ' $' . $argument->getName();
+            if ($argument->getDefault() !== null) {
+                // FIXME: check empty -> add ""
+                $args .= '=' . self::escape($default);
+            }
+            $args .= ', ';
         }
         $args = substr($args, 0, -2);
 
@@ -241,14 +251,20 @@ class PhpDomainBuilder extends RstBuilder {
         $modifiers .= $method->isStatic() ? ' static' : '';
         $this->addLine('.. rst-class:: ' . $modifiers)->addLine();
         $this->indent();
-        $this->beginPhpDomain('method', $method->getName() . '(' . $args . ')');
+        $this->beginPhpDomain('method', $modifiers . ' ' . $method->getName() . '(' . $args . ')');
         $this->addDocBlockDescription($method);
         $this->addLine();
         if (!empty($params)) {
             foreach ($method->getArguments() as $argument) {
                 /** @var Param $param */
                 $param = $params[$argument->getName()];
-                if ($param !== null) $this->addMultiline(':param ' . self::escape($param->getType()) . ' $' . $argument->getName() . ': ' . $param->getDescription(), true);
+                if ($param !== null) {
+                    $typString = $param->getType();
+                    $this->addMultiline(':param '.self::escape($typString).' $' . $argument->getName() . ': ' . self::typesToRst($typString) . ' ' . $param->getDescription(), true);
+                }
+            }
+            foreach ($docBlock->getTags() as $tag) {
+                $this->addDocblockTag($tag->getName(), $docBlock);
             }
         }
         $this->endPhpDomain('method');
@@ -386,10 +402,7 @@ class PhpDomainBuilder extends RstBuilder {
             }
             if (0 === strpos($type, '\\'))
                 $type = substr($type, 1);
-            // we could use :any: here but resolve_any_xref is not implemented by sphinxcontrib.phpdomain
-            // FIXME: once https://github.com/markstory/sphinxcontrib-phpdomain/pull/14 is merged
-            // $result .= ':any:`' . RstBuilder::escape($type) . '` | ';
-            $result .= '`' . RstBuilder::escape($type) . '` | ';
+            $result .= ':any:`' . RstBuilder::escape($type) . '` | ';
         }
         return substr($result, 0, -3);
     }

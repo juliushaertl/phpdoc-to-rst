@@ -41,7 +41,7 @@ Methods
 
 .. rst-class:: protected
 
-	.. php:method:: configure()
+	.. php:method:: protected configure()
 	
 		
 	
@@ -49,7 +49,7 @@ Methods
 
 .. rst-class:: protected
 
-	.. php:method:: execute( $input,  $output)
+	.. php:method:: protected execute(Symfony\\Component\\Console\\Input\\InputInterface $input, Symfony\\Component\\Console\\Output\\OutputInterface $output)
 	
 		
 	

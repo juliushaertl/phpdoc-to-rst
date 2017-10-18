@@ -41,7 +41,7 @@ Properties
 
 .. php:attr:: namespaces
 
-	:Type: `phpDocumentor\\Reflection\\Php\\Namespace\_` 
+	:Type: :any:`phpDocumentor\\Reflection\\Php\\Namespace\_` 
 
 
 Methods
@@ -49,7 +49,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: __construct( $namespaces)
+	.. php:method:: public __construct( $namespaces)
 	
 		
 	
@@ -57,7 +57,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: render()
+	.. php:method:: public render()
 	
 		
 	

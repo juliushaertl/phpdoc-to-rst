@@ -41,7 +41,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: shouldRenderElement( $element)
+	.. php:method:: public shouldRenderElement(phpDocumentor\\Reflection\\Element $element)
 	
 		
 	

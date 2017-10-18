@@ -60,7 +60,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: getContent()
+	.. php:method:: public getContent()
 	
 		
 	
@@ -68,7 +68,7 @@ Methods
 
 .. rst-class:: public static
 
-	.. php:method:: escape( $text)
+	.. php:method:: public static escape( $text)
 	
 		
 	
@@ -76,7 +76,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: indent()
+	.. php:method:: public indent()
 	
 		
 	
@@ -84,7 +84,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: unindent()
+	.. php:method:: public unindent()
 	
 		
 	
@@ -92,7 +92,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: addFieldList( $key,  $value)
+	.. php:method:: public addFieldList( $key, $value)
 	
 		
 	
@@ -100,7 +100,17 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: addH1( $text)
+	.. php:method:: public addH1(string $text)
+	
+		
+		:param string $text: string 
+		:Returns: $this 
+	
+	
+
+.. rst-class:: public
+
+	.. php:method:: public addH2( $text)
 	
 		
 	
@@ -108,7 +118,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: addH2( $text)
+	.. php:method:: public addH3( $text)
 	
 		
 	
@@ -116,7 +126,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: addH3( $text)
+	.. php:method:: public addLine( $text=)
 	
 		
 	
@@ -124,7 +134,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: addLine( $text)
+	.. php:method:: public addMultiline( $text=, $blockIndent=)
 	
 		
 	
@@ -132,7 +142,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: addMultiline( $text,  $blockIndent)
+	.. php:method:: public addMultilineWithoutRendering( $text)
 	
 		
 	
@@ -140,15 +150,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: addMultilineWithoutRendering( $text)
-	
-		
-	
-	
-
-.. rst-class:: public
-
-	.. php:method:: add( $text)
+	.. php:method:: public add( $text)
 	
 		
 	

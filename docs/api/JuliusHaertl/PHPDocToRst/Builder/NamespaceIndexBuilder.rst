@@ -74,27 +74,27 @@ Properties
 
 .. php:attr:: currentNamespace
 
-	:Type: `phpDocumentor\\Reflection\\Php\\Namespace\_` 
+	:Type: :any:`phpDocumentor\\Reflection\\Php\\Namespace\_` 
 
 
 .. php:attr:: namespaces
 
-	:Type: `phpDocumentor\\Reflection\\Php\\Namespace\_` 
+	:Type: :any:`phpDocumentor\\Reflection\\Php\\Namespace\_` 
 
 
 .. php:attr:: childNamespaces
 
-	:Type: `phpDocumentor\\Reflection\\Php\\Namespace\_` 
+	:Type: :any:`phpDocumentor\\Reflection\\Php\\Namespace\_` 
 
 
 .. php:attr:: functions
 
-	:Type: `phpDocumentor\\Reflection\\Php\\Function\_` 
+	:Type: :any:`phpDocumentor\\Reflection\\Php\\Function\_` 
 
 
 .. php:attr:: constants
 
-	:Type: `phpDocumentor\\Reflection\\Php\\Constant` 
+	:Type: :any:`phpDocumentor\\Reflection\\Php\\Constant` 
 
 
 Methods
@@ -102,7 +102,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: __construct( $extensions,  $namespaces,  $current,  $functions,  $constants)
+	.. php:method:: public __construct( $extensions, $namespaces, phpDocumentor\\Reflection\\Php\\Namespace\_ $current, $functions, $constants)
 	
 		
 	
@@ -110,7 +110,7 @@ Methods
 
 .. rst-class:: private
 
-	.. php:method:: findChildNamespaces()
+	.. php:method:: private findChildNamespaces()
 	
 		.. rst-class:: phpdoc-description
 		
@@ -126,7 +126,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: render()
+	.. php:method:: public render()
 	
 		
 	
@@ -134,7 +134,7 @@ Methods
 
 .. rst-class:: protected
 
-	.. php:method:: addIndex( $type)
+	.. php:method:: protected addIndex( $type)
 	
 		
 	
@@ -142,7 +142,7 @@ Methods
 
 .. rst-class:: private
 
-	.. php:method:: addFunctions()
+	.. php:method:: private addFunctions()
 	
 		
 	
@@ -150,7 +150,7 @@ Methods
 
 .. rst-class:: private
 
-	.. php:method:: addElementTocEntry( $entry)
+	.. php:method:: private addElementTocEntry(phpDocumentor\\Reflection\\Fqsen $entry)
 	
 		
 	
@@ -158,7 +158,7 @@ Methods
 
 .. rst-class:: private
 
-	.. php:method:: shouldRenderIndex( $type,  $element)
+	.. php:method:: private shouldRenderIndex( $type, $element=)
 	
 		
 	
@@ -166,7 +166,7 @@ Methods
 
 .. rst-class:: private
 
-	.. php:method:: getHeaderForType( $type)
+	.. php:method:: private getHeaderForType( $type)
 	
 		
 	
@@ -174,10 +174,11 @@ Methods
 
 .. rst-class:: private
 
-	.. php:method:: getElementList( $type)
+	.. php:method:: private getElementList( $type)
 	
 		
-		:param int $type: 
+		:param int $type: int 
+		:Returns: array 
 	
 	
 

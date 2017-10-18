@@ -49,7 +49,7 @@ Properties
 
 .. php:attr:: project
 
-	:Type: `phpDocumentor\\Reflection\\Php\\Project` 
+	:Type: :any:`phpDocumentor\\Reflection\\Php\\Project` 
 
 
 .. php:attr:: docFiles
@@ -69,7 +69,7 @@ Properties
 
 .. php:attr:: extensions
 
-	:Type: `JuliusHaertl\\PHPDocToRst\\Extension\\Extension` 
+	:Type: :any:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension` 
 
 
 .. php:attr:: extensionNames
@@ -102,7 +102,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: __construct( $srcDir,  $dstDir)
+	.. php:method:: public __construct( $srcDir, $dstDir)
 	
 		.. rst-class:: phpdoc-description
 		
@@ -113,14 +113,14 @@ Methods
 			
 		
 		
-		:param string\[\] $srcDir: array of paths that should be analysed
-		:param string $dstDir: path where the output documentation should be stored
+		:param string\[\] $srcDir: string array of paths that should be analysed
+		:param string $dstDir: string path where the output documentation should be stored
 	
 	
 
 .. rst-class:: public
 
-	.. php:method:: build()
+	.. php:method:: public build()
 	
 		.. rst-class:: phpdoc-description
 		
@@ -136,7 +136,7 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: setVerboseOutput( $v)
+	.. php:method:: public setVerboseOutput( $v)
 	
 		.. rst-class:: phpdoc-description
 		
@@ -147,13 +147,13 @@ Methods
 			
 		
 		
-		:param bool $v: Set to true to enable
+		:param bool $v: bool Set to true to enable
 	
 	
 
 .. rst-class:: public
 
-	.. php:method:: setDebugOutput( $v)
+	.. php:method:: public setDebugOutput( $v)
 	
 		.. rst-class:: phpdoc-description
 		
@@ -164,13 +164,13 @@ Methods
 			
 		
 		
-		:param bool $v: Set to true to enable
+		:param bool $v: bool Set to true to enable
 	
 	
 
 .. rst-class:: public
 
-	.. php:method:: log( $message)
+	.. php:method:: public log( $message)
 	
 		.. rst-class:: phpdoc-description
 		
@@ -181,13 +181,13 @@ Methods
 			
 		
 		
-		:param string $message: Message to be logged
+		:param string $message: string Message to be logged
 	
 	
 
 .. rst-class:: public
 
-	.. php:method:: debug( $message)
+	.. php:method:: public debug( $message)
 	
 		.. rst-class:: phpdoc-description
 		
@@ -198,13 +198,13 @@ Methods
 			
 		
 		
-		:param string $message: Message to be logged
+		:param string $message: string Message to be logged
 	
 	
 
 .. rst-class:: private
 
-	.. php:method:: setupReflection()
+	.. php:method:: private setupReflection()
 	
 		
 	
@@ -212,16 +212,17 @@ Methods
 
 .. rst-class:: public
 
-	.. php:method:: addExtension( $class)
+	.. php:method:: public addExtension( $class)
 	
 		
-		:param string $class: name of the extension class
+		:param string $class: string name of the extension class
+		:Throws: \Exception 
 	
 	
 
 .. rst-class:: private
 
-	.. php:method:: createDirectoryStructure()
+	.. php:method:: private createDirectoryStructure()
 	
 		.. rst-class:: phpdoc-description
 		
@@ -237,7 +238,7 @@ Methods
 
 .. rst-class:: private
 
-	.. php:method:: parseFiles()
+	.. php:method:: private parseFiles()
 	
 		
 	
@@ -245,7 +246,7 @@ Methods
 
 .. rst-class:: private
 
-	.. php:method:: buildIndexes()
+	.. php:method:: private buildIndexes()
 	
 		
 	
