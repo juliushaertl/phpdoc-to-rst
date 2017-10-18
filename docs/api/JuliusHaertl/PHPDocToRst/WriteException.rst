@@ -13,6 +13,14 @@ WriteException
 .. php:class:: WriteException
 
 
+	.. rst-class:: phpdoc-description
+	
+		| An exception for writing failure of files/directories in the build process
+		
+		| 
+		| 
+		
+	
 	:Parent:
 		:php:class:`Exception`
 	
@@ -20,9 +28,4 @@ WriteException
 
 Summary
 -------
-
-Methods
-~~~~~~~
-
-
 

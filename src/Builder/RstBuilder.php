@@ -64,7 +64,11 @@ class RstBuilder {
         return $this;
     }
 
-    public function addH1($text) {
+    /**
+     * @param string $text
+     * @return $this
+     */
+    public function addH1(string $text) {
         $this->addLine($text);
         $this->addLine(str_repeat('=', strlen((string)$text)))->addLine();
         return $this;

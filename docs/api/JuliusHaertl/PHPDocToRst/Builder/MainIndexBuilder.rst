@@ -39,11 +39,6 @@ Methods
 Properties
 ----------
 
-.. php:attr:: namespaces
-
-	:Type: :any:`phpDocumentor\\Reflection\\Php\\Namespace\_` 
-
-
 Methods
 -------
 

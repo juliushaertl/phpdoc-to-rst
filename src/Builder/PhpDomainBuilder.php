@@ -164,7 +164,8 @@ class PhpDomainBuilder extends RstBuilder {
      * @param Property $property
      */
     private function addProperty(Property $property) {
-        $this->beginPhpDomain('attr', $property->getName());
+        $modifiers = $property->isStatic() ? '' : ' static' ;
+        $this->beginPhpDomain('attr', $property->getVisibility() . $modifiers . ' ' . $property->getName());
         $docBlock = $property->getDocBlock();
         $this->addDocBlockDescription($property);
         if ($docBlock) {
@@ -206,6 +207,9 @@ class PhpDomainBuilder extends RstBuilder {
         }
     }
 
+    /**
+     * @param $methods
+     */
     protected function addMethods($methods) {
         if (count($methods) > 0) {
             $this->addH2('Methods');
@@ -230,15 +234,21 @@ class PhpDomainBuilder extends RstBuilder {
         $args = '';
         /** @var Argument $argument */
         foreach ($method->getArguments() as $argument) {
-            // FIXME: This will work after https://github.com/phpDocumentor/Reflection/pull/109 is merged
+            // This will work after https://github.com/phpDocumentor/Reflection/pull/109 is merged
             foreach ($argument->getTypes() as $type) {
                 $args .= self::escape($type) . '|';
             }
-            //FIXME: $argument->isByReference()
-            $args = substr($args, 0, -1);
-            $args .= ' $' . $argument->getName();
-            if ($argument->getDefault() !== null) {
-                // FIXME: check empty -> add ""
+            $args = substr($args, 0, -1) . ' ';
+            if($argument->isVariadic()) {
+                $args .= '...';
+            }
+            if($argument->isByReference()) {
+                $args .= '&';
+            }
+            $args .= '$' . $argument->getName();
+            $default = $argument->getDefault();
+            if ($default !== null) {
+                $default = $default === '' ? '""' : $default;
                 $args .= '=' . self::escape($default);
             }
             $args .= ', ';
@@ -260,7 +270,11 @@ class PhpDomainBuilder extends RstBuilder {
                 $param = $params[$argument->getName()];
                 if ($param !== null) {
                     $typString = $param->getType();
-                    $this->addMultiline(':param '.self::escape($typString).' $' . $argument->getName() . ': ' . self::typesToRst($typString) . ' ' . $param->getDescription(), true);
+                    // Remove first \ to allow references
+                    if(0 === strpos($typString, '\\')) {
+                        $typString = substr($typString, 1);
+                    }
+                    $this->addMultiline(':param '.self::escape($typString).' $' . $argument->getName() . ': ' . $param->getDescription(), true);
                 }
             }
             foreach ($docBlock->getTags() as $tag) {
@@ -298,6 +312,7 @@ class PhpDomainBuilder extends RstBuilder {
 
     /**
      * @param string $type
+     * @return $this
      */
     public function endPhpDomain($type = '') {
         $this->unindent();
@@ -336,7 +351,7 @@ class PhpDomainBuilder extends RstBuilder {
                 if (count($tags) === 0) continue;
                 /** @var Return_ $return */
                 $return = $tags[0];
-                $this->addMultiline(':Returns: ' . $return->getType() . ' ' . RstBuilder::escape($return->getDescription()), true);
+                $this->addMultiline(':Returns: ' . self::typesToRst($return->getType()) . ' ' . RstBuilder::escape($return->getDescription()), true);
                 break;
             case 'var':
                 if (count($tags) === 0) continue;
@@ -385,7 +400,11 @@ class PhpDomainBuilder extends RstBuilder {
 
     }
 
-    public static function typesToRst($types) {
+    /**
+     * @param array $types
+     * @return bool|string
+     */
+    public static function typesToRst(array $types) {
         // http://docs.phpdoc.org/guides/types.html
         $whitelist = [
             'string', 'int', 'integer', 'float', 'bool', 'boolean', 'array', 'resource', 'null', 'callable',
@@ -407,6 +426,10 @@ class PhpDomainBuilder extends RstBuilder {
         return substr($result, 0, -3);
     }
 
+    /**
+     * @param Element $element
+     * @return bool
+     */
     public function shouldRenderElement(Element $element) {
         /** @var Extension $extension */
         foreach ($this->extensions as $extension) {

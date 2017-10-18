@@ -205,7 +205,7 @@ final class ApiDocBuilder {
 
     /**
      * Create directory structure for the rst output
-     * @throws \Exception
+     * @throws WriteException
      */
     private function createDirectoryStructure() {
         foreach ($this->project->getNamespaces() as $namespace) {
