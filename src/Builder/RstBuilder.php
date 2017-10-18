@@ -43,7 +43,7 @@ class RstBuilder {
 
     public static function escape($text) {
         // escape all common reStructuredText control chars
-        $text = preg_replace("/[\'\`\*\_\{\}\[\]\(\)\>\#\+\-\.\\\!]/", '\\\\$0', $text);
+        $text = preg_replace("/[\'\`\*\_\{\}\[\]\(\)\|\>\#\+\-\.\\\!]/", '\\\\$0', $text);
         return $text;
     }
 

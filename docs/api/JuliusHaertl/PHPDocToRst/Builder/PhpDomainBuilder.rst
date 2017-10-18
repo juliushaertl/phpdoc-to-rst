@@ -200,7 +200,7 @@ Methods
 		
 		
 		
-		:param phpDocumentor\\Reflection\\Php\\Interface\_|\\phpDocumentor\\Reflection\\Php\\Class\_ $element: 
+		:param phpDocumentor\\Reflection\\Php\\Interface\_\|\\phpDocumentor\\Reflection\\Php\\Class\_ $element: 
 	
 	
 
@@ -213,7 +213,7 @@ Methods
 		
 		
 		
-		:param phpDocumentor\\Reflection\\Php\\Class\_|\\phpDocumentor\\Reflection\\Php\\Trait\_ $element: 
+		:param phpDocumentor\\Reflection\\Php\\Class\_\|\\phpDocumentor\\Reflection\\Php\\Trait\_ $element: 
 	
 	
 
@@ -283,7 +283,7 @@ Methods
 		
 		
 		
-		:param phpDocumentor\\Reflection\\Php\\Class\_|\\phpDocumentor\\Reflection\\Php\\Interface\_|\\phpDocumentor\\Reflection\\Php\\Trait\_|\\phpDocumentor\\Reflection\\Php\\Property|\\phpDocumentor\\Reflection\\Php\\Method|\\phpDocumentor\\Reflection\\Php\\Constant $element: 
+		:param phpDocumentor\\Reflection\\Php\\Class\_\|\\phpDocumentor\\Reflection\\Php\\Interface\_\|\\phpDocumentor\\Reflection\\Php\\Trait\_\|\\phpDocumentor\\Reflection\\Php\\Property\|\\phpDocumentor\\Reflection\\Php\\Method\|\\phpDocumentor\\Reflection\\Php\\Constant $element: 
 		:Returns: $this 
 	
 	
