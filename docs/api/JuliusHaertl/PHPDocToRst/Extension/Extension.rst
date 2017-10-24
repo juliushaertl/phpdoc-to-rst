@@ -107,9 +107,12 @@ Methods
 			`src/Extension/Extension.php#67 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/Extension.php#L67>`_
 		
 		
-		:param string $type: 
-		:param JuliusHaertl\\PHPDocToRst\\Builder\\ExtensionBuilder $builder: 
-		:param phpDocumentor\\Reflection\\Element $element: context for the render type
+		:Parameters:
+			* **$type** (string)  
+			* **$builder** (:any:`JuliusHaertl\\PHPDocToRst\\Builder\\ExtensionBuilder <JuliusHaertl\\PHPDocToRst\\Builder\\ExtensionBuilder>`)  
+			* **$element** (:any:`phpDocumentor\\Reflection\\Element <phpDocumentor\\Reflection\\Element>`)  context for the render type
+
+		
 	
 	
 
@@ -129,7 +132,10 @@ Methods
 			`src/Extension/Extension.php#80 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/Extension.php#L80>`_
 		
 		
-		:param phpDocumentor\\Reflection\\Element $element: 
+		:Parameters:
+			* **$element** (:any:`phpDocumentor\\Reflection\\Element <phpDocumentor\\Reflection\\Element>`)  
+
+		
 		:Returns: bool 
 	
 	

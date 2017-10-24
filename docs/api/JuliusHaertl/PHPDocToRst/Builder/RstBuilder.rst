@@ -123,7 +123,10 @@ Methods
 			`src/Builder/RstBuilder.php#71 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L71>`_
 		
 		
-		:param string $text: 
+		:Parameters:
+			* **$text** (string)  
+
+		
 		:Returns: $this 
 	
 	

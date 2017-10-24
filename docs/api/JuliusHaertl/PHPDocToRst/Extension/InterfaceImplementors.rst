@@ -64,9 +64,12 @@ Methods
 			`src/Extension/InterfaceImplementors.php#63 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/InterfaceImplementors.php#L63>`_
 		
 		
-		:param string $type: 
-		:param JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder $builder: 
-		:param phpDocumentor\\Reflection\\Element $element: 
+		:Parameters:
+			* **$type** (string)  
+			* **$builder** (:any:`JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder <JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder>`)  
+			* **$element** (:any:`phpDocumentor\\Reflection\\Element <phpDocumentor\\Reflection\\Element>`)  
+
+		
 	
 	
 

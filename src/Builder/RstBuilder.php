@@ -60,7 +60,7 @@ class RstBuilder {
 
     public function addFieldList($key, $value) {
         $this->addLine(':'.self::escape($key).':');
-        $this->indent()->addMultiline($value, true)->unindent();
+        $this->indent()->addMultiline($value, false)->unindent();
         return $this;
     }
 

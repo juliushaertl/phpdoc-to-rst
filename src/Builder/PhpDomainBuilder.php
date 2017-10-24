@@ -225,11 +225,13 @@ class PhpDomainBuilder extends RstBuilder {
         }
         $docBlock = $method->getDocBlock();
         $params = [];
+        $deprecated = [];
         if ($docBlock !== null) {
             /** @var Param $param */
             foreach ($docBlock->getTagsByName('param') as $param) {
                 $params[$param->getVariableName()] = $param;
             }
+            $deprecated = $docBlock->getTagsByName('deprecated');
         }
         $args = '';
         /** @var Argument $argument */
@@ -259,12 +261,14 @@ class PhpDomainBuilder extends RstBuilder {
         $modifiers .= $method->isAbstract() ? ' abstract' : '';
         $modifiers .= $method->isFinal() ? ' final' : '';
         $modifiers .= $method->isStatic() ? ' static' : '';
-        $this->addLine('.. rst-class:: ' . $modifiers)->addLine();
+        $deprecated = count($deprecated) > 0 ? ' deprecated' : '';
+        $this->addLine('.. rst-class:: ' . $modifiers . $deprecated)->addLine();
         $this->indent();
         $this->beginPhpDomain('method', $modifiers . ' ' . $method->getName() . '(' . $args . ')');
         $this->addDocBlockDescription($method);
         $this->addLine();
         if (!empty($params)) {
+            $parameterDetails = '';
             foreach ($method->getArguments() as $argument) {
                 /** @var Param $param */
                 $param = $params[$argument->getName()];
@@ -274,9 +278,16 @@ class PhpDomainBuilder extends RstBuilder {
                     if (0 === strpos($typString, '\\')) {
                         $typString = substr($typString, 1);
                     }
-                    $this->addMultiline(':param ' . self::escape($typString) . ' $' . $argument->getName() . ': ' . $param->getDescription(), true);
+                    $paramItem = '* ';
+                    $paramItem .= '**$' . $argument->getName() . '** ';
+                    if ($typString !== null) {
+                        $paramItem .= '(' . self::typesToRst($typString) . ') ';
+                    }
+                    $paramItem .= ' ' . $param->getDescription();
+                    $parameterDetails .= $paramItem . PHP_EOL;
                 }
             }
+            $this->addFieldList('Parameters', $parameterDetails);
         }
         if ($docBlock !== null) {
             foreach ($docBlock->getTags() as $tag) {

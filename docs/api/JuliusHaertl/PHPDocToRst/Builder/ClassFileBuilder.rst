@@ -53,7 +53,10 @@ Methods
 			`src/Builder/ClassFileBuilder.php#60 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/ClassFileBuilder.php#L60>`_
 		
 		
-		:param phpDocumentor\\Reflection\\Php\\Class\_ $element: 
+		:Parameters:
+			* **$element** (:any:`phpDocumentor\\Reflection\\Php\\Class\_ <phpDocumentor\\Reflection\\Php\\Class\_>`)  
+
+		
 	
 	
 

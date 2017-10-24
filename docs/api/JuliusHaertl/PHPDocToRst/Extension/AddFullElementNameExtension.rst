@@ -49,8 +49,11 @@ Methods
 			`src/Extension/AddFullElementNameExtension.php#45 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/AddFullElementNameExtension.php#L45>`_
 		
 		
-		:param string $type: 
-		:param JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder $builder: 
+		:Parameters:
+			* **$type** (string)  
+			* **$builder** (:any:`JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder <JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder>`)  
+
+		
 	
 	
 

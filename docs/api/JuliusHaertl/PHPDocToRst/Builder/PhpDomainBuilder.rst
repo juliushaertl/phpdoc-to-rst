@@ -121,7 +121,10 @@ Methods
 			`src/Builder/PhpDomainBuilder.php#72 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L72>`_
 		
 		
-		:param phpDocumentor\\Reflection\\Element $element: 
+		:Parameters:
+			* **$element** (:any:`phpDocumentor\\Reflection\\Element <phpDocumentor\\Reflection\\Element>`)  
+
+		
 		:Returns: mixed 
 	
 	
@@ -142,7 +145,10 @@ Methods
 			`src/Builder/PhpDomainBuilder.php#81 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L81>`_
 		
 		
-		:param phpDocumentor\\Reflection\\Element $element: 
+		:Parameters:
+			* **$element** (:any:`phpDocumentor\\Reflection\\Element <phpDocumentor\\Reflection\\Element>`)  
+
+		
 	
 	
 
@@ -176,7 +182,10 @@ Methods
 			`src/Builder/PhpDomainBuilder.php#152 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L152>`_
 		
 		
-		:param phpDocumentor\\Reflection\\Php\\Property\[\] $properties: 
+		:Parameters:
+			* **$properties** (:any:`phpDocumentor\\Reflection\\Php\\Property\[\] <phpDocumentor\\Reflection\\Php\\Property>`)  
+
+		
 	
 	
 
@@ -188,7 +197,10 @@ Methods
 			`src/Builder/PhpDomainBuilder.php#182 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L182>`_
 		
 		
-		:param phpDocumentor\\Reflection\\Php\\Interface\_\|\\phpDocumentor\\Reflection\\Php\\Class\_ $element: 
+		:Parameters:
+			* **$element** (:any:`phpDocumentor\\Reflection\\Php\\Interface\_ <phpDocumentor\\Reflection\\Php\\Interface\_>` | :any:`\\phpDocumentor\\Reflection\\Php\\Class\_ <phpDocumentor\\Reflection\\Php\\Class\_>`)  
+
+		
 	
 	
 
@@ -200,7 +212,10 @@ Methods
 			`src/Builder/PhpDomainBuilder.php#200 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L200>`_
 		
 		
-		:param phpDocumentor\\Reflection\\Php\\Class\_\|\\phpDocumentor\\Reflection\\Php\\Trait\_ $element: 
+		:Parameters:
+			* **$element** (:any:`phpDocumentor\\Reflection\\Php\\Class\_ <phpDocumentor\\Reflection\\Php\\Class\_>` | :any:`\\phpDocumentor\\Reflection\\Php\\Trait\_ <phpDocumentor\\Reflection\\Php\\Trait\_>`)  
+
+		
 	
 	
 
@@ -212,7 +227,10 @@ Methods
 			`src/Builder/PhpDomainBuilder.php#213 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L213>`_
 		
 		
-		:param  $methods: 
+		:Parameters:
+			* **$methods**  
+
+		
 	
 	
 
@@ -221,11 +239,14 @@ Methods
 	.. php:method:: public static getLink( $type, $fqsen, $description="")
 	
 		:Source:
-			`src/Builder/PhpDomainBuilder.php#295 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L295>`_
+			`src/Builder/PhpDomainBuilder.php#306 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L306>`_
 		
 		
-		:param  $type: string
-		:param  $fqsen: string
+		:Parameters:
+			* **$type**  string
+			* **$fqsen**  string
+
+		
 		:Returns: string 
 	
 	
@@ -235,12 +256,15 @@ Methods
 	.. php:method:: public beginPhpDomain( $type, $name, $indent=true)
 	
 		:Source:
-			`src/Builder/PhpDomainBuilder.php#307 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L307>`_
+			`src/Builder/PhpDomainBuilder.php#318 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L318>`_
 		
 		
-		:param  $type: string
-		:param  $name: string
-		:param  $indent: bool Should indent after the section started
+		:Parameters:
+			* **$type**  string
+			* **$name**  string
+			* **$indent**  bool Should indent after the section started
+
+		
 	
 	
 
@@ -249,10 +273,13 @@ Methods
 	.. php:method:: public endPhpDomain( $type="")
 	
 		:Source:
-			`src/Builder/PhpDomainBuilder.php#319 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L319>`_
+			`src/Builder/PhpDomainBuilder.php#330 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L330>`_
 		
 		
-		:param string $type: 
+		:Parameters:
+			* **$type** (string)  
+
+		
 		:Returns: $this 
 	
 	
@@ -262,10 +289,13 @@ Methods
 	.. php:method:: public addDocBlockDescription( $element)
 	
 		:Source:
-			`src/Builder/PhpDomainBuilder.php#328 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L328>`_
+			`src/Builder/PhpDomainBuilder.php#339 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L339>`_
 		
 		
-		:param phpDocumentor\\Reflection\\Php\\Class\_\|\\phpDocumentor\\Reflection\\Php\\Interface\_\|\\phpDocumentor\\Reflection\\Php\\Trait\_\|\\phpDocumentor\\Reflection\\Php\\Property\|\\phpDocumentor\\Reflection\\Php\\Method\|\\phpDocumentor\\Reflection\\Php\\Constant $element: 
+		:Parameters:
+			* **$element** (:any:`phpDocumentor\\Reflection\\Php\\Class\_ <phpDocumentor\\Reflection\\Php\\Class\_>` | :any:`\\phpDocumentor\\Reflection\\Php\\Interface\_ <phpDocumentor\\Reflection\\Php\\Interface\_>` | :any:`\\phpDocumentor\\Reflection\\Php\\Trait\_ <phpDocumentor\\Reflection\\Php\\Trait\_>` | :any:`\\phpDocumentor\\Reflection\\Php\\Property <phpDocumentor\\Reflection\\Php\\Property>` | :any:`\\phpDocumentor\\Reflection\\Php\\Method <phpDocumentor\\Reflection\\Php\\Method>` | :any:`\\phpDocumentor\\Reflection\\Php\\Constant <phpDocumentor\\Reflection\\Php\\Constant>`)  
+
+		
 		:Returns: $this 
 	
 	
@@ -275,11 +305,14 @@ Methods
 	.. php:method:: protected addDocblockTag( $tagName, phpDocumentor\\Reflection\\DocBlock $docBlock)
 	
 		:Source:
-			`src/Builder/PhpDomainBuilder.php#349 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L349>`_
+			`src/Builder/PhpDomainBuilder.php#360 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L360>`_
 		
 		
-		:param string $tagName: Name of the tag to parse
-		:param phpDocumentor\\Reflection\\DocBlock $docBlock: 
+		:Parameters:
+			* **$tagName** (string)  Name of the tag to parse
+			* **$docBlock** (:any:`phpDocumentor\\Reflection\\DocBlock <phpDocumentor\\Reflection\\DocBlock>`)  
+
+		
 	
 	
 
@@ -288,10 +321,13 @@ Methods
 	.. php:method:: public static typesToRst( $typesString)
 	
 		:Source:
-			`src/Builder/PhpDomainBuilder.php#409 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L409>`_
+			`src/Builder/PhpDomainBuilder.php#420 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L420>`_
 		
 		
-		:param string $typesString: 
+		:Parameters:
+			* **$typesString** (string)  
+
+		
 		:Returns: bool | string 
 	
 	
@@ -301,10 +337,13 @@ Methods
 	.. php:method:: public shouldRenderElement(phpDocumentor\\Reflection\\Element $element)
 	
 		:Source:
-			`src/Builder/PhpDomainBuilder.php#435 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L435>`_
+			`src/Builder/PhpDomainBuilder.php#446 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L446>`_
 		
 		
-		:param phpDocumentor\\Reflection\\Element $element: 
+		:Parameters:
+			* **$element** (:any:`phpDocumentor\\Reflection\\Element <phpDocumentor\\Reflection\\Element>`)  
+
+		
 		:Returns: bool 
 	
 	
