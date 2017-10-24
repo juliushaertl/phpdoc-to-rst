@@ -24,7 +24,6 @@ RstBuilder
 	:Source:
 		`src/Builder/RstBuilder.php#34 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L34>`_
 	
-	
 
 
 Summary
@@ -55,7 +54,6 @@ Properties
 	:Source:
 		`src/Builder/RstBuilder.php#38 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L38>`_
 	
-	
 	:Type: string 
 
 
@@ -70,7 +68,6 @@ Methods
 			`src/Builder/RstBuilder.php#40 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L40>`_
 		
 		
-		
 	
 	
 
@@ -80,7 +77,6 @@ Methods
 	
 		:Source:
 			`src/Builder/RstBuilder.php#44 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L44>`_
-		
 		
 		
 	
@@ -94,7 +90,6 @@ Methods
 			`src/Builder/RstBuilder.php#50 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L50>`_
 		
 		
-		
 	
 	
 
@@ -104,7 +99,6 @@ Methods
 	
 		:Source:
 			`src/Builder/RstBuilder.php#55 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L55>`_
-		
 		
 		
 	
@@ -118,7 +112,6 @@ Methods
 			`src/Builder/RstBuilder.php#61 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L61>`_
 		
 		
-		
 	
 	
 
@@ -128,7 +121,6 @@ Methods
 	
 		:Source:
 			`src/Builder/RstBuilder.php#71 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L71>`_
-		
 		
 		
 		:param string $text: 
@@ -144,7 +136,6 @@ Methods
 			`src/Builder/RstBuilder.php#77 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L77>`_
 		
 		
-		
 	
 	
 
@@ -154,7 +145,6 @@ Methods
 	
 		:Source:
 			`src/Builder/RstBuilder.php#83 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L83>`_
-		
 		
 		
 	
@@ -168,7 +158,6 @@ Methods
 			`src/Builder/RstBuilder.php#89 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L89>`_
 		
 		
-		
 	
 	
 
@@ -178,7 +167,6 @@ Methods
 	
 		:Source:
 			`src/Builder/RstBuilder.php#94 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L94>`_
-		
 		
 		
 	
@@ -192,7 +180,6 @@ Methods
 			`src/Builder/RstBuilder.php#109 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L109>`_
 		
 		
-		
 	
 	
 
@@ -202,7 +189,6 @@ Methods
 	
 		:Source:
 			`src/Builder/RstBuilder.php#118 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L118>`_
-		
 		
 		
 	

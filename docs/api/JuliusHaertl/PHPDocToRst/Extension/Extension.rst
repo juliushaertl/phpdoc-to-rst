@@ -18,7 +18,6 @@ Extension
 	:Source:
 		`src/Extension/Extension.php#32 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/Extension.php#L32>`_
 	
-	
 
 
 Summary
@@ -42,7 +41,6 @@ Properties
 	:Source:
 		`src/Extension/Extension.php#35 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/Extension.php#L35>`_
 	
-	
 	:Type: :any:`\\phpDocumentor\\Reflection\\Php\\Project <phpDocumentor\\Reflection\\Php\\Project>` 
 
 
@@ -50,7 +48,6 @@ Properties
 
 	:Source:
 		`src/Extension/Extension.php#38 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/Extension.php#L38>`_
-	
 	
 	:Type: array 
 
@@ -64,7 +61,6 @@ Methods
 	
 		:Source:
 			`src/Extension/Extension.php#40 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/Extension.php#L40>`_
-		
 		
 		
 	
@@ -86,7 +82,6 @@ Methods
 		
 		:Source:
 			`src/Extension/Extension.php#50 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/Extension.php#L50>`_
-		
 		
 		
 	
@@ -112,7 +107,6 @@ Methods
 			`src/Extension/Extension.php#67 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/Extension.php#L67>`_
 		
 		
-		
 		:param string $type: 
 		:param JuliusHaertl\\PHPDocToRst\\Builder\\ExtensionBuilder $builder: 
 		:param phpDocumentor\\Reflection\\Element $element: context for the render type
@@ -135,7 +129,6 @@ Methods
 			`src/Extension/Extension.php#80 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/Extension.php#L80>`_
 		
 		
-		
 		:param phpDocumentor\\Reflection\\Element $element: 
 		:Returns: bool 
 	
@@ -147,7 +140,6 @@ Methods
 	
 		:Source:
 			`src/Extension/Extension.php#84 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/Extension.php#L84>`_
-		
 		
 		
 	

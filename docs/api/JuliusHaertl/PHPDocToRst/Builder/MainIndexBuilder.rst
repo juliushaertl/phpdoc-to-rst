@@ -24,7 +24,6 @@ MainIndexBuilder
 	:Source:
 		`src/Builder/MainIndexBuilder.php#35 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/MainIndexBuilder.php#L35>`_
 	
-	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder`
 	
@@ -54,7 +53,6 @@ Methods
 			`src/Builder/MainIndexBuilder.php#40 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/MainIndexBuilder.php#L40>`_
 		
 		
-		
 	
 	
 
@@ -64,7 +62,6 @@ Methods
 	
 		:Source:
 			`src/Builder/MainIndexBuilder.php#44 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/MainIndexBuilder.php#L44>`_
-		
 		
 		
 	

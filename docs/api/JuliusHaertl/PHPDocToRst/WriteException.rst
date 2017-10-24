@@ -24,7 +24,6 @@ WriteException
 	:Source:
 		`src/WriteException.php#29 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/WriteException.php#L29>`_
 	
-	
 	:Parent:
 		:php:class:`Exception`
 	

@@ -24,7 +24,6 @@ InterfaceImplementors
 	:Source:
 		`src/Extension/InterfaceImplementors.php#41 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/InterfaceImplementors.php#L41>`_
 	
-	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`
 	
@@ -54,7 +53,6 @@ Methods
 			`src/Extension/InterfaceImplementors.php#45 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/InterfaceImplementors.php#L45>`_
 		
 		
-		
 	
 	
 
@@ -64,7 +62,6 @@ Methods
 	
 		:Source:
 			`src/Extension/InterfaceImplementors.php#63 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/InterfaceImplementors.php#L63>`_
-		
 		
 		
 		:param string $type: 

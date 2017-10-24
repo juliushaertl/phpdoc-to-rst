@@ -24,7 +24,6 @@ PhpDomainBuilder
 	:Source:
 		`src/Builder/PhpDomainBuilder.php#49 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L49>`_
 	
-	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder`
 	
@@ -69,14 +68,12 @@ Constants
 	:Source:
 		`src/Builder/PhpDomainBuilder.php#51 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L51>`_
 	
-	
 
 
 .. php:const:: SECTION_AFTER_DESCRIPTION = self::class . ::SECTION_AFTER_DESCRIPTION
 
 	:Source:
 		`src/Builder/PhpDomainBuilder.php#52 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L52>`_
-	
 	
 
 
@@ -85,14 +82,12 @@ Constants
 	:Source:
 		`src/Builder/PhpDomainBuilder.php#53 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L53>`_
 	
-	
 
 
 .. php:const:: SECTION_AFTER_INTRODUCTION = self::class . ::SECTION_AFTER_INTRODUCTION
 
 	:Source:
 		`src/Builder/PhpDomainBuilder.php#54 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L54>`_
-	
 	
 
 
@@ -105,7 +100,6 @@ Methods
 	
 		:Source:
 			`src/Builder/PhpDomainBuilder.php#60 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L60>`_
-		
 		
 		
 	
@@ -125,7 +119,6 @@ Methods
 		
 		:Source:
 			`src/Builder/PhpDomainBuilder.php#72 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L72>`_
-		
 		
 		
 		:param phpDocumentor\\Reflection\\Element $element: 
@@ -149,7 +142,6 @@ Methods
 			`src/Builder/PhpDomainBuilder.php#81 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L81>`_
 		
 		
-		
 		:param phpDocumentor\\Reflection\\Element $element: 
 	
 	
@@ -160,7 +152,6 @@ Methods
 	
 		:Source:
 			`src/Builder/PhpDomainBuilder.php#118 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L118>`_
-		
 		
 		
 	
@@ -174,7 +165,6 @@ Methods
 			`src/Builder/PhpDomainBuilder.php#123 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L123>`_
 		
 		
-		
 	
 	
 
@@ -184,7 +174,6 @@ Methods
 	
 		:Source:
 			`src/Builder/PhpDomainBuilder.php#152 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L152>`_
-		
 		
 		
 		:param phpDocumentor\\Reflection\\Php\\Property\[\] $properties: 
@@ -199,7 +188,6 @@ Methods
 			`src/Builder/PhpDomainBuilder.php#182 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L182>`_
 		
 		
-		
 		:param phpDocumentor\\Reflection\\Php\\Interface\_\|\\phpDocumentor\\Reflection\\Php\\Class\_ $element: 
 	
 	
@@ -210,7 +198,6 @@ Methods
 	
 		:Source:
 			`src/Builder/PhpDomainBuilder.php#200 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L200>`_
-		
 		
 		
 		:param phpDocumentor\\Reflection\\Php\\Class\_\|\\phpDocumentor\\Reflection\\Php\\Trait\_ $element: 
@@ -225,7 +212,6 @@ Methods
 			`src/Builder/PhpDomainBuilder.php#213 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L213>`_
 		
 		
-		
 		:param  $methods: 
 	
 	
@@ -236,7 +222,6 @@ Methods
 	
 		:Source:
 			`src/Builder/PhpDomainBuilder.php#295 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L295>`_
-		
 		
 		
 		:param  $type: string
@@ -253,7 +238,6 @@ Methods
 			`src/Builder/PhpDomainBuilder.php#307 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L307>`_
 		
 		
-		
 		:param  $type: string
 		:param  $name: string
 		:param  $indent: bool Should indent after the section started
@@ -266,7 +250,6 @@ Methods
 	
 		:Source:
 			`src/Builder/PhpDomainBuilder.php#319 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L319>`_
-		
 		
 		
 		:param string $type: 
@@ -282,7 +265,6 @@ Methods
 			`src/Builder/PhpDomainBuilder.php#328 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L328>`_
 		
 		
-		
 		:param phpDocumentor\\Reflection\\Php\\Class\_\|\\phpDocumentor\\Reflection\\Php\\Interface\_\|\\phpDocumentor\\Reflection\\Php\\Trait\_\|\\phpDocumentor\\Reflection\\Php\\Property\|\\phpDocumentor\\Reflection\\Php\\Method\|\\phpDocumentor\\Reflection\\Php\\Constant $element: 
 		:Returns: $this 
 	
@@ -294,7 +276,6 @@ Methods
 	
 		:Source:
 			`src/Builder/PhpDomainBuilder.php#349 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L349>`_
-		
 		
 		
 		:param string $tagName: Name of the tag to parse
@@ -310,7 +291,6 @@ Methods
 			`src/Builder/PhpDomainBuilder.php#409 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L409>`_
 		
 		
-		
 		:param string $typesString: 
 		:Returns: bool | string 
 	
@@ -322,7 +302,6 @@ Methods
 	
 		:Source:
 			`src/Builder/PhpDomainBuilder.php#435 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L435>`_
-		
 		
 		
 		:param phpDocumentor\\Reflection\\Element $element: 

@@ -30,19 +30,28 @@ use phpDocumentor\Reflection\Php\File;
 
 /**
  * This extension adds a link to the source at github to all elements
+ *
+ * Arguments
+ * 0 => Url to the github repo (required)
+ * 1 => Path to the git repository (required)
+ * 2 => Branch to link to (default=master)
  */
 
 class GithubLocationExtension extends Extension {
 
     protected $basePath;
     protected $githubRepo;
+    protected $branch = 'master';
 
     public function prepare() {
-        if (count($this->arguments) !== 2) {
+        if (count($this->arguments) < 2) {
             throw new \Exception('GithubLocationExtension requires the following arguments githubUrl, basePath.');
         }
         $this->basePath = $this->arguments[0];
         $this->githubRepo = $this->arguments[1];
+        if (count($this->arguments) > 2) {
+            $this->branch = $this->arguments[2];
+        }
     }
 
     /**
@@ -61,9 +70,8 @@ class GithubLocationExtension extends Extension {
             $filePath = $builder->getFile()->getPath();
             $filePath = preg_replace('/^' . preg_quote($this->basePath, '/') . '/', '', $filePath);
             $lineNumber = $element->getLocation()->getLineNumber();
-            $url = $this->getGithubLink($filePath, $lineNumber);
+            $url = $this->getGithubLink($filePath, $lineNumber, $this->branch);
             $builder->addFieldList('Source', '`' . $filePath. '#' . $lineNumber . ' <'.$url.'>`_');
-            $builder->addLine();
         }
     }
 

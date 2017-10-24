@@ -25,7 +25,6 @@ TocExtension
 	:Source:
 		`src/Extension/TocExtension.php#40 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/TocExtension.php#L40>`_
 	
-	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`
 	
@@ -49,7 +48,6 @@ Methods
 	
 		:Source:
 			`src/Extension/TocExtension.php#46 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/TocExtension.php#L46>`_
-		
 		
 		
 		:param string $type: 

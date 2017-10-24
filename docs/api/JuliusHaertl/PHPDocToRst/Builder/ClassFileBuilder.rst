@@ -16,7 +16,6 @@ ClassFileBuilder
 	:Source:
 		`src/Builder/ClassFileBuilder.php#30 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/ClassFileBuilder.php#L30>`_
 	
-	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder`
 	
@@ -43,7 +42,6 @@ Methods
 			`src/Builder/ClassFileBuilder.php#32 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/ClassFileBuilder.php#L32>`_
 		
 		
-		
 	
 	
 
@@ -53,7 +51,6 @@ Methods
 	
 		:Source:
 			`src/Builder/ClassFileBuilder.php#60 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/ClassFileBuilder.php#L60>`_
-		
 		
 		
 		:param phpDocumentor\\Reflection\\Php\\Class\_ $element: 

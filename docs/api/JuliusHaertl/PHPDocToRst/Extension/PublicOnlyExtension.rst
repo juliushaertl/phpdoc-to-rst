@@ -25,7 +25,6 @@ PublicOnlyExtension
 	:Source:
 		`src/Extension/PublicOnlyExtension.php#38 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/PublicOnlyExtension.php#L38>`_
 	
-	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`
 	
@@ -49,7 +48,6 @@ Methods
 	
 		:Source:
 			`src/Extension/PublicOnlyExtension.php#40 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/PublicOnlyExtension.php#L40>`_
-		
 		
 		
 	

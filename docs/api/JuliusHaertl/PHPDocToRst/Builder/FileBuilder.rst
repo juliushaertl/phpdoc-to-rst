@@ -26,7 +26,6 @@ FileBuilder
 	:Source:
 		`src/Builder/FileBuilder.php#35 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/FileBuilder.php#L35>`_
 	
-	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\PhpDomainBuilder`
 	
@@ -52,7 +51,6 @@ Properties
 	:Source:
 		`src/Builder/FileBuilder.php#38 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/FileBuilder.php#L38>`_
 	
-	
 	:Type: :any:`\\phpDocumentor\\Reflection\\Php\\File <phpDocumentor\\Reflection\\Php\\File>` 
 
 
@@ -61,7 +59,6 @@ Properties
 	:Source:
 		`src/Builder/FileBuilder.php#41 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/FileBuilder.php#L41>`_
 	
-	
 	:Type: :any:`\\phpDocumentor\\Reflection\\Element <phpDocumentor\\Reflection\\Element>` 
 
 
@@ -69,7 +66,6 @@ Properties
 
 	:Source:
 		`src/Builder/FileBuilder.php#44 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/FileBuilder.php#L44>`_
-	
 	
 	:Type: :any:`\\JuliusHaertl\\PHPDocToRst\\Extension\\Extension\[\] <JuliusHaertl\\PHPDocToRst\\Extension\\Extension>` 
 
@@ -85,7 +81,6 @@ Methods
 			`src/Builder/FileBuilder.php#46 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/FileBuilder.php#L46>`_
 		
 		
-		
 	
 	
 
@@ -95,7 +90,6 @@ Methods
 	
 		:Source:
 			`src/Builder/FileBuilder.php#48 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/FileBuilder.php#L48>`_
-		
 		
 		
 	
@@ -109,7 +103,6 @@ Methods
 			`src/Builder/FileBuilder.php#58 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/FileBuilder.php#L58>`_
 		
 		
-		
 		:Returns: :any:`\\phpDocumentor\\Reflection\\Element <phpDocumentor\\Reflection\\Element>` that is used to build the rst file
 	
 	
@@ -120,7 +113,6 @@ Methods
 	
 		:Source:
 			`src/Builder/FileBuilder.php#65 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/FileBuilder.php#L65>`_
-		
 		
 		
 		:Returns: :any:`\\phpDocumentor\\Reflection\\Php\\File <phpDocumentor\\Reflection\\Php\\File>` 
