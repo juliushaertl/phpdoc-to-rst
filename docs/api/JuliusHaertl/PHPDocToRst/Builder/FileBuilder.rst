@@ -103,7 +103,7 @@ Methods
 			`src/Builder/FileBuilder.php#58 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/FileBuilder.php#L58>`_
 		
 		
-		:Returns: :any:`\\phpDocumentor\\Reflection\\Element <phpDocumentor\\Reflection\\Element>` that is used to build the rst file
+		| :Returns: :any:`\\phpDocumentor\\Reflection\\Element <phpDocumentor\\Reflection\\Element>` that is used to build the rst file
 	
 	
 
@@ -115,7 +115,7 @@ Methods
 			`src/Builder/FileBuilder.php#65 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/FileBuilder.php#L65>`_
 		
 		
-		:Returns: :any:`\\phpDocumentor\\Reflection\\Php\\File <phpDocumentor\\Reflection\\Php\\File>` 
+		| :Returns: :any:`\\phpDocumentor\\Reflection\\Php\\File <phpDocumentor\\Reflection\\Php\\File>` 
 	
 	
 

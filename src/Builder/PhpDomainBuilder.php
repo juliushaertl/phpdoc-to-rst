@@ -364,7 +364,7 @@ class PhpDomainBuilder extends RstBuilder {
                 if (count($tags) === 0) continue;
                 /** @var Return_ $return */
                 $return = $tags[0];
-                $this->addMultiline(':Returns: ' . self::typesToRst($return->getType()) . ' ' . RstBuilder::escape($return->getDescription()), true);
+                $this->addMultilineWithoutRendering(':Returns: ' . self::typesToRst($return->getType()) . ' ' . RstBuilder::escape($return->getDescription()));
                 break;
             case 'var':
                 if (count($tags) === 0) continue;

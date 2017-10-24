@@ -127,7 +127,7 @@ Methods
 			* **$text** (string)  
 
 		
-		:Returns: $this 
+		| :Returns: $this 
 	
 	
 

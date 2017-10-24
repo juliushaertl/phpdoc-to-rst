@@ -136,7 +136,7 @@ Methods
 			* **$element** (:any:`phpDocumentor\\Reflection\\Element <phpDocumentor\\Reflection\\Element>`)  
 
 		
-		:Returns: bool 
+		| :Returns: bool 
 	
 	
 
