@@ -28,7 +28,7 @@ use phpDocumentor\Reflection\Php\Factory\File\CreateCommand;
 
 /**
  * Class ErrorHandlingMiddleware
- * @internal
+ * @ignore
  */
 final class ErrorHandlingMiddleware implements Middleware
 {

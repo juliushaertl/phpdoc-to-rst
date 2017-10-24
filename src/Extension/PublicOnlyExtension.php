@@ -41,7 +41,7 @@ class PublicOnlyExtension extends Extension {
         if ($element instanceof Class_) {
             /** @var Class_ $class */
             $class = $element;
-            if ($class->getDocBlock() !== null && $class->getDocBlock()->hasTag('internal')) {
+            if ($class->getDocBlock() !== null && $class->getDocBlock()->hasTag('ignore')) {
                 return false;
             }
         }
