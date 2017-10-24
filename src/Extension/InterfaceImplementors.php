@@ -68,7 +68,11 @@ class InterfaceImplementors extends Extension {
             /** @var Interface_ $interface */
             $interface = $builder->getElement();
             $content = '';
-            foreach ($this->implementors[(string)$interface->getFqsen()] as $implementor) {
+            $implementors = $this->implementors[(string)$interface->getFqsen()];
+            if (count($implementors) === 0) {
+                return;
+            }
+            foreach ($implementors as $implementor) {
                 $content .= ':php:class:`' . RstBuilder::escape(substr($implementor, 1)) . '` ';
             }
             $builder->addFieldList('Implemented by', $content);

@@ -135,7 +135,7 @@ class PhpDomainBuilder extends RstBuilder {
      * @param Constant $constant
      */
     private function addConstant(Constant $constant) {
-        $this->beginPhpDomain('const', $constant->getName() . ' = ' . $constant->getValue());
+        $this->beginPhpDomain('const', $constant->getName() . ' = ' . self::escape($constant->getValue()));
         $docBlock = $constant->getDocBlock();
         $this->addDocBlockDescription($constant);
         if ($docBlock) {

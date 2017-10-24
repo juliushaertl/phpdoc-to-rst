@@ -63,28 +63,28 @@ Methods
 Constants
 ---------
 
-.. php:const:: SECTION_BEFORE_DESCRIPTION = self::class . ::SECTION_BEFORE_DESCRIPTION
+.. php:const:: SECTION_BEFORE_DESCRIPTION = self::class \. ::SECTION\_BEFORE\_DESCRIPTION
 
 	:Source:
 		`src/Builder/PhpDomainBuilder.php#51 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L51>`_
 	
 
 
-.. php:const:: SECTION_AFTER_DESCRIPTION = self::class . ::SECTION_AFTER_DESCRIPTION
+.. php:const:: SECTION_AFTER_DESCRIPTION = self::class \. ::SECTION\_AFTER\_DESCRIPTION
 
 	:Source:
 		`src/Builder/PhpDomainBuilder.php#52 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L52>`_
 	
 
 
-.. php:const:: SECTION_AFTER_TITLE = self::class . ::SECTION_AFTER_TITLE
+.. php:const:: SECTION_AFTER_TITLE = self::class \. ::SECTION\_AFTER\_TITLE
 
 	:Source:
 		`src/Builder/PhpDomainBuilder.php#53 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L53>`_
 	
 
 
-.. php:const:: SECTION_AFTER_INTRODUCTION = self::class . ::SECTION_AFTER_INTRODUCTION
+.. php:const:: SECTION_AFTER_INTRODUCTION = self::class \. ::SECTION\_AFTER\_INTRODUCTION
 
 	:Source:
 		`src/Builder/PhpDomainBuilder.php#54 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L54>`_
