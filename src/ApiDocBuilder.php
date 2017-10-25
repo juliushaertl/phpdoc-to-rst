@@ -57,10 +57,10 @@ final class ApiDocBuilder {
     private $docFiles = [];
 
     /** @var array */
-    private $constants;
+    private $constants = [];
 
     /** @var array */
-    private $functions;
+    private $functions = [];
 
     /** @var Extension[] */
     private $extensions;
@@ -72,7 +72,7 @@ final class ApiDocBuilder {
     private $extensionArguments = [];
 
     /** @var string[] */
-    private $srcDir;
+    private $srcDir = [];
 
     /** @var string */
     private $dstDir;
