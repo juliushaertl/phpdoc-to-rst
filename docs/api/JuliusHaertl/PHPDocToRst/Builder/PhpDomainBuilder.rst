@@ -125,7 +125,7 @@ Methods
 			* **$element** (:any:`phpDocumentor\\Reflection\\Element <phpDocumentor\\Reflection\\Element>`)  
 
 		
-		| :Returns: mixed 
+		:Returns: mixed 
 	
 	
 
@@ -247,7 +247,7 @@ Methods
 			* **$fqsen**  string
 
 		
-		| :Returns: string 
+		:Returns: string 
 	
 	
 
@@ -280,7 +280,7 @@ Methods
 			* **$type** (string)  
 
 		
-		| :Returns: $this 
+		:Returns: $this 
 	
 	
 
@@ -296,7 +296,7 @@ Methods
 			* **$element** (:any:`phpDocumentor\\Reflection\\Php\\Class\_ <phpDocumentor\\Reflection\\Php\\Class\_>` | :any:`\\phpDocumentor\\Reflection\\Php\\Interface\_ <phpDocumentor\\Reflection\\Php\\Interface\_>` | :any:`\\phpDocumentor\\Reflection\\Php\\Trait\_ <phpDocumentor\\Reflection\\Php\\Trait\_>` | :any:`\\phpDocumentor\\Reflection\\Php\\Property <phpDocumentor\\Reflection\\Php\\Property>` | :any:`\\phpDocumentor\\Reflection\\Php\\Method <phpDocumentor\\Reflection\\Php\\Method>` | :any:`\\phpDocumentor\\Reflection\\Php\\Constant <phpDocumentor\\Reflection\\Php\\Constant>`)  
 
 		
-		| :Returns: $this 
+		:Returns: $this 
 	
 	
 
@@ -328,7 +328,7 @@ Methods
 			* **$typesString** (string)  
 
 		
-		| :Returns: bool | string 
+		:Returns: bool | string 
 	
 	
 
@@ -344,7 +344,7 @@ Methods
 			* **$element** (:any:`phpDocumentor\\Reflection\\Element <phpDocumentor\\Reflection\\Element>`)  
 
 		
-		| :Returns: bool 
+		:Returns: bool 
 	
 	
 
