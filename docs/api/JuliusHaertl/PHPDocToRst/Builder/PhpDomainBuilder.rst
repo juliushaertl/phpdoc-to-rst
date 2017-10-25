@@ -230,7 +230,7 @@ Methods
 	.. php:method:: public static getLink( $type, $fqsen, $description="")
 	
 		:Source:
-			`src/Builder/PhpDomainBuilder.php#306 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L306>`_
+			`src/Builder/PhpDomainBuilder.php#309 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L309>`_
 		
 		
 		:Parameters:
@@ -247,7 +247,7 @@ Methods
 	.. php:method:: public beginPhpDomain( $type, $name, $indent=true)
 	
 		:Source:
-			`src/Builder/PhpDomainBuilder.php#318 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L318>`_
+			`src/Builder/PhpDomainBuilder.php#321 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L321>`_
 		
 		
 		:Parameters:
@@ -264,7 +264,7 @@ Methods
 	.. php:method:: public endPhpDomain( $type="")
 	
 		:Source:
-			`src/Builder/PhpDomainBuilder.php#330 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L330>`_
+			`src/Builder/PhpDomainBuilder.php#333 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L333>`_
 		
 		
 		:Parameters:
@@ -280,7 +280,7 @@ Methods
 	.. php:method:: public addDocBlockDescription( $element)
 	
 		:Source:
-			`src/Builder/PhpDomainBuilder.php#339 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L339>`_
+			`src/Builder/PhpDomainBuilder.php#342 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L342>`_
 		
 		
 		:Parameters:
@@ -296,7 +296,7 @@ Methods
 	.. php:method:: protected addDocblockTag( $tagName, phpDocumentor\\Reflection\\DocBlock $docBlock)
 	
 		:Source:
-			`src/Builder/PhpDomainBuilder.php#362 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L362>`_
+			`src/Builder/PhpDomainBuilder.php#365 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L365>`_
 		
 		
 		:Parameters:
@@ -312,7 +312,7 @@ Methods
 	.. php:method:: public static typesToRst( $typesString)
 	
 		:Source:
-			`src/Builder/PhpDomainBuilder.php#422 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L422>`_
+			`src/Builder/PhpDomainBuilder.php#425 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L425>`_
 		
 		
 		:Parameters:
@@ -328,7 +328,7 @@ Methods
 	.. php:method:: public shouldRenderElement(phpDocumentor\\Reflection\\Element $element)
 	
 		:Source:
-			`src/Builder/PhpDomainBuilder.php#448 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L448>`_
+			`src/Builder/PhpDomainBuilder.php#451 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L451>`_
 		
 		
 		:Parameters:

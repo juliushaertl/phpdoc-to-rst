@@ -270,6 +270,9 @@ class PhpDomainBuilder extends RstBuilder {
         if (!empty($params)) {
             $parameterDetails = '';
             foreach ($method->getArguments() as $argument) {
+                if (!array_key_exists($argument->getName(), $params)) {
+                    continue;
+                }
                 /** @var Param $param */
                 $param = $params[$argument->getName()];
                 if ($param !== null) {

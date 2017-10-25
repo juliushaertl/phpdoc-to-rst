@@ -68,6 +68,9 @@ class InterfaceImplementors extends Extension {
             /** @var Interface_ $interface */
             $interface = $builder->getElement();
             $content = '';
+            if (!array_key_exists((string)$interface->getFqsen(), $this->implementors)) {
+                return;
+            }
             $implementors = $this->implementors[(string)$interface->getFqsen()];
             if (count($implementors) === 0) {
                 return;
