@@ -17,9 +17,6 @@ RstBuilder
 	
 		| Helper class to build reStructuredText files
 		
-		| 
-		| 
-		
 	
 	:Source:
 		`src/Builder/RstBuilder.php#34 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/RstBuilder.php#L34>`_

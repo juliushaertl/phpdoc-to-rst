@@ -19,9 +19,6 @@ FileBuilder
 	
 		| Abstract building class to build sphinxcontrib\-phpdomain from a php file
 		
-		| 
-		| 
-		
 	
 	:Source:
 		`src/Builder/FileBuilder.php#35 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/FileBuilder.php#L35>`_

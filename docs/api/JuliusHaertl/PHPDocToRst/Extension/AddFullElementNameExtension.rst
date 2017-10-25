@@ -17,9 +17,6 @@ AddFullElementNameExtension
 	
 		| Add the fully qualified element name including the namespace to each page
 		
-		| 
-		| 
-		
 	
 	:Source:
 		`src/Extension/AddFullElementNameExtension.php#39 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/AddFullElementNameExtension.php#L39>`_

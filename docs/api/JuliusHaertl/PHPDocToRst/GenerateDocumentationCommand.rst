@@ -17,9 +17,6 @@ GenerateDocumentationCommand
 	
 		| Class GenerateDocumentationCommand
 		
-		| 
-		| 
-		
 	
 	:Source:
 		`src/GenerateDocumentationCommand.php#42 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/GenerateDocumentationCommand.php#L42>`_

@@ -61,7 +61,7 @@ class InterfaceImplementors extends Extension {
      * @param Element $element
      */
     public function render($type, &$builder, $element) {
-        if (!$builder instanceof FileBuilder && !$element instanceof Interface_) {
+        if (!$builder instanceof FileBuilder || !$element instanceof Interface_) {
             return;
         }
         if ($type === PhpDomainBuilder::SECTION_AFTER_DESCRIPTION && $builder->getElement() instanceof Interface_) {

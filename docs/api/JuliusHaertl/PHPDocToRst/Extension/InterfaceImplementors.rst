@@ -17,9 +17,6 @@ InterfaceImplementors
 	
 		| Class InterfaceImplementors
 		
-		| 
-		| 
-		
 	
 	:Source:
 		`src/Extension/InterfaceImplementors.php#41 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/InterfaceImplementors.php#L41>`_

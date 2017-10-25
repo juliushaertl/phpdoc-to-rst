@@ -338,7 +338,7 @@ class PhpDomainBuilder extends RstBuilder {
      */
     public function addDocBlockDescription($element) {
         if ($element === null) {
-            return;
+            return $this;
         }
         $docBlock = $element->getDocBlock();
         $this->callExtensions(self::SECTION_BEFORE_DESCRIPTION, $element);
@@ -346,7 +346,9 @@ class PhpDomainBuilder extends RstBuilder {
             $this->addLine('.. rst-class:: phpdoc-description')->addLine();
             $this->indent();
             $this->addMultilineWithoutRendering(RstBuilder::escape($docBlock->getSummary()))->addLine();
-            $this->addMultilineWithoutRendering(RstBuilder::escape($docBlock->getDescription()))->addLine();
+            if ((string)$docBlock->getDescription() !== '') {
+                $this->addMultilineWithoutRendering(RstBuilder::escape($docBlock->getDescription()))->addLine();
+            }
             $this->unindent();
         }
         $this->callExtensions(self::SECTION_AFTER_DESCRIPTION, $element);

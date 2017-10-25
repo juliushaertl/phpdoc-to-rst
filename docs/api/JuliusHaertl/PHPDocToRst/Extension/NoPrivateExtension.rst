@@ -18,9 +18,6 @@ NoPrivateExtension
 		| Do not render classes marked with phpDoc internal tag
 		| Do only render public methods/properties
 		
-		| 
-		| 
-		
 	
 	:Source:
 		`src/Extension/NoPrivateExtension.php#38 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/NoPrivateExtension.php#L38>`_

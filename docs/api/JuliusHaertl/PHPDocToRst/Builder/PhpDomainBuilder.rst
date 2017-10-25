@@ -17,9 +17,6 @@ PhpDomainBuilder
 	
 		| Class to build reStructuredText file with sphinxcontrib\-phpdomain syntax
 		
-		| 
-		| 
-		
 	
 	:Source:
 		`src/Builder/PhpDomainBuilder.php#49 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L49>`_
@@ -113,9 +110,6 @@ Methods
 		
 			| Strip element name from Fqsen to return the namespace only
 			
-			| 
-			| 
-			
 		
 		:Source:
 			`src/Builder/PhpDomainBuilder.php#72 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L72>`_
@@ -136,9 +130,6 @@ Methods
 		.. rst-class:: phpdoc-description
 		
 			| Add namespace
-			
-			| 
-			| 
 			
 		
 		:Source:
@@ -305,7 +296,7 @@ Methods
 	.. php:method:: protected addDocblockTag( $tagName, phpDocumentor\\Reflection\\DocBlock $docBlock)
 	
 		:Source:
-			`src/Builder/PhpDomainBuilder.php#360 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L360>`_
+			`src/Builder/PhpDomainBuilder.php#362 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L362>`_
 		
 		
 		:Parameters:
@@ -321,7 +312,7 @@ Methods
 	.. php:method:: public static typesToRst( $typesString)
 	
 		:Source:
-			`src/Builder/PhpDomainBuilder.php#420 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L420>`_
+			`src/Builder/PhpDomainBuilder.php#422 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L422>`_
 		
 		
 		:Parameters:
@@ -337,7 +328,7 @@ Methods
 	.. php:method:: public shouldRenderElement(phpDocumentor\\Reflection\\Element $element)
 	
 		:Source:
-			`src/Builder/PhpDomainBuilder.php#446 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L446>`_
+			`src/Builder/PhpDomainBuilder.php#448 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/PhpDomainBuilder.php#L448>`_
 		
 		
 		:Parameters:

@@ -17,9 +17,6 @@ HideChildNamespaces
 	
 		| Example for hiding a section in the namespace index page
 		
-		| 
-		| 
-		
 	
 	:Source:
 		`src/Extension/HideChildNamespaces.php#32 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/HideChildNamespaces.php#L32>`_

@@ -17,9 +17,6 @@ MainIndexBuilder
 	
 		| This class builds a list of all available namespaces in the project\.
 		
-		| 
-		| 
-		
 	
 	:Source:
 		`src/Builder/MainIndexBuilder.php#35 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Builder/MainIndexBuilder.php#L35>`_

@@ -76,9 +76,6 @@ Methods
 			| This is useful for preparing own data structures
 			| to be used in the output documentation
 			
-			| 
-			| 
-			
 		
 		:Source:
 			`src/Extension/Extension.php#50 <https://github.com/juliushaertl/phpdoc-to-rst/blob/master/src/Extension/Extension.php#L50>`_
