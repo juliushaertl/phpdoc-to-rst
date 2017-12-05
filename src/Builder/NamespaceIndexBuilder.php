@@ -167,10 +167,12 @@ class NamespaceIndexBuilder extends PhpDomainBuilder {
             $this->addDocBlockDescription($function);
             if (!empty($params)) {
                 foreach ($function->getArguments() as $argument) {
-                    /** @var Param $param */
-                    $param = $params[$argument->getName()];
-                    if ($param !== null) {
-                        $this->addMultiline(':param ' . self::escape($param->getType()) . ' $' . $argument->getName() . ': ' . $param->getDescription(), true);
+                    if (array_key_exists($argument->getName(), $params)) {
+                        /** @var Param $param */
+                        $param = $params[$argument->getName()];
+                        if ($param !== null) {
+                            $this->addMultiline(':param ' . self::escape($param->getType()) . ' $' . $argument->getName() . ': ' . $param->getDescription(), true);
+                        }
                     }
                 }
             }
