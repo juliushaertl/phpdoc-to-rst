@@ -2,8 +2,8 @@ dist: trusty
 sudo: required
 language: php
 php:
-  - 7.0
   - 7.1
+  - 7.2
 
 install:
   - composer install --dev --no-interaction
