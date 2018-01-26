@@ -4,6 +4,7 @@
     "type": "library",
     "require": {
         "phpdocumentor/reflection": "dev-develop",
+        "phpdocumentor/reflection-common": "1.0.1",
         "symfony/console": "^3.3"
     },
     "require-dev": {
