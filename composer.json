@@ -1,21 +1,14 @@
 {
-    "name": "stuba/phpdoc-to-rst",
+    "name": "juliushaertl/phpdoc-to-rst",
     "description": "Generate Sphinx/ReStructured documentation from PHPDoc",
     "type": "library",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/stuba/phpdoc-to-rst.git"
-        }
-    ],
     "require": {
-        "phpdocumentor/reflection": "dev-develop#cc98c55",
-        "phpdocumentor/reflection-common": "1.0.1@stable",
-        "phpdocumentor/reflection-docblock": "4.3.0@stable",
-        "symfony/console": "^4.0@stable"
+        "phpdocumentor/reflection": "dev-develop",
+        "phpdocumentor/reflection-common": "1.0.1",
+        "symfony/console": "^4.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "~6.5.5@stable"
+        "phpunit/phpunit": "^4.8"
     },
     "license": "AGPL-3.0-or-later",
     "authors": [
